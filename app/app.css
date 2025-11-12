@@ -1,15 +1,39 @@
 @import "tailwindcss";
+@source "./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}";
+@plugin "tailwindcss-animate";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-heading: "Poppins", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #004c97;
+  --color-secondary: #f9b233;
+  --color-accent: #00a859;
+  --color-neutral-950: #0b0e1a;
+  --color-surface: #f4f6fa;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --shadow-card: 0 20px 45px -20px rgb(0 76 151 / 35%);
+  --container-max: 1200px;
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+@layer base {
+  html,
+  body {
+    @apply min-h-screen bg-white text-gray-900 antialiased;
   }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  a {
+    @apply text-primary hover:text-accent transition-colors;
+  }
+}
+
+.container {
+  max-width: var(--container-max);
 }
