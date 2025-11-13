@@ -260,7 +260,7 @@ export function Navigation({
       let reservedMore = false;
       const nextOverflow: string[] = [];
 
-      itemWidths.forEach((item, index) => {
+      itemWidths.forEach((item) => {
         if (!item.key) return;
         const widthWithGap = item.width + (used > 0 ? gap : 0);
 
