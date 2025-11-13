@@ -5,7 +5,7 @@ import { CountdownTimer } from "./ui/countdown-timer";
 import { Button } from "./ui/button";
 import { cn } from "~/lib/utils";
 
-const eventDate = new Date("2025-11-10T09:00:00+01:00");
+const eventDate = new Date("2026-11-10T09:00:00+01:00");
 
 export function HeroSection() {
   return (
