@@ -45,8 +45,8 @@ export function Header() {
         isScrolled ? "bg-white/95 backdrop-blur-sm shadow-md" : "bg-white",
       )}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+      <div className="mx-auto w-full max-w-[1440px] px-6 lg:px-10 xl:px-12">
+        <div className="flex items-center justify-between gap-6 h-16 md:h-20">
           {/* Logo */}
           <Link
             to="/"
@@ -58,8 +58,8 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center">
-            <Navigation />
+          <div className="hidden lg:flex items-center lg:gap-4 xl:ml-10">
+            <Navigation variant="desktop" />
           </div>
 
           {/* Mobile Menu Button */}
@@ -103,7 +103,8 @@ export function Header() {
             >
               <div className="p-6">
                 <Navigation
-                  className="flex-col items-stretch gap-2"
+                  variant="mobile"
+                  className="flex-col items-stretch gap-4"
                   onLinkClick={closeMobileMenu}
                 />
               </div>
