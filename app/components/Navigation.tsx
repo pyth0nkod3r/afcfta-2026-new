@@ -402,19 +402,20 @@ export function Navigation({
               {link.label}
               {hasChildren && <ChevronDown className="size-4 text-gray-500" />}
             </Link>
-
             {hasChildren && (
-              <div className="pointer-events-none absolute left-0 top-[calc(100%+0.5rem)] hidden min-w-[240px] flex-col rounded-md border border-surface bg-white py-2 shadow-lg transition group-hover:pointer-events-auto group-hover:flex group-focus-within:flex z-30">
-                {link.children!.map((child) => (
-                  <Link
-                    key={child.href}
-                    to={child.href}
-                    onClick={onLinkClick}
-                    className="whitespace-normal px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-surface hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-                  >
-                    {child.label}
-                  </Link>
-                ))}
+              <div className="pointer-events-none absolute left-0 top-full hidden min-w-[240px] pt-2 group-hover:pointer-events-auto group-hover:block group-focus-within:block z-30">
+                <div className="flex flex-col rounded-md border border-surface bg-white py-2 shadow-lg transition">
+                  {link.children!.map((child) => (
+                    <Link
+                      key={child.href}
+                      to={child.href}
+                      onClick={onLinkClick}
+                      className="whitespace-normal px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-surface hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
             )}
           </div>
@@ -440,17 +441,19 @@ export function Navigation({
         </button>
 
         {hiddenLinks.length > 0 && (
-          <div className="pointer-events-none absolute left-0 top-[calc(100%+0.5rem)] hidden min-w-[220px] flex-col rounded-md border border-surface bg-white py-2 shadow-lg transition group-hover:pointer-events-auto group-hover:flex group-focus-within:flex">
-            {hiddenLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                onClick={onLinkClick}
-                className="whitespace-normal px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-surface hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="pointer-events-none absolute left-0 top-full hidden min-w-[220px] pt-2 group-hover:pointer-events-auto group-hover:block group-focus-within:block z-30">
+            <div className="flex flex-col rounded-md border border-surface bg-white py-2 shadow-lg transition">
+              {hiddenLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  onClick={onLinkClick}
+                  className="whitespace-normal px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-surface hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
         )}
       </div>

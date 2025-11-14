@@ -34,7 +34,7 @@ const pillars = [
 
 export function PillarsSection() {
   return (
-    <Section id="pillars" background="subtle">
+    <Section id="pillars" background="muted" className="bg-white text-black">
       <div className="flex flex-col gap-12">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -43,10 +43,10 @@ export function PillarsSection() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl space-y-4 text-center mx-auto"
         >
-          <Heading as="h2" level="h2" align="center" className="text-gray-900!">
+          <Heading as="h2" level="h2" align="center" className="text-black">
             Hackathon Pillars
           </Heading>
-          <Body size="lg" align="center" className="text-gray-900!">
+          <Body size="lg" align="center" className="text-black/80">
             Four strategic pillars guide every track, mentorship initiative, and
             partnership activation throughout the AfCFTA Hackathon.
           </Body>
@@ -61,17 +61,17 @@ export function PillarsSection() {
               viewport={{ once: true, amount: 0.35 }}
               transition={{ duration: 0.45, delay: index * 0.05 }}
             >
-              <Card className="h-full border-border/70 bg-gray-50! transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl">
+              <Card className="h-full border-white/15 bg-white/5 text-white transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl">
                 <CardHeader className="flex flex-col gap-4">
                   <span className="inline-flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
                     <Icon className="size-5" aria-hidden />
                   </span>
-                  <CardTitle className="text-lg font-semibold text-gray-900!">
+                  <CardTitle className="text-lg font-semibold text-white">
                     {title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-gray-900!">
-                  <Body size="sm" className="text-gray-900!">
+                <CardContent className="text-white">
+                  <Body size="sm" className="text-white/80">
                     {description}
                   </Body>
                 </CardContent>

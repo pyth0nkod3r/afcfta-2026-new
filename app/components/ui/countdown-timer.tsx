@@ -23,47 +23,50 @@ function CountdownTimer({
   completionMessage = "Event has started!",
   onComplete,
 }: CountdownTimerProps) {
-  const [timeLeft, setTimeLeft] = React.useState<TimeLeft | null>(null);
-  const [isComplete, setIsComplete] = React.useState(false);
-
-  React.useEffect(() => {
+  const computeTimeLeft = React.useCallback((): TimeLeft | null => {
     const target =
       typeof targetDate === "string" ? new Date(targetDate) : targetDate;
+    const now = Date.now();
+    const difference = target.getTime() - now;
 
-    const calculateTimeLeft = (): TimeLeft | null => {
-      const now = Date.now();
-      const difference = target.getTime() - now;
-
-      if (difference <= 0) {
-        setIsComplete(true);
-        onComplete?.();
-        return null;
-      }
-
-      return {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor(
-          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-        ),
-        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((difference % (1000 * 60)) / 1000),
-      };
+    if (difference <= 0) {
+      return null;
+    }
+    return {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      ),
+      minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+      seconds: Math.floor((difference % (1000 * 60)) / 1000),
     };
+  }, [targetDate]);
 
-    // Initial calculation
-    setTimeLeft(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = React.useState<TimeLeft | null>(
+    computeTimeLeft,
+  );
+  const [isComplete, setIsComplete] = React.useState(timeLeft === null);
+
+  React.useEffect(() => {
+    if (timeLeft === null) {
+      setIsComplete(true);
+      onComplete?.();
+      return;
+    }
 
     const interval = setInterval(() => {
-      const newTimeLeft = calculateTimeLeft();
-      if (newTimeLeft) {
-        setTimeLeft(newTimeLeft);
-      } else {
+      const next = computeTimeLeft();
+      if (!next) {
+        setIsComplete(true);
+        onComplete?.();
         clearInterval(interval);
+        return;
       }
+      setTimeLeft(next);
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [targetDate, onComplete]);
+  }, [computeTimeLeft, timeLeft, onComplete]);
 
   if (isComplete) {
     return (
@@ -101,7 +104,7 @@ function CountdownTimer({
       {timeUnits.map((unit, index) => (
         <React.Fragment key={unit.label}>
           <div className="flex flex-col items-center justify-center">
-            <div className="flex min-w-13 items-center justify-center rounded-lg bg-primary/10 px-3 py-2 md:min-w-16 md:px-4 md:py-3">
+            <div className="flex min-w-13 items-center ...">
               <span className="font-heading text-2xl font-semibold text-primary md:text-3xl lg:text-4xl">
                 {String(unit.value).padStart(2, "0")}
               </span>

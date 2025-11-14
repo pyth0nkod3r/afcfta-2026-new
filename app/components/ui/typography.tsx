@@ -67,6 +67,7 @@ function Heading({
 const bodyVariants = cva("font-sans text-gray-700 dark:text-gray-300", {
   variants: {
     size: {
+      xs: "text-xs md:text-sm leading-relaxed",
       sm: "text-sm md:text-base leading-relaxed",
       default: "text-base md:text-lg leading-relaxed",
       lg: "text-lg md:text-xl leading-relaxed",

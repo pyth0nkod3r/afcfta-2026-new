@@ -140,7 +140,7 @@ function TimelineItemVertical({
 
 function renderHorizontalTimeline(items: TimelineItem[]) {
   return (
-    <div className="flex w-full min-w-0 gap-6 md:gap-8">
+    <div className="flex w-full min-w-0 gap-6 md:gap-8 items-stretch">
       {items.map((item, index) => (
         <TimelineItemHorizontal
           key={item.id}
@@ -167,7 +167,7 @@ function TimelineItemHorizontal({
       className="relative flex w-full min-w-[220px] flex-col"
     >
       {!isLast && (
-        <div className="absolute right-6 top-5 hidden h-px w-[calc(100%+1.5rem)] bg-gray-200 dark:bg-gray-700 md:block" />
+        <div className="absolute left-[calc(50%+1.5rem)] top-6 hidden h-px w-[calc(100%-3rem+1.5rem+1.5rem)] bg-gray-200 dark:bg-gray-700 md:block md:left-[calc(50%+2rem)] md:top-6 md:w-[calc(100%-4rem+2rem+2rem)]" />
       )}
 
       <div
@@ -179,7 +179,7 @@ function TimelineItemHorizontal({
         {item.icon ? <span className="text-sm">{item.icon}</span> : null}
       </div>
 
-      <div className="flex flex-col gap-2 rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-neutral-900">
+      <div className="flex flex-col gap-2 rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-neutral-900 h-full">
         {item.date && (
           <span className="text-xs font-semibold uppercase tracking-wide text-primary md:text-sm">
             {item.date}

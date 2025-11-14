@@ -2,6 +2,9 @@ import type { Route } from "./+types/home";
 import { HeroSection } from "~/components/hero-section";
 import { AboutSection } from "~/components/about-section";
 import { PillarsSection } from "~/components/pillars-section";
+import { TimelinePreviewSection } from "~/components/timeline-preview-section";
+import { RewardsPreviewSection } from "~/components/rewards-preview-section";
+import { ChallengeTracksPreviewSection } from "~/components/challenge-tracks-section";
 
 export const meta: Route.MetaFunction = () => [
   { title: "AfCFTA Hackathon 2026 — Accelerating Digital Trade" },
@@ -18,7 +21,9 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <PillarsSection />
-
+      <TimelinePreviewSection />
+      <RewardsPreviewSection />
+      <ChallengeTracksPreviewSection />
       {/* Attach subsequent sections here once their tasks are ready */}
     </>
   );
