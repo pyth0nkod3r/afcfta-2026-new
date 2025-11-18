@@ -2,13 +2,13 @@ import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-import path from "path";
+import { fileURLToPath, URL } from "url";
 
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
   resolve: {
     alias: {
-      "~": path.resolve(__dirname, "./app"),
+      "~": fileURLToPath(new URL("./app", import.meta.url)),
     },
   },
 });
