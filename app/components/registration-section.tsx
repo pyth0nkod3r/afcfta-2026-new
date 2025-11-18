@@ -283,7 +283,7 @@ export function HeroSection() {
       aria-labelledby="hero-heading"
     >
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/images/hero-placeholder.jpg')] bg-cover bg-center opacity-40 md:opacity-60" />
+        <div className="absolute inset-0 bg-[url('/images/hero-placeholder.png')] bg-cover bg-center opacity-40 md:opacity-60" />
         <div className="absolute inset-0 bg-linear-to-br from-primary/90 via-primary/80 to-background/85" />
       </div>
 
