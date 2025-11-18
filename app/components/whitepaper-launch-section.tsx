@@ -72,12 +72,13 @@ export function WhitepaperLaunchSection() {
             Whitepaper Launch
           </Body>
           <Heading as="h2" level="h2" className="text-white!">
-            AfCFTA Digital Trade Innovation Whitepaper 2026
+            Launch of the AfCFTA Nigeria Whitepaper on Digital Trade, Technology
+            & Innovation
           </Heading>
           <Body size="lg" className="text-white/80">
-            A policy-to-product blueprint detailing how startups, corporates,
-            and public-sector partners can activate continental digital trade
-            rails ahead of the 2026 Hackathon showcase.
+            Strengthen Nigeria&apos;s leadership in AfCFTA Digital Trade. This
+            whitepaper aligns policy with innovation and launches during the
+            Hackathon Opening Ceremony.
           </Body>
 
           <div className="flex flex-wrap gap-3">
@@ -117,6 +118,24 @@ export function WhitepaperLaunchSection() {
               </div>
             ))}
           </div>
+
+          {/* Key Points */}
+          <ul className="space-y-3 text-sm text-white/70">
+            <li className="flex items-start gap-2">
+              <span className="mt-1 h-2 w-2 rounded-full bg-secondary" />
+              <span>
+                Strengthen Nigeria&apos;s leadership in AfCFTA Digital Trade
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mt-1 h-2 w-2 rounded-full bg-secondary" />
+              <span>Align policy with innovation</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mt-1 h-2 w-2 rounded-full bg-secondary" />
+              <span>Launch during Hackathon Opening Ceremony</span>
+            </li>
+          </ul>
         </motion.div>
 
         <motion.div

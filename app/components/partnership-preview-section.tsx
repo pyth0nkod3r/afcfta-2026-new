@@ -1,6 +1,6 @@
 // app/components/partnership-preview-section.tsx
 import { motion } from "framer-motion";
-import { BadgeCheck, Building2, Handshake, Users } from "lucide-react";
+import { BadgeCheck, Building2, Handshake, Gem } from "lucide-react";
 import { Link } from "react-router";
 import { Section } from "./ui/section";
 import { Heading, Body } from "./ui/typography";
@@ -27,17 +27,18 @@ const PARTNER_TIERS = [
     highlight: true,
   },
   {
-    name: "Gold",
-    icon: Building2,
+    name: "Diamond",
+    icon: Gem, // You may need to import Gem from lucide-react
     perks: [
       "Premium branding across all media",
       "Investor matchmaking session",
       "Host private roundtable event",
+      "Priority access to winning teams",
     ],
   },
   {
-    name: "Silver",
-    icon: Handshake,
+    name: "Gold",
+    icon: Building2,
     perks: [
       "Official partner logo placement",
       "Participate in mentor clinics",
@@ -45,9 +46,13 @@ const PARTNER_TIERS = [
     ],
   },
   {
-    name: "Community",
-    icon: Users,
-    perks: ["Grassroots & university partners", "Open mentoring invitation"],
+    name: "Silver",
+    icon: Handshake,
+    perks: [
+      "Partner logo on website",
+      "Social media mentions",
+      "Event program listing",
+    ],
   },
 ];
 
@@ -69,16 +74,12 @@ export function PartnershipPreviewSection() {
       >
         <div className="space-y-5 text-center">
           <Heading as="h2" level="h2" align="center" className="text-white!">
-            Join as a Partner
+            ₦60 Million in Prizes + Mentorship & Acceleration Opportunities
           </Heading>
-          <Body
-            size="lg"
-            align="center"
-            className="mx-auto max-w-2xl text-white/75"
-          >
-            Support Africa’s next generation of innovators, policy pilots, and
-            digital entrepreneurs. Multi-tiered partnerships offer branding,
-            recruiting, and networking benefits.
+          <Body size="lg" align="center" className="text-white/80">
+            Significant cash prizes, implementation grants, and non-cash
+            benefits accelerate winning teams from prototype to pilot across the
+            continent.
           </Body>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">

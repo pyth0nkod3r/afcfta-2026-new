@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Globe2, Network, ShieldCheck, Sparkles } from "lucide-react";
+import { Globe2, Lightbulb, Network, Sparkles } from "lucide-react";
 
 import { Section } from "./ui/section";
 import { Heading, Body } from "./ui/typography";
@@ -7,28 +7,28 @@ import { cn } from "~/lib/utils";
 
 const objectives = [
   {
-    title: "Unlock Digital Trade",
+    title: "Inspire innovation around digital trade",
     description:
-      "Design products that lower market-entry barriers and streamline AfCFTA-aligned cross-border commerce.",
+      "Foster creative solutions that transform how Africa trades digitally.",
+    icon: Sparkles,
+  },
+  {
+    title: "Build cross-border trade solutions",
+    description:
+      "Develop technology-driven solutions that accelerate intra-African commerce.",
     icon: Globe2,
   },
   {
-    title: "Empower SMEs",
+    title: "Connect Africa's tech ecosystem",
     description:
-      "Build tools that give small businesses actionable data, frictionless payments, and scalable logistics.",
+      "Bring together innovators, developers, policymakers, and entrepreneurs.",
     icon: Network,
   },
   {
-    title: "Strengthen Trust",
+    title: "Showcase AI, fintech, and logistics innovations",
     description:
-      "Prototype secure, transparent systems that boost confidence in continental supply chains and governance.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Ignite Innovation",
-    description:
-      "Showcase frontier ideas that connect Africa’s builders, investors, and policy leaders across all regions.",
-    icon: Sparkles,
+      "Highlight cutting-edge technologies shaping Africa's digital trade future.",
+    icon: Lightbulb,
   },
 ];
 
@@ -44,12 +44,13 @@ export function AboutSection() {
           className="space-y-4 text-center"
         >
           <Heading as="h2" level="h2" align="center" className="text-white!">
-            About the AfCFTA Hackathon
+            Empowering Africa&apos;s Digital Trade Future
           </Heading>
           <Body size="lg" align="center" className="text-white!">
-            The AfCFTA Hackathon brings technologists, policymakers, and
-            industry partners together to co-create digital infrastructure that
-            accelerates intra-African trade and inclusive growth.
+            The AfCFTA Hackathon 2026 brings together innovators, developers,
+            policymakers, and entrepreneurs to build technology-driven trade
+            solutions that accelerate Africa&apos;s digital transformation under
+            the African Continental Free Trade Area (AfCFTA) framework.
           </Body>
         </motion.div>
 

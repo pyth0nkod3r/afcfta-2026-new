@@ -5,7 +5,8 @@ import { CountdownTimer } from "./ui/countdown-timer";
 import { Button } from "./ui/button";
 import { cn } from "~/lib/utils";
 
-const eventDate = new Date("2026-11-10T09:00:00+01:00");
+// Countdown from launch date: April 10, 2026
+const launchDate = new Date("2026-04-10T09:00:00+01:00");
 
 export function HeroSection() {
   return (
@@ -35,37 +36,36 @@ export function HeroSection() {
                 id="hero-heading"
                 className="text-3xl font-heading font-bold leading-tight sm:text-4xl lg:text-5xl xl:text-6xl"
               >
-                Building Africa&apos;s Digital Trade Future.
+                Digital Trade, Technology & AI — The New Trade Frontier
               </h1>
               <p className="max-w-2xl text-base text-white/80 sm:text-lg">
-                Join innovators across the continent in Abuja and virtually as
-                we unlock solutions that accelerate intra-African trade, empower
-                SMEs, and deliver on the promise of the AfCFTA Digital Trade
-                Protocol.
+                Join innovators, developers, policymakers, and entrepreneurs to
+                build technology-driven trade solutions that accelerate
+                Africa&apos;s digital transformation under the AfCFTA framework.
               </p>
             </div>
 
-            <ul className="flex flex-col gap-4 text-sm sm:flex-row sm:flex-wrap sm:text-base">
+            <ul className="flex flex-row gap-4 text-sm sm:text-base">
               {[
                 {
                   icon: MapPin,
                   label: "Location",
-                  value: "Abuja, Nigeria + Pan-African Virtual Hubs",
+                  value: "Abuja, Nigeria",
                 },
                 {
                   icon: CalendarDays,
                   label: "Dates",
-                  value: "10 – 14 November 2026",
+                  value: "April 8–10, 2026",
                 },
                 {
                   icon: Radio,
                   label: "Format",
-                  value: "Hybrid (On-site + Synchronized Virtual Tracks)",
+                  value: "Hybrid Event",
                 },
               ].map(({ icon: Icon, label, value }) => (
                 <li
                   key={label}
-                  className="flex items-start gap-3 rounded-2xl bg-white/10 px-4 py-3 backdrop-blur-sm sm:min-w-[220px]"
+                  className="flex items-start gap-3 rounded-2xl bg-white/10 px-4 py-3 backdrop-blur-sm flex-1 min-w-0"
                 >
                   <Icon className="mt-0.5 size-5 text-secondary" aria-hidden />
                   <div>
@@ -112,10 +112,10 @@ export function HeroSection() {
             )}
           >
             <p className="text-center text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
-              Countdown to Kickoff
+              Launches in
             </p>
             <CountdownTimer
-              targetDate={eventDate}
+              targetDate={launchDate}
               className="mt-6"
               completionMessage="AfCFTA Hackathon 2026 is live!"
             />

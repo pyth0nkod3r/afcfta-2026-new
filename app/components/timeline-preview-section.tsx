@@ -11,27 +11,27 @@ const timelinePhases: TimelineItem[] = [
   {
     id: "phase-1",
     title: "Pre-Hackathon",
-    date: "September - October 2026",
+    date: "Nov 2025 – Mar 2026",
     description:
-      "Registration opens, team formation, mentorship matching, and virtual workshops to prepare participants for the hackathon.",
+      "Launch, registration, team selection, and outreach activities to prepare participants.",
     status: "upcoming",
     icon: <Calendar className="size-4" />,
   },
   {
     id: "phase-2",
-    title: "Hackathon Days",
-    date: "10 - 14 November 2026",
+    title: "Hackathon",
+    date: "Apr 8–10, 2026",
     description:
-      "Five days of intensive building, mentorship sessions, pitch development, and cross-track collaboration in Abuja and virtual hubs.",
+      "Live competition, mentorship sessions, judging, and awards ceremony in Abuja and virtual hubs.",
     status: "upcoming",
     icon: <Rocket className="size-4" />,
   },
   {
     id: "phase-3",
     title: "Post-Hackathon",
-    date: "November 2026 - Q1 2027",
+    date: "Apr – Oct 2026",
     description:
-      "Judging, awards ceremony, pilot program launches, and integration support for winning teams to scale their solutions.",
+      "Incubation programs, implementation support, evaluation, and final reporting for winning teams.",
     status: "upcoming",
     icon: <Trophy className="size-4" />,
   },
@@ -49,7 +49,7 @@ export function TimelinePreviewSection() {
           className="max-w-3xl space-y-4 text-center mx-auto"
         >
           <Heading as="h2" level="h2" align="center" className="text-white!">
-            Event Timeline
+            Hackathon Journey — From Vision to Impact
           </Heading>
           <Body size="lg" align="center" className="text-white!">
             Three phases structure the AfCFTA Hackathon 2026, from preparation

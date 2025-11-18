@@ -36,56 +36,60 @@ const prizeTiers: PrizeTier[] = [
   {
     id: "grand",
     title: "Grand Prize",
-    amount: "$100,000",
-    description: "Cash + AfCFTA flagship pilot deployment",
+    amount: "₦20,000,000",
+    description: "Trophy + Pilot Project + Accelerator Admission",
     highlights: [
-      "12-month integration grant with AfCFTA Digital Trade Protocol",
-      "VIP showcase at Awards & Policy Forum",
+      "Trophy recognition",
+      "Pilot project deployment opportunity",
+      "Accelerator program admission",
     ],
     icon: Trophy,
     featured: true,
   },
   {
     id: "second",
-    title: "2nd Place",
-    amount: "$40,000",
-    description: "Capital + cross-border expansion sprint",
+    title: "2nd Prize",
+    amount: "₦10,000,000",
+    description: "Cash + Mentorship",
     highlights: [
-      "Dedicated investor roundtable",
-      "Technical due-diligence support",
+      "Cash prize",
+      "Dedicated mentorship program",
+      "Innovation hub access",
     ],
     icon: Medal,
   },
   {
     id: "third",
-    title: "3rd Place",
-    amount: "$25,000",
-    description: "Productization & go-to-market coaching",
-    highlights: [
-      "Legal and compliance playbook",
-      "Cloud + API credits from partners",
-    ],
+    title: "3rd Prize",
+    amount: "₦7,000,000",
+    description: "Cash + Innovation Hub Access",
+    highlights: ["Cash prize", "Innovation hub access", "Technical support"],
     icon: Award,
   },
   {
     id: "top10",
-    title: "Top 10 Finalists",
-    amount: "$10,000 / team",
-    description: "Cash + pilot-ready mentorship",
+    title: "Top 10 Teams",
+    amount: "Share ₦23,000,000",
+    description: "Cash prizes distributed among top teams",
     highlights: [
-      "Rapid prototyping bootcamp (Abuja + virtual)",
-      "Ongoing mentor office hours post-event",
+      "Shared prize pool",
+      "Recognition certificates",
+      "Mentorship opportunities",
     ],
     icon: Star,
   },
   {
     id: "category",
     title: "Category Awards",
-    amount: "$5,000 x10",
-    description: "Thematic recognitions across tracks",
+    amount: "Multiple Categories",
+    description:
+      "FinTech, AgriTech, Logistics, AI Tools, Women & Youth Innovation",
     highlights: [
-      "Sponsored showcases at partner summits",
-      "Feature in AfCFTA Innovation Report 2026",
+      "FinTech Innovation Award",
+      "AgriTech Excellence Award",
+      "Logistics & Supply Chain Award",
+      "AI Tools for Trade Award",
+      "Women & Youth Innovation Award",
     ],
     icon: Sparkles,
   },
@@ -139,7 +143,7 @@ export function RewardsPreviewSection() {
           className="text-center space-y-4"
         >
           <Heading as="h2" level="h2" align="center" className="text-white!">
-            Rewards & Incentives Snapshot
+            ₦60 Million in Prizes + Mentorship & Acceleration Opportunities
           </Heading>
           <Body size="lg" align="center" className="text-white/80">
             Significant cash prizes, implementation grants, and non-cash

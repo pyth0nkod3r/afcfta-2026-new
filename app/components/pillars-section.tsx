@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Lightbulb, Route, Users2, Zap } from "lucide-react";
+import { Brain, Lightbulb, Leaf, Users2 } from "lucide-react";
 
 import { Section } from "./ui/section";
 import { Heading, Body } from "./ui/typography";
@@ -7,28 +7,28 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 const pillars = [
   {
-    title: "Innovation at Scale",
+    title: "Innovation for Digital Trade",
     description:
-      "Champion bold ideas that leverage emerging tech to unlock AfCFTA-aligned business models for millions.",
+      "Championing innovative solutions that transform how Africa conducts digital commerce.",
     icon: Lightbulb,
   },
   {
-    title: "Policy Meets Product",
+    title: "AI for Trade Facilitation",
     description:
-      "Bridge regulators and builders to design solutions that align seamlessly with continental trade policies.",
-    icon: Route,
+      "Leveraging artificial intelligence to streamline and optimize cross-border trade processes.",
+    icon: Brain,
   },
   {
-    title: "Inclusive Collaboration",
+    title: "Technology for MSMEs",
     description:
-      "Enable cross-border, cross-discipline teams to co-create sustainable growth for SMEs and youth.",
+      "Empowering micro, small, and medium enterprises with accessible digital trade tools.",
     icon: Users2,
   },
   {
-    title: "Execution Velocity",
+    title: "Sustainability & Inclusion",
     description:
-      "Turn prototypes into pilots fast with access to mentors, investors, and integration partners.",
-    icon: Zap,
+      "Ensuring equitable growth and sustainable practices across Africa&apos;s digital trade ecosystem.",
+    icon: Leaf,
   },
 ];
 
