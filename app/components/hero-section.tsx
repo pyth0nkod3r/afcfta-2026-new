@@ -1,9 +1,8 @@
-// app/components/hero-section.tsx
 import { motion } from "framer-motion";
 import { CalendarDays, MapPin, Radio } from "lucide-react";
 import { CountdownTimer } from "./ui/countdown-timer";
 import { Button } from "./ui/button";
-import { cn } from "~/lib/utils";
+import { cn } from "../lib/utils";
 
 // Countdown from launch date: April 10, 2026
 const launchDate = new Date("2026-04-10T09:00:00+01:00");
