@@ -56,14 +56,16 @@ export function PartnershipPreviewSection() {
     <Section
       id="partnership"
       background="muted"
-      className="relative bg-linear-to-b from-black via-neutral-950 to-neutral-900 text-white"
+      className="relative bg-white text-black"
     >
+      {/* <div className="rounded-[36px] border border-white/15 bg-black/60 p-10 text-white shadow-[0_20px_80px_rgba(0,0,0,0.45)]"> */}
+
       <motion.div
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.5 }}
-        className="mx-auto max-w-7xl flex flex-col gap-10"
+        className="mx-auto flex max-w-7xl flex-col gap-10"
       >
         <div className="space-y-5 text-center">
           <Heading as="h2" level="h2" align="center" className="text-white!">
@@ -72,7 +74,7 @@ export function PartnershipPreviewSection() {
           <Body
             size="lg"
             align="center"
-            className="mx-auto max-w-2xl text-white/70"
+            className="mx-auto max-w-2xl text-white/75"
           >
             Support Africa’s next generation of innovators, policy pilots, and
             digital entrepreneurs. Multi-tiered partnerships offer branding,
@@ -85,18 +87,22 @@ export function PartnershipPreviewSection() {
             return (
               <Card
                 key={tier.name}
-                className="h-full border border-gray-200 bg-gray-50! text-gray-900! shadow-md"
+                className={cn(
+                  "h-full border-white/15 bg-white/5 text-white shadow-xl backdrop-blur-sm",
+                  tier.highlight &&
+                    "bg-linear-to-br from-primary/40 via-primary/20 to-secondary/40 border-white/25",
+                )}
               >
-                <CardHeader className="flex flex-col items-center gap-2">
-                  <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-gray-200 text-primary">
+                <CardHeader className="flex flex-col items-center gap-2 text-center">
+                  <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-white/15 text-white">
                     <Icon className="size-5" aria-hidden />
                   </span>
-                  <CardTitle className="text-gray-900! text-xl">
+                  <CardTitle className="text-xl text-white">
                     {tier.name} Partner
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-sm text-gray-900!">
+                  <ul className="space-y-2 text-sm text-white/80">
                     {tier.perks.map((perk) => (
                       <li key={perk} className="flex items-center gap-2">
                         <span className="h-2 w-2 rounded-full bg-secondary" />
@@ -108,14 +114,13 @@ export function PartnershipPreviewSection() {
                 <CardFooter className="mt-auto">
                   <Button
                     asChild
-                    variant={tier.highlight ? "primary" : "outline"}
                     className={cn(
                       "w-full",
-                      tier.highlight &&
-                        "bg-primary text-white hover:bg-primary/90",
-                      !tier.highlight &&
-                        "border-gray-300 bg-white text-gray-700 hover:bg-primary hover:text-white",
+                      tier.highlight
+                        ? "bg-white text-black hover:bg-white/90"
+                        : "border-white/30 text-white hover:bg-white hover:text-black",
                     )}
+                    variant={tier.highlight ? "secondary" : "outline"}
                   >
                     <Link to="/partners">Become a Partner</Link>
                   </Button>
@@ -125,6 +130,7 @@ export function PartnershipPreviewSection() {
           })}
         </div>
       </motion.div>
+      {/* </div> */}
     </Section>
   );
 }

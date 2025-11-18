@@ -7,6 +7,8 @@ import { RewardsPreviewSection } from "~/components/rewards-preview-section";
 import { ChallengeTracksPreviewSection } from "~/components/challenge-tracks-section";
 import { WhitepaperLaunchSection } from "~/components/whitepaper-launch-section";
 import { PartnershipPreviewSection } from "~/components/partnership-preview-section";
+import { MediaCommunitySection } from "~/components/media-community-section";
+import { RegistrationSection } from "~/components/registration-section";
 
 export const meta: Route.MetaFunction = () => [
   { title: "AfCFTA Hackathon 2026 — Accelerating Digital Trade" },
@@ -28,6 +30,8 @@ export default function Home() {
       <ChallengeTracksPreviewSection />
       <WhitepaperLaunchSection />
       <PartnershipPreviewSection />
+      <MediaCommunitySection />
+      <RegistrationSection />
       {/* Attach subsequent sections here once their tasks are ready */}
     </>
   );
