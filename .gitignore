@@ -78,8 +78,6 @@ build/
 dist/
 eggs/
 .eggs/
-lib/
-!app/lib/
 parts/
 sdist/
 var/
