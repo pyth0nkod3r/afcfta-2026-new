@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Brain, Lightbulb, Leaf, Users2 } from "lucide-react";
 
-import { Section } from "./ui/section";
-import { Heading, Body } from "./ui/typography";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Section } from "../ui/section";
+import { Heading, Body } from "../ui/typography";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 const pillars = [
   {

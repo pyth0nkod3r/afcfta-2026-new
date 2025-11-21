@@ -25,9 +25,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Brand Section */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2 text-xl md:text-2xl font-heading font-bold">
-              <span>AfCFTA</span>
-              <span className="text-secondary">2026</span>
+            <div className="flex items-center gap-2">
+              <img
+                src="/images/afcfta-logo.jpg"
+                alt="Nigeria AfCFTA Coordination Office"
+                className="h-12 w-auto" // Adjust size as needed
+                style={{ borderRadius: "50%" }} // Optional
+              />
+              <span className="sr-only">AfCFTA 2026 Footer Home</span>
             </div>
             <p className="text-sm text-gray-400">
               Empowering African innovation through technology and

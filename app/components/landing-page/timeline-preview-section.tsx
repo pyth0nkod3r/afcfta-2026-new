@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Calendar, Rocket, Trophy } from "lucide-react";
 import { Link } from "react-router";
 
-import { Section } from "./ui/section";
-import { Heading, Body } from "./ui/typography";
-import { Button } from "./ui/button";
-import { Timeline, type TimelineItem } from "./ui/timeline";
+import { Section } from "../ui/section";
+import { Heading, Body } from "../ui/typography";
+import { Button } from "../ui/button";
+import { Timeline, type TimelineItem } from "../ui/timeline";
 
 const timelinePhases: TimelineItem[] = [
   {

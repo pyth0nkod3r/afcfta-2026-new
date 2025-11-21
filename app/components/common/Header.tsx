@@ -53,8 +53,13 @@ export function Header() {
             className="flex items-center gap-2 text-xl md:text-2xl font-heading font-bold text-primary hover:text-accent transition-colors"
             onClick={closeMobileMenu}
           >
-            <span>AfCFTA</span>
-            <span className="text-secondary">2026</span>
+            <img
+              src="/images/afcfta-logo.jpg"
+              alt="Nigeria AfCFTA Coordination Office"
+              className="h-10 w-auto" // adjust size as needed (e.g., h-10 for Tailwind)
+              style={{ borderRadius: "50%" }} // optional: make logo circular
+            />
+            <span className="sr-only">AfCFTA 2026 Home</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -9,17 +9,17 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 
-import { Section } from "./ui/section";
-import { Heading, Body } from "./ui/typography";
+import { Section } from "../ui/section";
+import { Heading, Body } from "../ui/typography";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import { Button } from "./ui/button";
+} from "../ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
+import { Button } from "../ui/button";
 import { cn } from "~/lib/utils";
 
 type PrizeTier = {

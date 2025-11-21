@@ -8,16 +8,16 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 
-import { Section } from "./ui/section";
-import { Heading, Body } from "./ui/typography";
-import { Button } from "./ui/button";
+import { Section } from "../ui/section";
+import { Heading, Body } from "../ui/typography";
+import { Button } from "../ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
+} from "../ui/card";
 
 const releaseStats = [
   { label: "Pages of deep dives", value: "94" },

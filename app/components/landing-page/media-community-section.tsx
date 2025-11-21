@@ -12,10 +12,10 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 
-import { Section } from "./ui/section";
-import { Heading, Body } from "./ui/typography";
-import { Button } from "./ui/button";
-import { Card, CardContent } from "./ui/card";
+import { Section } from "../ui/section";
+import { Heading, Body } from "../ui/typography";
+import { Button } from "../ui/button";
+import { Card, CardContent } from "../ui/card";
 
 const socialPlatforms = [
   {

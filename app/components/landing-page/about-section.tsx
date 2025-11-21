@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Globe2, Lightbulb, Network, Sparkles } from "lucide-react";
 
-import { Section } from "./ui/section";
-import { Heading, Body } from "./ui/typography";
+import { Section } from "../ui/section";
+import { Heading, Body } from "../ui/typography";
 import { cn } from "~/lib/utils";
 
 const objectives = [

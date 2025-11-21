@@ -2,16 +2,16 @@
 import { motion } from "framer-motion";
 import { BadgeCheck, Building2, Handshake, Gem } from "lucide-react";
 import { Link } from "react-router";
-import { Section } from "./ui/section";
-import { Heading, Body } from "./ui/typography";
+import { Section } from "../ui/section";
+import { Heading, Body } from "../ui/typography";
 import {
   Card,
   CardHeader,
   CardTitle,
   CardContent,
   CardFooter,
-} from "./ui/card";
-import { Button } from "./ui/button";
+} from "../ui/card";
+import { Button } from "../ui/button";
 import { cn } from "~/lib/utils";
 
 const PARTNER_TIERS = [

@@ -15,8 +15,8 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 
-import { Section } from "./ui/section";
-import { Heading, Body } from "./ui/typography";
+import { Section } from "../ui/section";
+import { Heading, Body } from "../ui/typography";
 import {
   Card,
   CardAction,
@@ -24,15 +24,15 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-import { Badge } from "./ui/badge";
+} from "../ui/card";
+import { Badge } from "../ui/badge";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "./ui/accordion";
-import { Button } from "./ui/button";
+} from "../ui/accordion";
+import { Button } from "../ui/button";
 
 type ChallengeTrack = {
   id: string;

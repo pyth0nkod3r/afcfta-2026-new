@@ -28,13 +28,13 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 
-import { Section } from "./ui/section";
-import { Heading, Body } from "./ui/typography";
-import { Button } from "./ui/button";
+import { Section } from "../ui/section";
+import { Heading, Body } from "../ui/typography";
+import { Button } from "../ui/button";
 import { cn } from "~/lib/utils";
-import { CountdownTimer } from "./ui/countdown-timer";
-import { Timeline, type TimelineItem } from "./ui/timeline";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { CountdownTimer } from "../ui/countdown-timer";
+import { Timeline, type TimelineItem } from "../ui/timeline";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 // Countdown from launch date: November 10, 2025
 const launchDate = new Date("2025-11-10T09:00:00+01:00");
