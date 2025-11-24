@@ -10,7 +10,12 @@
       }
     },
     "routeIdToServerBundleId": {
-      "routes/home": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0"
+      "routes/home": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/challenge-tracks": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/portal-index": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/portal-assessment": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/portal-results": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/portal-register": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0"
     },
     "routes": {
       "root": {
@@ -24,6 +29,51 @@
         "parentId": "root",
         "file": "app/routes/home.tsx",
         "index": true,
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/challenge-tracks": {
+        "id": "routes/challenge-tracks",
+        "parentId": "root",
+        "file": "app/routes/challenge-tracks.tsx",
+        "path": "/challenge-tracks",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/portal-index": {
+        "id": "routes/portal-index",
+        "parentId": "root",
+        "file": "app/routes/portal-index.tsx",
+        "path": "/portal",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/portal-assessment": {
+        "id": "routes/portal-assessment",
+        "parentId": "root",
+        "file": "app/routes/portal-assessment.tsx",
+        "path": "/portal/assessment",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/portal-results": {
+        "id": "routes/portal-results",
+        "parentId": "root",
+        "file": "app/routes/portal-results.tsx",
+        "path": "/portal/results",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/portal-register": {
+        "id": "routes/portal-register",
+        "parentId": "root",
+        "file": "app/routes/portal-register.tsx",
+        "path": "/portal/register",
         "config": {
           "runtime": "nodejs"
         }
@@ -52,6 +102,36 @@
         "parentId": "root",
         "file": "routes/home.tsx",
         "index": true
+      },
+      "routes/challenge-tracks": {
+        "id": "routes/challenge-tracks",
+        "parentId": "root",
+        "file": "routes/challenge-tracks.tsx",
+        "path": "/challenge-tracks"
+      },
+      "routes/portal-index": {
+        "id": "routes/portal-index",
+        "parentId": "root",
+        "file": "routes/portal-index.tsx",
+        "path": "/portal"
+      },
+      "routes/portal-assessment": {
+        "id": "routes/portal-assessment",
+        "parentId": "root",
+        "file": "routes/portal-assessment.tsx",
+        "path": "/portal/assessment"
+      },
+      "routes/portal-results": {
+        "id": "routes/portal-results",
+        "parentId": "root",
+        "file": "routes/portal-results.tsx",
+        "path": "/portal/results"
+      },
+      "routes/portal-register": {
+        "id": "routes/portal-register",
+        "parentId": "root",
+        "file": "routes/portal-register.tsx",
+        "path": "/portal/register"
       }
     },
     "routeDiscovery": {
@@ -70,6 +150,26 @@
           {
             "file": "routes/home.tsx",
             "index": true
+          },
+          {
+            "file": "routes/challenge-tracks.tsx",
+            "path": "/challenge-tracks"
+          },
+          {
+            "file": "routes/portal-index.tsx",
+            "path": "/portal"
+          },
+          {
+            "file": "routes/portal-assessment.tsx",
+            "path": "/portal/assessment"
+          },
+          {
+            "file": "routes/portal-results.tsx",
+            "path": "/portal/results"
+          },
+          {
+            "file": "routes/portal-register.tsx",
+            "path": "/portal/register"
           }
         ]
       }
