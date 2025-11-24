@@ -3,7 +3,8 @@ import { type RouteConfig, index, route } from "@react-router/dev/routes";
 export default [
   index("routes/home.tsx"),
   route("/challenge-tracks", "routes/challenge-tracks.tsx"),
-  
+  route("/faqs", "routes/faq.tsx"),
+
   // Portal routes
   route("/portal", "routes/portal-index.tsx"),
   route("/portal/assessment", "routes/portal-assessment.tsx"),
