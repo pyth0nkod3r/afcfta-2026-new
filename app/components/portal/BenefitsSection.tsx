@@ -5,24 +5,27 @@ const benefits = [
   {
     icon: Globe,
     title: "Continental Trade Access",
-    description: "Join the largest free trade area in the world and access markets across 54 African countries.",
+    description:
+      "Join the largest free trade area in the world and access markets across 54 African countries.",
     iconBg: "bg-primary/10",
-    iconColor: "text-primary"
+    iconColor: "text-primary",
   },
   {
     icon: TrendingUp,
     title: "Business Growth",
-    description: "Expand your business reach, increase revenue streams, and build international partnerships.",
+    description:
+      "Expand your business reach, increase revenue streams, and build international partnerships.",
     iconBg: "bg-success/10",
-    iconColor: "text-success"
+    iconColor: "text-success",
   },
   {
     icon: Shield,
     title: "Compliance Support",
-    description: "Get comprehensive guidance on meeting all regulatory requirements for cross-border trade.",
+    description:
+      "Get comprehensive guidance on meeting all regulatory requirements for cross-border trade.",
     iconBg: "bg-accent/10",
-    iconColor: "text-accent-foreground"
-  }
+    iconColor: "text-accent-foreground",
+  },
 ];
 
 const BenefitsSection = () => {
@@ -33,11 +36,13 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
-              <Card 
+              <Card
                 key={index}
                 className="p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50"
               >
-                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${benefit.iconBg} mb-4`}>
+                <div
+                  className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${benefit.iconBg} mb-4`}
+                >
                   <Icon className={`w-6 h-6 ${benefit.iconColor}`} />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">
@@ -56,4 +61,3 @@ const BenefitsSection = () => {
 };
 
 export default BenefitsSection;
-

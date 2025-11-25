@@ -5,8 +5,20 @@ import { Card } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 import { Textarea } from "~/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "~/components/ui/select";
-import { ArrowLeft, ArrowRight, Building2, FileText, Upload } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "~/components/ui/select";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Building2,
+  FileText,
+  Upload,
+} from "lucide-react";
 import Header from "~/components/portal/Header";
 import { useToast } from "~/hooks/use-toast";
 
@@ -18,11 +30,12 @@ const Register = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (step < totalSteps) {
-      setStep(prev => prev + 1);
+      setStep((prev) => prev + 1);
     } else {
       toast({
         title: "Registration Submitted!",
-        description: "Your application has been received and is being processed. We'll contact you within 2-3 business days.",
+        description:
+          "Your application has been received and is being processed. We'll contact you within 2-3 business days.",
       });
     }
   };
@@ -30,12 +43,15 @@ const Register = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <section className="w-full py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="mb-8">
-              <Link to="/portal/results?score=100" className="text-primary hover:underline inline-flex items-center gap-2 mb-4">
+              <Link
+                to="/portal/results?score=100"
+                className="text-primary hover:underline inline-flex items-center gap-2 mb-4"
+              >
                 <ArrowLeft className="w-4 h-4" />
                 Back to Results
               </Link>
@@ -76,18 +92,30 @@ const Register = () => {
                   <>
                     <div className="flex items-center gap-3 mb-6">
                       <Building2 className="w-6 h-6 text-primary" />
-                      <h2 className="text-2xl font-bold text-foreground">Company Information</h2>
+                      <h2 className="text-2xl font-bold text-foreground">
+                        Company Information
+                      </h2>
                     </div>
 
                     <div className="space-y-4">
                       <div>
                         <Label htmlFor="company-name">Company Name *</Label>
-                        <Input id="company-name" required placeholder="Enter your company name" />
+                        <Input
+                          id="company-name"
+                          required
+                          placeholder="Enter your company name"
+                        />
                       </div>
 
                       <div>
-                        <Label htmlFor="registration-number">Business Registration Number *</Label>
-                        <Input id="registration-number" required placeholder="Enter registration number" />
+                        <Label htmlFor="registration-number">
+                          Business Registration Number *
+                        </Label>
+                        <Input
+                          id="registration-number"
+                          required
+                          placeholder="Enter registration number"
+                        />
                       </div>
 
                       <div>
@@ -113,9 +141,15 @@ const Register = () => {
                             <SelectValue placeholder="Select industry" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="manufacturing">Manufacturing</SelectItem>
-                            <SelectItem value="agriculture">Agriculture</SelectItem>
-                            <SelectItem value="technology">Technology</SelectItem>
+                            <SelectItem value="manufacturing">
+                              Manufacturing
+                            </SelectItem>
+                            <SelectItem value="agriculture">
+                              Agriculture
+                            </SelectItem>
+                            <SelectItem value="technology">
+                              Technology
+                            </SelectItem>
                             <SelectItem value="textiles">Textiles</SelectItem>
                             <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
@@ -124,7 +158,11 @@ const Register = () => {
 
                       <div>
                         <Label htmlFor="address">Business Address *</Label>
-                        <Textarea id="address" required placeholder="Enter complete business address" />
+                        <Textarea
+                          id="address"
+                          required
+                          placeholder="Enter complete business address"
+                        />
                       </div>
                     </div>
                   </>
@@ -134,33 +172,56 @@ const Register = () => {
                   <>
                     <div className="flex items-center gap-3 mb-6">
                       <FileText className="w-6 h-6 text-primary" />
-                      <h2 className="text-2xl font-bold text-foreground">Contact & Tax Information</h2>
+                      <h2 className="text-2xl font-bold text-foreground">
+                        Contact & Tax Information
+                      </h2>
                     </div>
 
                     <div className="space-y-4">
                       <div>
-                        <Label htmlFor="contact-name">Contact Person Name *</Label>
-                        <Input id="contact-name" required placeholder="Full name" />
+                        <Label htmlFor="contact-name">
+                          Contact Person Name *
+                        </Label>
+                        <Input
+                          id="contact-name"
+                          required
+                          placeholder="Full name"
+                        />
                       </div>
 
                       <div>
                         <Label htmlFor="email">Business Email *</Label>
-                        <Input id="email" type="email" required placeholder="contact@company.com" />
+                        <Input
+                          id="email"
+                          type="email"
+                          required
+                          placeholder="contact@company.com"
+                        />
                       </div>
 
                       <div>
                         <Label htmlFor="phone">Phone Number *</Label>
-                        <Input id="phone" type="tel" required placeholder="+234 xxx xxx xxxx" />
+                        <Input
+                          id="phone"
+                          type="tel"
+                          required
+                          placeholder="+234 xxx xxx xxxx"
+                        />
                       </div>
 
                       <div>
-                        <Label htmlFor="tin">Tax Identification Number (TIN) *</Label>
+                        <Label htmlFor="tin">
+                          Tax Identification Number (TIN) *
+                        </Label>
                         <Input id="tin" required placeholder="Enter TIN" />
                       </div>
 
                       <div>
                         <Label htmlFor="vat">VAT Registration Number</Label>
-                        <Input id="vat" placeholder="Enter VAT number (if applicable)" />
+                        <Input
+                          id="vat"
+                          placeholder="Enter VAT number (if applicable)"
+                        />
                       </div>
                     </div>
                   </>
@@ -170,7 +231,9 @@ const Register = () => {
                   <>
                     <div className="flex items-center gap-3 mb-6">
                       <Upload className="w-6 h-6 text-primary" />
-                      <h2 className="text-2xl font-bold text-foreground">Document Upload</h2>
+                      <h2 className="text-2xl font-bold text-foreground">
+                        Document Upload
+                      </h2>
                     </div>
 
                     <div className="space-y-6">
@@ -179,8 +242,14 @@ const Register = () => {
                         <div className="mt-2 flex items-center justify-center w-full">
                           <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-border rounded-lg cursor-pointer hover:bg-muted/50 transition-colors">
                             <Upload className="w-8 h-8 text-muted-foreground mb-2" />
-                            <p className="text-sm text-muted-foreground">Click to upload or drag and drop</p>
-                            <input type="file" className="hidden" accept=".pdf,.jpg,.png" />
+                            <p className="text-sm text-muted-foreground">
+                              Click to upload or drag and drop
+                            </p>
+                            <input
+                              type="file"
+                              className="hidden"
+                              accept=".pdf,.jpg,.png"
+                            />
                           </label>
                         </div>
                       </div>
@@ -190,8 +259,14 @@ const Register = () => {
                         <div className="mt-2 flex items-center justify-center w-full">
                           <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-border rounded-lg cursor-pointer hover:bg-muted/50 transition-colors">
                             <Upload className="w-8 h-8 text-muted-foreground mb-2" />
-                            <p className="text-sm text-muted-foreground">Click to upload or drag and drop</p>
-                            <input type="file" className="hidden" accept=".pdf,.jpg,.png" />
+                            <p className="text-sm text-muted-foreground">
+                              Click to upload or drag and drop
+                            </p>
+                            <input
+                              type="file"
+                              className="hidden"
+                              accept=".pdf,.jpg,.png"
+                            />
                           </label>
                         </div>
                       </div>
@@ -201,8 +276,14 @@ const Register = () => {
                         <div className="mt-2 flex items-center justify-center w-full">
                           <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-border rounded-lg cursor-pointer hover:bg-muted/50 transition-colors">
                             <Upload className="w-8 h-8 text-muted-foreground mb-2" />
-                            <p className="text-sm text-muted-foreground">Click to upload or drag and drop</p>
-                            <input type="file" className="hidden" accept=".pdf,.jpg,.png" />
+                            <p className="text-sm text-muted-foreground">
+                              Click to upload or drag and drop
+                            </p>
+                            <input
+                              type="file"
+                              className="hidden"
+                              accept=".pdf,.jpg,.png"
+                            />
                           </label>
                         </div>
                       </div>
@@ -219,13 +300,13 @@ const Register = () => {
                     <Button
                       type="button"
                       variant="outline"
-                      onClick={() => setStep(prev => prev - 1)}
+                      onClick={() => setStep((prev) => prev - 1)}
                     >
                       <ArrowLeft className="mr-2 h-4 w-4" />
                       Previous
                     </Button>
                   )}
-                  
+
                   <Button type="submit" className={step === 1 ? "ml-auto" : ""}>
                     {step === totalSteps ? "Submit Registration" : "Continue"}
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -235,7 +316,9 @@ const Register = () => {
             </Card>
 
             <div className="mt-6 text-center text-sm text-muted-foreground">
-              <p>Need help? Contact our support team at support@afcfta-portal.org</p>
+              <p>
+                Need help? Contact our support team at support@afcfta-portal.org
+              </p>
             </div>
           </div>
         </div>
@@ -245,4 +328,3 @@ const Register = () => {
 };
 
 export default Register;
-

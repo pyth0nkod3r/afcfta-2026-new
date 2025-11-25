@@ -169,3 +169,5 @@ cache/
 **/cache/
 .npm/
 .yarn/
+
+.vercel/*

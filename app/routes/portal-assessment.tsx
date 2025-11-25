@@ -12,64 +12,66 @@ import Header from "~/components/portal/Header";
 const questions = [
   {
     id: 1,
-    question: "Does your business have a valid business registration certificate?",
-    options: ["Yes", "No", "In Progress"]
+    question:
+      "Does your business have a valid business registration certificate?",
+    options: ["Yes", "No", "In Progress"],
   },
   {
     id: 2,
     question: "Do you have a Tax Identification Number (TIN)?",
-    options: ["Yes", "No", "In Progress"]
+    options: ["Yes", "No", "In Progress"],
   },
   {
     id: 3,
     question: "Is your business registered for VAT?",
-    options: ["Yes", "No", "Not Applicable"]
+    options: ["Yes", "No", "Not Applicable"],
   },
   {
     id: 4,
     question: "Do you have an import/export license?",
-    options: ["Yes", "No", "In Progress"]
+    options: ["Yes", "No", "In Progress"],
   },
   {
     id: 5,
     question: "Are your products/services compliant with AfCFTA standards?",
-    options: ["Yes", "No", "Under Review"]
+    options: ["Yes", "No", "Under Review"],
   },
   {
     id: 6,
     question: "Do you have a certificate of origin for your products?",
-    options: ["Yes", "No", "In Progress"]
+    options: ["Yes", "No", "In Progress"],
   },
   {
     id: 7,
     question: "Have you completed customs registration?",
-    options: ["Yes", "No", "In Progress"]
+    options: ["Yes", "No", "In Progress"],
   },
   {
     id: 8,
     question: "Do you have international payment processing capabilities?",
-    options: ["Yes", "No", "Setting Up"]
+    options: ["Yes", "No", "Setting Up"],
   },
   {
     id: 9,
-    question: "Are your business documents translated into official AU languages (if required)?",
-    options: ["Yes", "No", "Not Required"]
+    question:
+      "Are your business documents translated into official AU languages (if required)?",
+    options: ["Yes", "No", "Not Required"],
   },
   {
     id: 10,
     question: "Do you have liability insurance for cross-border trade?",
-    options: ["Yes", "No", "In Progress"]
+    options: ["Yes", "No", "In Progress"],
   },
   {
     id: 11,
     question: "Have you identified target markets within AfCFTA member states?",
-    options: ["Yes", "No", "Researching"]
+    options: ["Yes", "No", "Researching"],
   },
   {
     id: 12,
     question: "Do you have a logistics partner for cross-border shipments?",
-    options: ["Yes", "No", "In Negotiation"]
-  }
+    options: ["Yes", "No", "In Negotiation"],
+  },
 ];
 
 export default function PortalAssessment() {
@@ -82,26 +84,28 @@ export default function PortalAssessment() {
   const canProceed = answers[questions[currentQuestion].id] !== undefined;
 
   const handleAnswer = (answer: string) => {
-    setAnswers(prev => ({
+    setAnswers((prev) => ({
       ...prev,
-      [questions[currentQuestion].id]: answer
+      [questions[currentQuestion].id]: answer,
     }));
   };
 
   const handleNext = () => {
     if (isLastQuestion) {
       // Calculate score based on "Yes" answers
-      const yesCount = Object.values(answers).filter(answer => answer === "Yes").length;
+      const yesCount = Object.values(answers).filter(
+        (answer) => answer === "Yes",
+      ).length;
       const score = Math.round((yesCount / questions.length) * 100);
       navigate(`/portal/results?score=${score}`);
     } else {
-      setCurrentQuestion(prev => prev + 1);
+      setCurrentQuestion((prev) => prev + 1);
     }
   };
 
   const handleBack = () => {
     if (currentQuestion > 0) {
-      setCurrentQuestion(prev => prev - 1);
+      setCurrentQuestion((prev) => prev - 1);
     }
   };
 
@@ -110,12 +114,15 @@ export default function PortalAssessment() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <section className="w-full py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="mb-8">
-              <Link to="/portal" className="text-primary hover:underline inline-flex items-center gap-2 mb-4">
+              <Link
+                to="/portal"
+                className="text-primary hover:underline inline-flex items-center gap-2 mb-4"
+              >
                 <ArrowLeft className="w-4 h-4" />
                 Back to Home
               </Link>
@@ -179,10 +186,7 @@ export default function PortalAssessment() {
                     Previous
                   </Button>
 
-                  <Button
-                    onClick={handleNext}
-                    disabled={!canProceed}
-                  >
+                  <Button onClick={handleNext} disabled={!canProceed}>
                     {isLastQuestion ? "View Results" : "Next Question"}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>

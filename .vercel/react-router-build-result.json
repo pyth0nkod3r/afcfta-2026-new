@@ -12,6 +12,8 @@
     "routeIdToServerBundleId": {
       "routes/home": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/challenge-tracks": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/faq": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/terms": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/portal-index": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/portal-assessment": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/portal-results": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
@@ -38,6 +40,24 @@
         "parentId": "root",
         "file": "app/routes/challenge-tracks.tsx",
         "path": "/challenge-tracks",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/faq": {
+        "id": "routes/faq",
+        "parentId": "root",
+        "file": "app/routes/faq.tsx",
+        "path": "/faq",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/terms": {
+        "id": "routes/terms",
+        "parentId": "root",
+        "file": "app/routes/terms.tsx",
+        "path": "/terms",
         "config": {
           "runtime": "nodejs"
         }
@@ -109,6 +129,18 @@
         "file": "routes/challenge-tracks.tsx",
         "path": "/challenge-tracks"
       },
+      "routes/faq": {
+        "id": "routes/faq",
+        "parentId": "root",
+        "file": "routes/faq.tsx",
+        "path": "/faq"
+      },
+      "routes/terms": {
+        "id": "routes/terms",
+        "parentId": "root",
+        "file": "routes/terms.tsx",
+        "path": "/terms"
+      },
       "routes/portal-index": {
         "id": "routes/portal-index",
         "parentId": "root",
@@ -154,6 +186,14 @@
           {
             "file": "routes/challenge-tracks.tsx",
             "path": "/challenge-tracks"
+          },
+          {
+            "file": "routes/faq.tsx",
+            "path": "/faq"
+          },
+          {
+            "file": "routes/terms.tsx",
+            "path": "/terms"
           },
           {
             "file": "routes/portal-index.tsx",

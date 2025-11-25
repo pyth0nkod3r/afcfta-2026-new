@@ -31,6 +31,12 @@ export default [
     ...json.configs.recommended,
   },
   {
-    ignores: [".react-router/**"],
+    ignores: ["build/**", "node_modules/**", ".react-router/**"],
+  },
+  {
+    files: ["app/components/ui/**/*.tsx"],
+    rules: {
+      "react/prop-types": "off",
+    },
   },
 ];
