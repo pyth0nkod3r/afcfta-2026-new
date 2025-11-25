@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "~/components/ui/button";
-import { HelpCircle } from "lucide-react";
+import { FileText } from "lucide-react";
 
-export function FAQHero() {
+export function TermsHero() {
   return (
     <section
       className="relative isolate overflow-hidden bg-surface text-white"
-      aria-labelledby="faq-hero-heading"
+      aria-labelledby="terms-hero-heading"
     >
       {/* Background Image & Overlay */}
       <div className="absolute inset-0">
@@ -24,27 +24,32 @@ export function FAQHero() {
         >
           <div className="space-y-4">
             <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
-              <HelpCircle className="mr-2 size-4" aria-hidden />
-              Frequently Asked Questions
+              <FileText className="mr-2 size-4" aria-hidden />
+              Legal Information
             </span>
             <h1
-              id="faq-hero-heading"
+              id="terms-hero-heading"
               className="text-3xl font-heading font-bold leading-tight sm:text-4xl lg:text-5xl xl:text-6xl"
             >
-              Everything You Need to Know About AfCFTA Hackathon 2026
+              Terms & Conditions
             </h1>
             <p className="max-w-2xl text-base text-white/80 sm:text-lg">
-              Find answers to common questions about participation, challenge
-              tracks, format, rewards, and technical requirements. Can&apos;t
-              find what you&apos;re looking for? Contact our support team.
+              Please read these terms and conditions carefully before
+              participating in the AfCFTA Hackathon 2026. By registering, you
+              agree to be bound by these terms.
             </p>
           </div>
           <div className="flex gap-4 flex-wrap">
-            <Button variant="primary" size="lg">
-              Register Now
-            </Button>
-            <Button variant="outline" size="lg">
-              Contact Support
+            <Button
+              variant="primary"
+              size="lg"
+              asChild
+              className="inline-flex items-center gap-2"
+            >
+              <a href="/assets/terms-and-conditions.pdf" download>
+                <FileText className="size-4" aria-hidden />
+                Download PDF
+              </a>
             </Button>
           </div>
         </motion.div>

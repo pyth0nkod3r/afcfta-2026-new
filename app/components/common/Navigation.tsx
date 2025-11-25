@@ -14,157 +14,164 @@ const navLinks: NavItem[] = [
   {
     href: "/about",
     label: "About",
-    children: [
-      { href: "/about/why-the-hackathon", label: "Why the Hackathon" },
-      { href: "/about/format", label: "Format (Hybrid: Physical + Virtual)" },
-      { href: "/about/venue-dates", label: "Venue & Dates" },
-    ],
+    // children: [
+    //   { href: "/about/why-the-hackathon", label: "Why the Hackathon" },
+    //   { href: "/about/format", label: "Format (Hybrid: Physical + Virtual)" },
+    //   { href: "/about/venue-dates", label: "Venue & Dates" },
+    // ],
   },
   {
     href: "/strategic-plan",
     label: "Strategic Plan",
-    children: [
-      {
-        href: "/strategic-plan/vision-objectives",
-        label: "Vision & Objectives",
-      },
-      { href: "/strategic-plan/pillars", label: "Pillars" },
-      {
-        href: "/strategic-plan/governance-legal-framework",
-        label: "Governance & Legal Framework",
-      },
-    ],
+    // children: [
+    //   {
+    //     href: "/strategic-plan/vision-objectives",
+    //     label: "Vision & Objectives",
+    //   },
+    //   { href: "/strategic-plan/pillars", label: "Pillars" },
+    //   {
+    //     href: "/strategic-plan/governance-legal-framework",
+    //     label: "Governance & Legal Framework",
+    //   },
+    // ],
   },
   {
     href: "/challenge-tracks",
     label: "Challenge Tracks",
-    children: [
-      { href: "/challenge-tracks", label: "All Tracks" },
-      {
-        href: "/challenge-tracks/digital-trade-facilitation",
-        label: "Digital Trade Facilitation",
-      },
-      {
-        href: "/challenge-tracks/ai-for-trade-intelligence",
-        label: "AI for Trade Intelligence",
-      },
-      {
-        href: "/challenge-tracks/fintech-msme-financing",
-        label: "FinTech & MSME Financing",
-      },
-      {
-        href: "/challenge-tracks/ecommerce-msme-empowerment",
-        label: "E-Commerce & MSME Empowerment",
-      },
-      {
-        href: "/challenge-tracks/smart-logistics-supply-chains",
-        label: "Smart Logistics & Supply Chains",
-      },
-      {
-        href: "/challenge-tracks/documentation-compliance-automation",
-        label: "Documentation & Compliance Automation",
-      },
-      {
-        href: "/challenge-tracks/sustainable-inclusive-trade",
-        label: "Sustainable & Inclusive Trade",
-      },
-      {
-        href: "/challenge-tracks/digital-identity-verification",
-        label: "Digital Identity & Verification",
-      },
-      {
-        href: "/challenge-tracks/agriculture-trade-value-chain",
-        label: "Agriculture & Trade Value Chain",
-      },
-      {
-        href: "/challenge-tracks/knowledge-learning-ecosystem",
-        label: "Knowledge & Learning Ecosystem",
-      },
-    ],
+    // children: [
+    //   { href: "/challenge-tracks", label: "All Tracks" },
+    //   {
+    //     href: "/challenge-tracks/digital-trade-facilitation",
+    //     label: "Digital Trade Facilitation",
+    //   },
+    //   {
+    //     href: "/challenge-tracks/ai-for-trade-intelligence",
+    //     label: "AI for Trade Intelligence",
+    //   },
+    //   {
+    //     href: "/challenge-tracks/fintech-msme-financing",
+    //     label: "FinTech & MSME Financing",
+    //   },
+    //   {
+    //     href: "/challenge-tracks/ecommerce-msme-empowerment",
+    //     label: "E-Commerce & MSME Empowerment",
+    //   },
+    //   {
+    //     href: "/challenge-tracks/smart-logistics-supply-chains",
+    //     label: "Smart Logistics & Supply Chains",
+    //   },
+    //   {
+    //     href: "/challenge-tracks/documentation-compliance-automation",
+    //     label: "Documentation & Compliance Automation",
+    //   },
+    //   {
+    //     href: "/challenge-tracks/sustainable-inclusive-trade",
+    //     label: "Sustainable & Inclusive Trade",
+    //   },
+    //   {
+    //     href: "/challenge-tracks/digital-identity-verification",
+    //     label: "Digital Identity & Verification",
+    //   },
+    //   {
+    //     href: "/challenge-tracks/agriculture-trade-value-chain",
+    //     label: "Agriculture & Trade Value Chain",
+    //   },
+    //   {
+    //     href: "/challenge-tracks/knowledge-learning-ecosystem",
+    //     label: "Knowledge & Learning Ecosystem",
+    //   },
+    // ],
   },
   {
     href: "/timeline-format",
     label: "Timeline & Format",
-    children: [
-      { href: "/timeline-format/pre-hackathon", label: "Pre-Hackathon Phase" },
-      { href: "/timeline-format/hackathon-days", label: "Hackathon Days" },
-      {
-        href: "/timeline-format/post-hackathon",
-        label: "Post-Hackathon Phase",
-      },
-      { href: "/timeline-format/schedule", label: "Schedule" },
-    ],
+    // children: [
+    //   { href: "/timeline-format/pre-hackathon", label: "Pre-Hackathon Phase" },
+    //   { href: "/timeline-format/hackathon-days", label: "Hackathon Days" },
+    //   {
+    //     href: "/timeline-format/post-hackathon",
+    //     label: "Post-Hackathon Phase",
+    //   },
+    //   { href: "/timeline-format/schedule", label: "Schedule" },
+    // ],
   },
   {
     href: "/rewards-incentives",
     label: "Rewards & Incentives",
-    children: [
-      {
-        href: "/rewards-incentives/prize-categories",
-        label: "Prize Categories",
-      },
-      { href: "/rewards-incentives/thematic-awards", label: "Thematic Awards" },
-      {
-        href: "/rewards-incentives/non-cash-benefits",
-        label: "Non-Cash Benefits",
-      },
-      {
-        href: "/rewards-incentives/delivery-integration-framework",
-        label: "Delivery & Integration Framework",
-      },
-    ],
+    // children: [
+    //   {
+    //     href: "/rewards-incentives/prize-categories",
+    //     label: "Prize Categories",
+    //   },
+    //   { href: "/rewards-incentives/thematic-awards", label: "Thematic Awards" },
+    //   {
+    //     href: "/rewards-incentives/non-cash-benefits",
+    //     label: "Non-Cash Benefits",
+    //   },
+    //   {
+    //     href: "/rewards-incentives/delivery-integration-framework",
+    //     label: "Delivery & Integration Framework",
+    //   },
+    // ],
   },
   {
     href: "/partners",
     label: "Partners",
-    children: [
-      {
-        href: "/partners/partnership-tiers",
-        label: "Partnership Tiers (Platinum / Diamond / Gold / Silver)",
-      },
-      { href: "/partners/become-a-partner", label: "Become a Partner" },
-    ],
+    // children: [
+    //   {
+    //     href: "/partners/partnership-tiers",
+    //     label: "Partnership Tiers (Platinum / Diamond / Gold / Silver)",
+    //   },
+    //   { href: "/partners/become-a-partner", label: "Become a Partner" },
+    // ],
   },
   {
     href: "/media-resources",
     label: "Media & Resources",
-    children: [
-      { href: "/media-resources/news-updates", label: "News & Updates" },
-      { href: "/media-resources/gallery", label: "Gallery" },
-      { href: "/media-resources/video-library", label: "Video Library" },
-      {
-        href: "/media-resources/downloadable-assets",
-        label: "Downloadable Assets (Brochure, Whitepaper)",
-      },
-    ],
+    // children: [
+    //   { href: "/media-resources/news-updates", label: "News & Updates" },
+    //   { href: "/media-resources/gallery", label: "Gallery" },
+    //   { href: "/media-resources/video-library", label: "Video Library" },
+    //   {
+    //     href: "/media-resources/downloadable-assets",
+    //     label: "Downloadable Assets (Brochure, Whitepaper)",
+    //   },
+    // ],
   },
   {
     href: "/register",
-    label: "Register / Apply",
-    children: [
-      { href: "/register/participants", label: "Participant Registration" },
-      { href: "/register/mentors", label: "Mentor Signup" },
-      { href: "/register/partners", label: "Partner Signup" },
-    ],
+    label: "Register",
+    // children: [
+    //   { href: "/register/participants", label: "Participant Registration" },
+    //   { href: "/register/mentors", label: "Mentor Signup" },
+    //   { href: "/register/partners", label: "Partner Signup" },
+    // ],
   },
   {
-    href: "/faqs",
+    href: "/faq",
     label: "FAQs",
-    children: [
-      { href: "/faqs", label: "Frequently Asked Questions" },
-      { href: "/faqs/terms", label: "Terms & Conditions" },
-      { href: "/faqs/privacy", label: "Privacy Policy" },
-    ],
+    // children: [
+    //   { href: "/faq", label: "Frequently Asked Questions" },
+    //   { href: "/faq/terms", label: "Terms & Conditions" },
+    //   { href: "/faq/privacy", label: "Privacy Policy" },
+    // ],
   },
   {
     href: "/contact",
     label: "Contact",
-    children: [
-      { href: "/contact#form", label: "Contact Form" },
-      { href: "/contact#location", label: "Office Address & Map" },
-      { href: "/contact#social", label: "Social Media Links" },
-    ],
+    // children: [
+    //   { href: "/contact#form", label: "Contact Form" },
+    //   { href: "/contact#location", label: "Office Address & Map" },
+    //   { href: "/contact#social", label: "Social Media Links" },
+    // ],
   },
+];
+
+const forcedOverflow = [
+  "/strategic-plan",
+  "/media-resources",
+  "/faq",
+  "/partners",
 ];
 
 interface NavigationProps {
@@ -254,19 +261,31 @@ export function Navigation({
       const style = window.getComputedStyle(container);
       const gap = parseFloat(style.columnGap || "0");
       const rawMoreWidth = moreRef.current?.getBoundingClientRect().width ?? 0;
-      const moreWidth = hiddenLinks.length > 0 ? rawMoreWidth : 0;
       let available = container.clientWidth;
       let used = 0;
       let reservedMore = false;
+
       const nextOverflow: string[] = [];
+
+      // First, ensure room for the More button if we are forcing overflow.
+      if (forcedOverflow.length > 0) {
+        reservedMore = true;
+        available -= rawMoreWidth;
+      }
 
       itemWidths.forEach((item) => {
         if (!item.key) return;
         const widthWithGap = item.width + (used > 0 ? gap : 0);
 
+        // These items always go under More
+        if (forcedOverflow.includes(item.key)) {
+          nextOverflow.push(item.key);
+          return;
+        }
+
         if (!reservedMore && used + widthWithGap > available) {
           reservedMore = true;
-          available -= moreWidth + (used > 0 ? gap : 0);
+          available -= rawMoreWidth + (used > 0 ? gap : 0);
         }
 
         if (used + widthWithGap > available) {
@@ -363,10 +382,12 @@ export function Navigation({
   }
 
   const visibleLinks = navLinks.filter(
-    (link) => !overflowKeys.includes(link.href),
+    (link) =>
+      !overflowKeys.includes(link.href) && !forcedOverflow.includes(link.href),
   );
-  const hiddenLinks = navLinks.filter((link) =>
-    overflowKeys.includes(link.href),
+  const hiddenLinks = navLinks.filter(
+    (link) =>
+      overflowKeys.includes(link.href) || forcedOverflow.includes(link.href),
   );
 
   return (
@@ -403,7 +424,7 @@ export function Navigation({
               {hasChildren && <ChevronDown className="size-4 text-gray-500" />}
             </Link>
             {hasChildren && (
-              <div className="pointer-events-none absolute left-0 top-full hidden min-w-[240px] pt-2 group-hover:pointer-events-auto group-hover:block group-focus-within:block z-30">
+              <div className="pointer-events-none absolute right-2 top-full hidden min-w-[220px] max-w-[95vw] pt-2 group-hover:pointer-events-auto group-hover:block group-focus-within:block z-30">
                 <div className="flex flex-col rounded-md border border-surface bg-white py-2 shadow-lg transition">
                   {link.children!.map((child) => (
                     <Link
@@ -441,7 +462,7 @@ export function Navigation({
         </button>
 
         {hiddenLinks.length > 0 && (
-          <div className="pointer-events-none absolute left-0 top-full hidden min-w-[220px] pt-2 group-hover:pointer-events-auto group-hover:block group-focus-within:block z-30">
+          <div className="pointer-events-none absolute left-auto right-4 top-full hidden min-w-[220px] max-w-[95vw] pt-2 group-hover:pointer-events-auto group-hover:block group-focus-within:block z-30">
             <div className="flex flex-col rounded-md border border-surface bg-white py-2 shadow-lg transition">
               {hiddenLinks.map((link) => (
                 <Link

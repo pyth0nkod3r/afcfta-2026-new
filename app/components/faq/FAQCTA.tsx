@@ -33,7 +33,7 @@ export function FAQCTA() {
               size="lg"
               className="inline-flex items-center gap-2"
             >
-              <Link to="/faqs">
+              <Link to="/faq">
                 <FileText className="w-5 h-5" />
                 View All FAQs
               </Link>
