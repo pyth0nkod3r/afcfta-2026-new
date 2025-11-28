@@ -42,19 +42,19 @@ const launchDate = new Date("2025-11-10T09:00:00+01:00");
 const registrationCTAs = [
   {
     label: "Register Your Team",
-    href: "/register/team",
+    href: "/portal/register",
     icon: Users,
     accent: "primary",
   },
   {
     label: "Mentor Signup",
-    href: "/register/mentor",
+    href: "/portal/register?type=mentor",
     icon: UserPlus,
     accent: "muted",
   },
   {
     label: "Partner Signup",
-    href: "/register/partner",
+    href: "/partners",
     icon: Handshake,
     accent: "outline",
   },

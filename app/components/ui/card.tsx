@@ -1,15 +1,36 @@
 import * as React from "react";
+import { motion } from "framer-motion";
 
 import { cn } from "~/lib/utils";
+import { cardHover } from "~/lib/animations";
 
-function Card({ className, ...props }: React.ComponentProps<"div">) {
+interface CardProps extends React.ComponentProps<"div"> {
+  animated?: boolean;
+}
+
+function Card({ className, animated = true, ...props }: CardProps) {
+  if (!animated) {
+    return (
+      <div
+        data-slot="card"
+        className={cn(
+          "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
+          className,
+        )}
+        {...props}
+      />
+    );
+  }
+
   return (
-    <div
+    <motion.div
       data-slot="card"
       className={cn(
-        "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1",
+        "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm cursor-pointer",
         className,
       )}
+      whileHover={cardHover}
+      transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
       {...props}
     />
   );

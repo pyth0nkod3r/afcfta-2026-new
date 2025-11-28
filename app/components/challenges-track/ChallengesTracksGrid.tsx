@@ -26,6 +26,7 @@ export function ChallengesTracksGrid() {
                 transition={{ duration: 0.3 }}
                 onMouseEnter={() => setHoveredTrack(track.id)}
                 onMouseLeave={() => setHoveredTrack(null)}
+                onClick={() => setHoveredTrack(isExpanded ? null : track.id)}
               >
                 <div className="flex items-center gap-4 p-6">
                   <Icon className="w-8 h-8 text-white shrink-0" aria-hidden />

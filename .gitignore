@@ -8,6 +8,7 @@
 /build/
 /do-not-track/
 /do-not-track-2/
+INTEGRATION_TEST_RESULTS.md
 
 # Generated .gitignore patterns
 

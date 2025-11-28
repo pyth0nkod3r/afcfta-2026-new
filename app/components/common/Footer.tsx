@@ -5,9 +5,9 @@ const footerLinks = {
   main: [
     { href: "/", label: "Home" },
     { href: "/challenge-tracks", label: "Challenge Tracks" },
-    { href: "/rewards", label: "Rewards" },
-    { href: "/timeline", label: "Timeline" },
-    { href: "/venue", label: "Venue" },
+    { href: "/rewards-incentives", label: "Rewards" },
+    { href: "/timeline-format", label: "Timeline" },
+    { href: "/venue-dates", label: "Venue" },
     { href: "/partners", label: "Partners" },
     { href: "/why-afcfta", label: "Why AfCFTA" },
     { href: "/faq", label: "FAQ" },
@@ -29,8 +29,7 @@ export function Footer() {
               <img
                 src="/images/afcfta-logo.jpg"
                 alt="Nigeria AfCFTA Coordination Office"
-                className="h-12 w-auto" // Adjust size as needed
-                style={{ borderRadius: "50%" }} // Optional
+                className="h-12 w-auto rounded-full"
               />
               <span className="sr-only">AfCFTA 2026 Footer Home</span>
             </div>

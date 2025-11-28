@@ -1,7 +1,14 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
 import { ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "~/lib/utils";
+import {
+  dropdownVariants,
+  mobileMenuVariants,
+  easings,
+  durations,
+} from "~/lib/animations";
 
 type NavItem = {
   href: string;
@@ -11,159 +18,21 @@ type NavItem = {
 
 const navLinks: NavItem[] = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/challenge-tracks", label: "Challenge Tracks" },
+  { href: "/timeline-format", label: "Timeline & Format" },
+  { href: "/rewards-incentives", label: "Rewards & Incentives" },
+  { href: "/register", label: "Register" },
+  { href: "/contact", label: "Contact" },
   {
-    href: "/about",
-    label: "About",
-    // children: [
-    //   { href: "/about/why-the-hackathon", label: "Why the Hackathon" },
-    //   { href: "/about/format", label: "Format (Hybrid: Physical + Virtual)" },
-    //   { href: "/about/venue-dates", label: "Venue & Dates" },
-    // ],
-  },
-  {
-    href: "/strategic-plan",
-    label: "Strategic Plan",
-    // children: [
-    //   {
-    //     href: "/strategic-plan/vision-objectives",
-    //     label: "Vision & Objectives",
-    //   },
-    //   { href: "/strategic-plan/pillars", label: "Pillars" },
-    //   {
-    //     href: "/strategic-plan/governance-legal-framework",
-    //     label: "Governance & Legal Framework",
-    //   },
-    // ],
-  },
-  {
-    href: "/challenge-tracks",
-    label: "Challenge Tracks",
-    // children: [
-    //   { href: "/challenge-tracks", label: "All Tracks" },
-    //   {
-    //     href: "/challenge-tracks/digital-trade-facilitation",
-    //     label: "Digital Trade Facilitation",
-    //   },
-    //   {
-    //     href: "/challenge-tracks/ai-for-trade-intelligence",
-    //     label: "AI for Trade Intelligence",
-    //   },
-    //   {
-    //     href: "/challenge-tracks/fintech-msme-financing",
-    //     label: "FinTech & MSME Financing",
-    //   },
-    //   {
-    //     href: "/challenge-tracks/ecommerce-msme-empowerment",
-    //     label: "E-Commerce & MSME Empowerment",
-    //   },
-    //   {
-    //     href: "/challenge-tracks/smart-logistics-supply-chains",
-    //     label: "Smart Logistics & Supply Chains",
-    //   },
-    //   {
-    //     href: "/challenge-tracks/documentation-compliance-automation",
-    //     label: "Documentation & Compliance Automation",
-    //   },
-    //   {
-    //     href: "/challenge-tracks/sustainable-inclusive-trade",
-    //     label: "Sustainable & Inclusive Trade",
-    //   },
-    //   {
-    //     href: "/challenge-tracks/digital-identity-verification",
-    //     label: "Digital Identity & Verification",
-    //   },
-    //   {
-    //     href: "/challenge-tracks/agriculture-trade-value-chain",
-    //     label: "Agriculture & Trade Value Chain",
-    //   },
-    //   {
-    //     href: "/challenge-tracks/knowledge-learning-ecosystem",
-    //     label: "Knowledge & Learning Ecosystem",
-    //   },
-    // ],
-  },
-  {
-    href: "/timeline-format",
-    label: "Timeline & Format",
-    // children: [
-    //   { href: "/timeline-format/pre-hackathon", label: "Pre-Hackathon Phase" },
-    //   { href: "/timeline-format/hackathon-days", label: "Hackathon Days" },
-    //   {
-    //     href: "/timeline-format/post-hackathon",
-    //     label: "Post-Hackathon Phase",
-    //   },
-    //   { href: "/timeline-format/schedule", label: "Schedule" },
-    // ],
-  },
-  {
-    href: "/rewards-incentives",
-    label: "Rewards & Incentives",
-    // children: [
-    //   {
-    //     href: "/rewards-incentives/prize-categories",
-    //     label: "Prize Categories",
-    //   },
-    //   { href: "/rewards-incentives/thematic-awards", label: "Thematic Awards" },
-    //   {
-    //     href: "/rewards-incentives/non-cash-benefits",
-    //     label: "Non-Cash Benefits",
-    //   },
-    //   {
-    //     href: "/rewards-incentives/delivery-integration-framework",
-    //     label: "Delivery & Integration Framework",
-    //   },
-    // ],
-  },
-  {
-    href: "/partners",
-    label: "Partners",
-    // children: [
-    //   {
-    //     href: "/partners/partnership-tiers",
-    //     label: "Partnership Tiers (Platinum / Diamond / Gold / Silver)",
-    //   },
-    //   { href: "/partners/become-a-partner", label: "Become a Partner" },
-    // ],
-  },
-  {
-    href: "/media-resources",
-    label: "Media & Resources",
-    // children: [
-    //   { href: "/media-resources/news-updates", label: "News & Updates" },
-    //   { href: "/media-resources/gallery", label: "Gallery" },
-    //   { href: "/media-resources/video-library", label: "Video Library" },
-    //   {
-    //     href: "/media-resources/downloadable-assets",
-    //     label: "Downloadable Assets (Brochure, Whitepaper)",
-    //   },
-    // ],
-  },
-  {
-    href: "/register",
-    label: "Register",
-    // children: [
-    //   { href: "/register/participants", label: "Participant Registration" },
-    //   { href: "/register/mentors", label: "Mentor Signup" },
-    //   { href: "/register/partners", label: "Partner Signup" },
-    // ],
-  },
-  {
-    href: "/faq",
-    label: "FAQs",
-    // children: [
-    //   { href: "/faq", label: "Frequently Asked Questions" },
-    //   { href: "/faq/terms", label: "Terms & Conditions" },
-    //   { href: "/faq/privacy", label: "Privacy Policy" },
-    // ],
-  },
-  {
-    href: "/contact",
-    label: "Contact",
-    // children: [
-    //   { href: "/contact#form", label: "Contact Form" },
-    //   { href: "/contact#location", label: "Office Address & Map" },
-    //   { href: "/contact#social", label: "Social Media Links" },
-    // ],
+    href: "#",
+    label: "More",
+    children: [
+      { href: "/strategic-plan", label: "Strategic Plan" },
+      { href: "/partners", label: "Partners" },
+      { href: "/media-resources", label: "Media & Resources" },
+      { href: "/faq", label: "FAQ" },
+    ],
   },
 ];
 
@@ -342,10 +211,11 @@ export function Navigation({
                 {hasChildren && (
                   <button
                     type="button"
-                    aria-expanded={expanded}
+                    aria-expanded="false"
                     aria-controls={`submenu-${link.href.replace(/[^\w]/g, "-")}`}
                     onClick={() => toggleSection(link.href)}
                     className="rounded-md p-1 text-gray-600 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                    {...(expanded && { "aria-expanded": "true" })}
                   >
                     <ChevronDown
                       className={cn(
@@ -357,23 +227,39 @@ export function Navigation({
                 )}
               </div>
 
-              {hasChildren && expanded && (
-                <div
-                  id={`submenu-${link.href.replace(/[^\w]/g, "-")}`}
-                  className="flex flex-col gap-2 border-l border-surface pl-4 text-sm"
-                >
-                  {link.children!.map((child) => (
-                    <Link
-                      key={child.href}
-                      to={child.href}
-                      onClick={onLinkClick}
-                      className="text-gray-700 transition-colors hover:text-primary"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
+              <AnimatePresence>
+                {hasChildren && expanded && (
+                  <motion.div
+                    id={`submenu-${link.href.replace(/[^\w]/g, "-")}`}
+                    className="flex flex-col gap-2 border-l border-surface pl-4 text-sm overflow-hidden"
+                    variants={mobileMenuVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    {link.children!.map((child, index) => (
+                      <motion.div
+                        key={child.href}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                          delay: index * 0.05,
+                          duration: durations.fast,
+                          ease: easings.smooth,
+                        }}
+                      >
+                        <Link
+                          to={child.href}
+                          onClick={onLinkClick}
+                          className="text-gray-700 transition-colors hover:text-primary block"
+                        >
+                          {child.label}
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           );
         })}
@@ -425,18 +311,34 @@ export function Navigation({
             </Link>
             {hasChildren && (
               <div className="pointer-events-none absolute right-2 top-full hidden min-w-[220px] max-w-[95vw] pt-2 group-hover:pointer-events-auto group-hover:block group-focus-within:block z-30">
-                <div className="flex flex-col rounded-md border border-surface bg-white py-2 shadow-lg transition">
-                  {link.children!.map((child) => (
-                    <Link
+                <motion.div
+                  className="flex flex-col rounded-md border border-surface bg-white py-2 shadow-lg"
+                  variants={dropdownVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  {link.children!.map((child, index) => (
+                    <motion.div
                       key={child.href}
-                      to={child.href}
-                      onClick={onLinkClick}
-                      className="whitespace-normal px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-surface hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                      initial={{ opacity: 0, y: -5 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        delay: index * 0.05,
+                        duration: durations.fast,
+                        ease: easings.smooth,
+                      }}
                     >
-                      {child.label}
-                    </Link>
+                      <Link
+                        to={child.href}
+                        onClick={onLinkClick}
+                        className="whitespace-normal px-4 py-2 text-sm text-gray-700 transition-all duration-200 hover:bg-surface hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 block"
+                      >
+                        {child.label}
+                      </Link>
+                    </motion.div>
                   ))}
-                </div>
+                </motion.div>
               </div>
             )}
           </div>
@@ -463,18 +365,34 @@ export function Navigation({
 
         {hiddenLinks.length > 0 && (
           <div className="pointer-events-none absolute left-auto right-4 top-full hidden min-w-[220px] max-w-[95vw] pt-2 group-hover:pointer-events-auto group-hover:block group-focus-within:block z-30">
-            <div className="flex flex-col rounded-md border border-surface bg-white py-2 shadow-lg transition">
-              {hiddenLinks.map((link) => (
-                <Link
+            <motion.div
+              className="flex flex-col rounded-md border border-surface bg-white py-2 shadow-lg"
+              variants={dropdownVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              {hiddenLinks.map((link, index) => (
+                <motion.div
                   key={link.href}
-                  to={link.href}
-                  onClick={onLinkClick}
-                  className="whitespace-normal px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-surface hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                  initial={{ opacity: 0, y: -5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    delay: index * 0.05,
+                    duration: durations.fast,
+                    ease: easings.smooth,
+                  }}
                 >
-                  {link.label}
-                </Link>
+                  <Link
+                    to={link.href}
+                    onClick={onLinkClick}
+                    className="whitespace-normal px-4 py-2 text-sm text-gray-700 transition-all duration-200 hover:bg-surface hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 block"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         )}
       </div>
