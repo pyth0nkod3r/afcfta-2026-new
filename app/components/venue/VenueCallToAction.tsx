@@ -6,67 +6,67 @@ import { FileDown, Globe, PenSquare } from "lucide-react";
 
 export function VenueCallToAction() {
   return (
-    \u003cSection background="muted" spacing="lg" className="bg-black!"\u003e
-      \u003cdiv className="space-y-12 md:space-y-16"\u003e
-        \u003cmotion.div
+    <Section background="muted" spacing="lg" className="bg-black!">
+      <div className="space-y-12 md:space-y-16">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
           className="text-center space-y-6"
-        \u003e
-          \u003cHeading as="h2" level="h2" className="text-white!"\u003e
-            Be Part of Africa\u0026apos;s Digital Trade Revolution
-          \u003c/Heading\u003e
-          \u003cBody size="lg" className="max-w-3xl mx-auto text-white/80!"\u003e
+        >
+          <Heading as="h2" level="h2" className="text-white!">
+            Be Part of Africa&apos;s Digital Trade Revolution
+          </Heading>
+          <Body size="lg" className="max-w-3xl mx-auto text-white/80!">
             Whether in Abuja or online, your participation shapes the future of
             trade, innovation, and collaboration across Africa.
-          \u003c/Body\u003e
-        \u003c/motion.div\u003e
+          </Body>
+        </motion.div>
 
         {/* CTA Buttons */}
-        \u003cmotion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-wrap gap-4 justify-center"
-        \u003e
-          \u003cButton
+        >
+          <Button
             variant="default"
             size="lg"
             asChild
             className="inline-flex items-center gap-2"
-          \u003e
-            \u003ca href="/register"\u003e
-              \u003cPenSquare className="size-5" /\u003e
+          >
+            <a href="/register">
+              <PenSquare className="size-5" />
               Register Now
-            \u003c/a\u003e
-          \u003c/Button\u003e
-          \u003cButton
+            </a>
+          </Button>
+          <Button
             variant="outline"
             size="lg"
             asChild
             className="inline-flex items-center gap-2 bg-white/10 border-white/20 text-white hover:bg-white/20"
-          \u003e
-            \u003ca href="#"\u003e
-              \u003cFileDown className="size-5" /\u003e
+          >
+            <a href="#">
+              <FileDown className="size-5" />
               Download Participant Guide
-            \u003c/a\u003e
-          \u003c/Button\u003e
-          \u003cButton
+            </a>
+          </Button>
+          <Button
             variant="outline"
             size="lg"
             asChild
             className="inline-flex items-center gap-2 bg-white/10 border-white/20 text-white hover:bg-white/20"
-          \u003e
-            \u003ca href="/register"\u003e
-              \u003cGlobe className="size-5" /\u003e
+          >
+            <a href="/register">
+              <Globe className="size-5" />
               Join Virtually
-            \u003c/a\u003e
-          \u003c/Button\u003e
-        \u003c/motion.div\u003e
-      \u003c/div\u003e
-    \u003c/Section\u003e
+            </a>
+          </Button>
+        </motion.div>
+      </div>
+    </Section>
   );
 }
