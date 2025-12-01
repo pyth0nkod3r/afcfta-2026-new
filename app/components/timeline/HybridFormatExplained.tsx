@@ -124,7 +124,7 @@ const participationStats = [
 
 export function HybridFormatExplained() {
   return (
-    <Section background="muted" spacing="lg">
+    <Section background="muted" spacing="lg" className="bg-white text-black">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
