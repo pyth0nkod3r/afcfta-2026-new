@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { Button } from "~/components/ui/button";
 import { Section } from "~/components/ui/section";
-import { Home, ArrowLeft, Search } from "lucide-react";
+import { Home, ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -17,7 +17,7 @@ export default function NotFound() {
               Page Not Found
             </h1>
             <p className="text-lg text-gray-600 max-w-md mx-auto">
-              Sorry, we couldn't find the page you're looking for. It might have
+              Sorry, we couldn&apos;t find the page you&apos;re looking for. It might have
               been moved, deleted, or you entered the wrong URL.
             </p>
           </div>

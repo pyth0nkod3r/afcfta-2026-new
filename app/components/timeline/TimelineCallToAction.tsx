@@ -9,7 +9,6 @@ import {
   Calendar,
   Users,
   MapPin,
-  Download,
   Mail,
   ExternalLink,
   Clock,
@@ -92,7 +91,7 @@ export function TimelineCallToAction() {
                 🏁 6️⃣ Call to Action
               </Badge>
               <Heading as="h2" level="h2" className="text-white">
-                Your Innovation Can Shape Africa's Borderless Digital Future
+                Your Innovation Can Shape Africa&apos;s Borderless Digital Future
               </Heading>
               <Body size="lg" className="max-w-3xl mx-auto text-white/90">
                 Be part of the movement redefining how Africa trades, connects,
@@ -359,7 +358,7 @@ export function TimelineCallToAction() {
             </Body>
             <Body size="sm" color="muted">
               Join thousands of innovators who are already preparing for
-              Africa's digital trade revolution.
+              Africa&apos;s digital trade revolution.
             </Body>
           </div>
         </motion.div>

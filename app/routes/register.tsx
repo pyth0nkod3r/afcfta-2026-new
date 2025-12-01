@@ -18,17 +18,12 @@ import { Checkbox } from "~/components/ui/checkbox";
 import {
   Users,
   UserCheck,
-  Building,
   ArrowRight,
   CalendarCheck,
   Globe2,
   Radio,
-  Upload,
   CheckCircle,
   User,
-  Mail,
-  Phone,
-  MapPin,
   Briefcase,
   GraduationCap,
   Handshake,
@@ -130,8 +125,8 @@ export default function Register() {
   return (
     <>
       <PageHero
+        badge={{ text: "Join the AfCFTA Hackathon 2026" }}
         title="Ready to Shape Africa’s Trade Future?"
-        subtitle="Join the AfCFTA Hackathon 2026"
         description="Be part of building technology-driven solutions that accelerate Africa's digital transformation under the AfCFTA framework."
       />
 
@@ -200,7 +195,7 @@ export default function Register() {
                 Choose Your Registration Type
               </h2>
               <p className="text-lg text-gray-600">
-                Select how you'd like to participate in the hackathon
+                Select how you&apos;d like to participate in the hackathon
               </p>
             </motion.div>
 

@@ -194,9 +194,9 @@ export function StrategicPartnerNetwork() {
               Join Our Growing Network
             </Heading>
             <Body className="max-w-2xl mx-auto">
-              We're actively building partnerships across all sectors. Whether
-              you're a government institution, private company, academic
-              organization, or international body, there's a place for you in
+              We&apos;re actively building partnerships across all sectors. Whether
+              you&apos;re a government institution, private company, academic
+              organization, or international body, there&apos;s a place for you in
               our ecosystem.
             </Body>
             <Body size="sm" color="muted">

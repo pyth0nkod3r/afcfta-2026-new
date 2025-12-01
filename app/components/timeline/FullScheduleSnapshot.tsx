@@ -339,7 +339,7 @@ export function FullScheduleSnapshot() {
               </Heading>
               <Body className="max-w-2xl mx-auto text-gray-700!">
                 Download the complete schedule and set up calendar reminders to
-                ensure you don't miss any critical dates or opportunities.
+                ensure you don&apos;t miss any critical dates or opportunities.
               </Body>
             </div>
 

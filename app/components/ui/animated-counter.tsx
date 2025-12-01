@@ -52,7 +52,7 @@ export function AnimatedCounter({
       className={className}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={isIntersecting ? { opacity: 1, scale: 1 } : {}}
-      transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+      transition={{ duration: duration, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       {prefix}
       <motion.span>{display}</motion.span>

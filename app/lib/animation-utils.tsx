@@ -28,8 +28,10 @@ export function getOptimizedAnimationSettings() {
   // Check device performance indicators
   const isLowEndDevice = navigator.hardwareConcurrency <= 2;
   const isSlowConnection =
-    (navigator as any).connection &&
-    (navigator as any).connection.effectiveType === "slow-2g";
+    (navigator as unknown as { connection?: { effectiveType: string } })
+      .connection &&
+    (navigator as unknown as { connection?: { effectiveType: string } })
+      .connection?.effectiveType === "slow-2g";
 
   return {
     enableAnimations: !prefersReducedMotion,
@@ -126,7 +128,7 @@ export function AnimatedSection({
   children: React.ReactNode;
   delay?: number;
   className?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }) {
   return (
     <motion.div
@@ -153,7 +155,7 @@ export function StaggeredContainer({
   staggerDelay?: number;
   childDelay?: number;
   className?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }) {
   return (
     <motion.div

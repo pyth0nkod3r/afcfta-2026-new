@@ -11,13 +11,23 @@
     },
     "routeIdToServerBundleId": {
       "routes/home": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/about": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/challenge-tracks": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/timeline-format": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/rewards-incentives": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/register": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/contact": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/strategic-plan": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/partners": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/media-resources": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/faq": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/terms": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/privacy": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/portal-index": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/portal-assessment": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/portal-results": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
-      "routes/portal-register": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0"
+      "routes/portal-register": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/$": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0"
     },
     "routes": {
       "root": {
@@ -35,11 +45,83 @@
           "runtime": "nodejs"
         }
       },
+      "routes/about": {
+        "id": "routes/about",
+        "parentId": "root",
+        "file": "app/routes/about.tsx",
+        "path": "/about",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
       "routes/challenge-tracks": {
         "id": "routes/challenge-tracks",
         "parentId": "root",
         "file": "app/routes/challenge-tracks.tsx",
         "path": "/challenge-tracks",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/timeline-format": {
+        "id": "routes/timeline-format",
+        "parentId": "root",
+        "file": "app/routes/timeline-format.tsx",
+        "path": "/timeline-format",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/rewards-incentives": {
+        "id": "routes/rewards-incentives",
+        "parentId": "root",
+        "file": "app/routes/rewards-incentives.tsx",
+        "path": "/rewards-incentives",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/register": {
+        "id": "routes/register",
+        "parentId": "root",
+        "file": "app/routes/register.tsx",
+        "path": "/register",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/contact": {
+        "id": "routes/contact",
+        "parentId": "root",
+        "file": "app/routes/contact.tsx",
+        "path": "/contact",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/strategic-plan": {
+        "id": "routes/strategic-plan",
+        "parentId": "root",
+        "file": "app/routes/strategic-plan.tsx",
+        "path": "/strategic-plan",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/partners": {
+        "id": "routes/partners",
+        "parentId": "root",
+        "file": "app/routes/partners.tsx",
+        "path": "/partners",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/media-resources": {
+        "id": "routes/media-resources",
+        "parentId": "root",
+        "file": "app/routes/media-resources.tsx",
+        "path": "/media-resources",
         "config": {
           "runtime": "nodejs"
         }
@@ -58,6 +140,15 @@
         "parentId": "root",
         "file": "app/routes/terms.tsx",
         "path": "/terms",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/privacy": {
+        "id": "routes/privacy",
+        "parentId": "root",
+        "file": "app/routes/privacy.tsx",
+        "path": "/privacy",
         "config": {
           "runtime": "nodejs"
         }
@@ -97,6 +188,15 @@
         "config": {
           "runtime": "nodejs"
         }
+      },
+      "routes/$": {
+        "id": "routes/$",
+        "parentId": "root",
+        "file": "app/routes/$.tsx",
+        "path": "*",
+        "config": {
+          "runtime": "nodejs"
+        }
       }
     }
   },
@@ -105,7 +205,7 @@
     "basename": "/",
     "buildDirectory": "C:/Users/macmk/codes/GFA-TECH/WORK/afcfta-2026/build",
     "future": {
-      "v8_middleware": false,
+      "v8_middleware": true,
       "unstable_optimizeDeps": false,
       "unstable_splitRouteModules": false,
       "unstable_subResourceIntegrity": false,
@@ -123,11 +223,59 @@
         "file": "routes/home.tsx",
         "index": true
       },
+      "routes/about": {
+        "id": "routes/about",
+        "parentId": "root",
+        "file": "routes/about.tsx",
+        "path": "/about"
+      },
       "routes/challenge-tracks": {
         "id": "routes/challenge-tracks",
         "parentId": "root",
         "file": "routes/challenge-tracks.tsx",
         "path": "/challenge-tracks"
+      },
+      "routes/timeline-format": {
+        "id": "routes/timeline-format",
+        "parentId": "root",
+        "file": "routes/timeline-format.tsx",
+        "path": "/timeline-format"
+      },
+      "routes/rewards-incentives": {
+        "id": "routes/rewards-incentives",
+        "parentId": "root",
+        "file": "routes/rewards-incentives.tsx",
+        "path": "/rewards-incentives"
+      },
+      "routes/register": {
+        "id": "routes/register",
+        "parentId": "root",
+        "file": "routes/register.tsx",
+        "path": "/register"
+      },
+      "routes/contact": {
+        "id": "routes/contact",
+        "parentId": "root",
+        "file": "routes/contact.tsx",
+        "path": "/contact"
+      },
+      "routes/strategic-plan": {
+        "id": "routes/strategic-plan",
+        "parentId": "root",
+        "file": "routes/strategic-plan.tsx",
+        "path": "/strategic-plan"
+      },
+      "routes/partners": {
+        "id": "routes/partners",
+        "parentId": "root",
+        "file": "routes/partners.tsx",
+        "path": "/partners"
+      },
+      "routes/media-resources": {
+        "id": "routes/media-resources",
+        "parentId": "root",
+        "file": "routes/media-resources.tsx",
+        "path": "/media-resources"
       },
       "routes/faq": {
         "id": "routes/faq",
@@ -140,6 +288,12 @@
         "parentId": "root",
         "file": "routes/terms.tsx",
         "path": "/terms"
+      },
+      "routes/privacy": {
+        "id": "routes/privacy",
+        "parentId": "root",
+        "file": "routes/privacy.tsx",
+        "path": "/privacy"
       },
       "routes/portal-index": {
         "id": "routes/portal-index",
@@ -164,6 +318,12 @@
         "parentId": "root",
         "file": "routes/portal-register.tsx",
         "path": "/portal/register"
+      },
+      "routes/$": {
+        "id": "routes/$",
+        "parentId": "root",
+        "file": "routes/$.tsx",
+        "path": "*"
       }
     },
     "routeDiscovery": {
@@ -184,8 +344,40 @@
             "index": true
           },
           {
+            "file": "routes/about.tsx",
+            "path": "/about"
+          },
+          {
             "file": "routes/challenge-tracks.tsx",
             "path": "/challenge-tracks"
+          },
+          {
+            "file": "routes/timeline-format.tsx",
+            "path": "/timeline-format"
+          },
+          {
+            "file": "routes/rewards-incentives.tsx",
+            "path": "/rewards-incentives"
+          },
+          {
+            "file": "routes/register.tsx",
+            "path": "/register"
+          },
+          {
+            "file": "routes/contact.tsx",
+            "path": "/contact"
+          },
+          {
+            "file": "routes/strategic-plan.tsx",
+            "path": "/strategic-plan"
+          },
+          {
+            "file": "routes/partners.tsx",
+            "path": "/partners"
+          },
+          {
+            "file": "routes/media-resources.tsx",
+            "path": "/media-resources"
           },
           {
             "file": "routes/faq.tsx",
@@ -194,6 +386,10 @@
           {
             "file": "routes/terms.tsx",
             "path": "/terms"
+          },
+          {
+            "file": "routes/privacy.tsx",
+            "path": "/privacy"
           },
           {
             "file": "routes/portal-index.tsx",
@@ -210,6 +406,10 @@
           {
             "file": "routes/portal-register.tsx",
             "path": "/portal/register"
+          },
+          {
+            "file": "routes/$.tsx",
+            "path": "*"
           }
         ]
       }

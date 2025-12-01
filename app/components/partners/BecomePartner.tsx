@@ -95,8 +95,8 @@ export function BecomePartner() {
             Become a Partner
           </Heading>
           <Body size="lg" className="max-w-3xl mx-auto">
-            Ready to join Africa's premier innovation event? Partner with us to
-            connect with the continent's brightest minds and shape the future of
+            Ready to join Africa&apos;s premier innovation event? Partner with us to
+            connect with the continent&apos;s brightest minds and shape the future of
             African trade.
           </Body>
         </motion.div>
@@ -247,17 +247,7 @@ export function BecomePartner() {
           className="text-center bg-primary text-white rounded-2xl p-8 md:p-12"
         >
           <div className="space-y-6">
-            <div className="space-y-4">
-              <Heading as="h3" level="h3" className="text-white">
-                Ready to Shape Africa's Digital Future?
-              </Heading>
-              <Body className="max-w-2xl mx-auto text-white/90">
-                Join us in creating the largest innovation event in Africa.
-                Partner with AfCFTA Hackathon 2026 and be part of the
-                continental transformation.
-              </Body>
-            </div>
-            <div className="flex gap-4 justify-center flex-wrap">
+            <div className="flex flex-col gap-4 sm:flex-row justify-center">
               <Button
                 variant="secondary"
                 size="lg"

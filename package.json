@@ -6,9 +6,9 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc --no-Emit",
+    "typecheck": "react-router typegen && tsc --noEmit",
     "lint": "eslint . --ext .ts,.tsx",
-    "format:check": "prettier --check .",
+    "format-check": "prettier --check .",
     "format": "prettier --write ."
   },
   "dependencies": {

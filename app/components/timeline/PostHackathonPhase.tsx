@@ -5,11 +5,9 @@ import { Card } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
 import {
   Award,
-  Rocket,
   Building,
   Network,
   TrendingUp,
-  CheckCircle,
   Calendar,
 } from "lucide-react";
 
@@ -158,7 +156,7 @@ export function PostHackathonPhase() {
                 Incubation
               </Heading>
               <Body size="sm" className="text-white/70">
-                Winners' program
+                Winners&apos; program
               </Body>
             </div>
           </Card>

@@ -28,6 +28,7 @@ interface PageHeroProps {
   actions?: HeroAction[];
   stats?: HeroStat[];
   backgroundImage?: string;
+  subtitle?: string;
   className?: string;
   id?: string;
 }
@@ -35,6 +36,7 @@ interface PageHeroProps {
 export function PageHero({
   badge,
   title,
+  subtitle,
   description,
   actions = [],
   stats = [],
@@ -77,6 +79,11 @@ export function PageHero({
             >
               {title}
             </h1>
+            {subtitle && (
+              <p className="text-xl text-white/90 sm:text-2xl font-medium">
+                {subtitle}
+              </p>
+            )}
             <p className="max-w-2xl text-base text-white/80 sm:text-lg">
               {description}
             </p>
@@ -117,7 +124,7 @@ export function PageHero({
           {/* Action Buttons */}
           {actions.length > 0 && (
             <div className="flex gap-4 flex-wrap">
-              {actions.map((action, index) => (
+              {actions.map((action) => (
                 <Button
                   key={action.label}
                   variant={action.variant || "primary"}

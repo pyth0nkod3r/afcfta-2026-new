@@ -38,7 +38,7 @@ export function CTASection({
     muted: "bg-gray-50 dark:bg-gray-900",
   };
 
-  const textColor = background === "gradient" ? "text-white" : "";
+
 
   return (
     <Section

@@ -33,15 +33,16 @@ export function PartnersHero() {
             >
               Partner with AfCFTA Hackathon 2026
             </h1>
-            <p className="max-w-2xl text-base text-white/80 sm:text-lg">
-              Join us in shaping the future of African trade and innovation.
-              Partner with the continent's premier hackathon and connect with
-              the next generation of African entrepreneurs and technologists.
+            <p className="max-w-2xl text-lg text-white/90 sm:text-xl">
+              Join us in shaping the future of African trade. Connect with top
+              talent, drive innovation, and demonstrate your commitment to
+              continental growth.
             </p>
           </div>
-          <div className="flex gap-4 flex-wrap">
+
+          <div className="flex flex-col gap-4 sm:flex-row">
             <Button
-              variant="primary"
+              variant="secondary"
               size="lg"
               asChild
               className="inline-flex items-center gap-2"

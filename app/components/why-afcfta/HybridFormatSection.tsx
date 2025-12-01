@@ -77,7 +77,7 @@ export function HybridFormatSection() {
 
           <div className="text-center bg-white/10 rounded-xl p-8 border border-white/20">
             <p className="text-lg text-white/90 leading-relaxed">
-              This hybrid model reflects AfCFTA's vision of a digitally
+              This hybrid model reflects AfCFTA&apos;s vision of a digitally
               connected Africa —
               <strong className="text-blue-400">borderless</strong>,
               <strong className="text-green-400"> inclusive</strong>, and

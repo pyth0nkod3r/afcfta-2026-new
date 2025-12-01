@@ -1,10 +1,10 @@
 import * as React from "react";
-import { motion } from "framer-motion";
+import { type HTMLMotionProps, motion } from "framer-motion";
 
 import { cn } from "~/lib/utils";
 import { cardHover } from "~/lib/animations";
 
-interface CardProps extends React.ComponentProps<"div"> {
+interface CardProps extends HTMLMotionProps<"div"> {
   animated?: boolean;
 }
 
@@ -17,7 +17,7 @@ function Card({ className, animated = true, ...props }: CardProps) {
           "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
           className,
         )}
-        {...props}
+        {...(props as React.ComponentProps<"div">)}
       />
     );
   }

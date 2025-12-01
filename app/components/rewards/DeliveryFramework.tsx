@@ -162,8 +162,8 @@ export function DeliveryFramework() {
             </Heading>
             <Body className="max-w-2xl mx-auto">
               Our framework ensures the development of sustainable, scalable 
-              solutions that strengthen Africa's digital trade ecosystem and 
-              empower local innovators to drive the AfCFTA's implementation.
+              solutions that strengthen Africa&apos;s digital trade ecosystem and 
+              empower local innovators to drive the AfCFTA&apos;s implementation.
             </Body>
           </div>
         </motion.div>

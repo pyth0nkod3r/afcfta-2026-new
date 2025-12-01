@@ -30,7 +30,7 @@ export function TimelineHero() {
               className="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white/90 border border-white/20"
             >
               <Clock className="mr-2 size-4" aria-hidden />A Three-Phase Journey
-              to Power Africa's Digital Trade Future
+              to Power Africa&apos;s Digital Trade Future
             </motion.span>
             <h1
               id="timeline-hero-heading"
@@ -41,7 +41,7 @@ export function TimelineHero() {
             <p className="max-w-2xl text-lg text-white/90 sm:text-xl leading-relaxed">
               The AfCFTA Hackathon 2026 follows a structured three-phase process
               — from ideation and preparation to innovation and deployment —
-              designed to enable meaningful collaboration among Africa's
+              designed to enable meaningful collaboration among Africa&apos;s
               brightest innovators, developers, entrepreneurs, and policymakers.
             </p>
           </div>

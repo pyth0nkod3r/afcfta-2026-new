@@ -14,7 +14,7 @@ export function VisionSection() {
           <div className="prose prose-lg max-w-none text-white! leading-relaxed space-y-6">
             <p className="text-xl text-white!">
               The African Continental Free Trade Area (AfCFTA) represents the
-              most ambitious trade initiative in Africa's history — connecting{" "}
+              most ambitious trade initiative in Africa&apos;s history — connecting{" "}
               <strong>55 nations</strong>,<strong>1.4 billion people</strong>,
               and a <strong>$3.4 trillion market</strong>.
             </p>
@@ -27,7 +27,7 @@ export function VisionSection() {
 
             <p className="text-white!">
               The AfCFTA Hackathon 2026 was created to transform policy into
-              practical technology solutions, connecting Africa's brightest
+              practical technology solutions, connecting Africa&apos;s brightest
               innovators to solve real challenges in trade, logistics, payments,
               and policy execution.
             </p>

@@ -6,7 +6,6 @@ import {
   Laptop,
   Users,
   Video,
-  MessageSquare,
   Cloud,
   Globe,
 } from "lucide-react";

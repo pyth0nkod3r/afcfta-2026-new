@@ -60,7 +60,7 @@ export function PrizeCategories() {
             level="h2"
             className="text-white"
           >
-            Celebrating Africa's Top Digital Trade Innovators
+            Celebrating Africa&apos;s Top Digital Trade Innovators
           </Heading>
           <Body size="lg" className="max-w-3xl mx-auto text-white/90">
             Outstanding teams will receive monetary rewards, thematic recognitions, 

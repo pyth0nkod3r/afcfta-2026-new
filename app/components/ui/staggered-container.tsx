@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { cn } from "~/lib/utils";
-import { staggerContainer } from "~/lib/animations";
 import { useIntersectionObserver } from "~/hooks/use-intersection-observer";
 
 interface StaggeredContainerProps {
@@ -41,7 +40,7 @@ export function StaggeredContainer({
   childDelay = 0.1,
   direction = "up",
 }: StaggeredContainerProps) {
-  const { ref, isIntersecting } = useIntersectionObserver({
+  const { ref, isIntersecting } = useIntersectionObserver<HTMLDivElement>({
     threshold: 0.1,
     triggerOnce: true,
   });

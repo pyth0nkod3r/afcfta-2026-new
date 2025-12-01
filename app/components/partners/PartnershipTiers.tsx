@@ -103,9 +103,9 @@ export function PartnershipTiers() {
             Partnership Tiers
           </Heading>
           <Body size="lg" className="max-w-3xl mx-auto">
-            Choose the partnership level that aligns with your organization's
+            Choose the partnership level that aligns with your organization&apos;s
             goals and investment capacity. Each tier offers unique benefits and
-            opportunities to engage with Africa's brightest innovators.
+            opportunities to engage with Africa&apos;s brightest innovators.
           </Body>
         </motion.div>
 

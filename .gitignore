@@ -10,6 +10,7 @@
 /do-not-track-2/
 INTEGRATION_TEST_RESULTS.md
 AGENTS.md
+lint_output*.*
 
 # Generated .gitignore patterns
 

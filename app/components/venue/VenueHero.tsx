@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "~/components/ui/button";
-import { MapPin, Calendar, Globe, Users } from "lucide-react";
+import { MapPin, Calendar, Globe } from "lucide-react";
 
 export function VenueHero() {
   return (

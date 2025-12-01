@@ -133,17 +133,17 @@ export function RewardsCallToAction() {
               level="h4"
               className="text-white"
             >
-              Shape Africa's Digital Trade Future
+              Shape Africa&apos;s Digital Trade Future
             </Heading>
             <Body className="max-w-2xl mx-auto text-white/90">
-              Beyond the substantial rewards, you'll be part of a movement
-              that's transforming how Africa trades, connects, and prospers. The
+              Beyond the substantial rewards, you&apos;ll be part of a movement
+              that&apos;s transforming how Africa trades, connects, and prospers. The
               impact of your solution could benefit millions across the
               continent.
             </Body>
             <Body size="sm" className="text-white/70">
               Join innovators, developers, and entrepreneurs building technology-driven 
-              trade solutions that accelerate Africa's digital transformation.
+              trade solutions that accelerate Africa&apos;s digital transformation.
             </Body>
           </div>
         </motion.div>

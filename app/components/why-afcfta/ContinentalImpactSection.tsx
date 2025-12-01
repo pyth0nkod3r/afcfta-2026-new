@@ -13,9 +13,9 @@ export function ContinentalImpactSection() {
 
           <div className="space-y-8">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {cities.map((city, index) => (
+              {cities.map((city) => (
                 <span
-                  key={index}
+                  key={city}
                   className="px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold rounded-full text-lg"
                 >
                   {city}
@@ -35,16 +35,16 @@ export function ContinentalImpactSection() {
 
               <p className="text-lg leading-relaxed text-gray-300">
                 This collaboration strengthens regional integration and ensures
-                that Nigeria's innovations connect seamlessly with the rest of
+                that Nigeria&apos;s innovations connect seamlessly with the rest of
                 Africa, creating shared growth opportunities and a unified
                 digital market.
               </p>
 
               <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 mt-8">
                 <p className="text-2xl font-semibold text-yellow-400">
-                  Together, we're not just hosting a hackathon —
+                  Together, we&apos;re not just hosting a hackathon —
                   <br className="hidden md:block" />
-                  we're shaping Africa's digital economy.
+                  we&apos;re shaping Africa&apos;s digital economy.
                 </p>
               </div>
             </div>

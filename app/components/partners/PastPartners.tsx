@@ -110,7 +110,7 @@ export function PastPartners() {
             Highlighted Past Partners
           </Heading>
           <Body size="lg" className="max-w-3xl mx-auto">
-            We're proud to have collaborated with leading organizations across
+            We&apos;re proud to have collaborated with leading organizations across
             Africa and globally. Join this distinguished network of innovation
             partners.
           </Body>
@@ -281,10 +281,10 @@ export function PastPartners() {
                 size="lg"
                 className="italic text-gray-700 dark:text-gray-300"
               >
-                "Partnering with the AfCFTA Hackathon has been transformational
+                &quot;Partnering with the AfCFTA Hackathon has been transformational
                 for our organization. The quality of innovation, the caliber of
                 participants, and the impact on African trade development
-                exceeded all our expectations."
+                exceeded all our expectations.&quot;
               </Body>
               <div className="space-y-1">
                 <Body

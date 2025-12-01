@@ -13,7 +13,6 @@ import {
   Headphones,
   Camera,
   CheckCircle,
-  ArrowRight,
 } from "lucide-react";
 
 const formatComparison = {

@@ -12,16 +12,16 @@ export function WhyAfcftaHero() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Building Africa's Digital Trade Future —{" "}
+                Building Africa&apos;s Digital Trade Future —{" "}
                 <span className="text-yellow-400">
                   One Innovation at a Time
                 </span>
               </h1>
 
               <p className="text-xl md:text-2xl text-blue-100 leading-relaxed">
-                The AfCFTA Hackathon 2026 is Africa's premier innovation
+                The AfCFTA Hackathon 2026 is Africa&apos;s premier innovation
                 challenge driving cross-border digital trade, fintech, and AI
-                solutions that power the continent's economic future under the
+                solutions that power the continent&apos;s economic future under the
                 AfCFTA Digital Trade Protocol.
               </p>
             </div>

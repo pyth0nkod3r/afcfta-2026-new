@@ -14,7 +14,7 @@ export function WhyAfcftaCallToAction() {
               Join the AfCFTA Hackathon 2026
             </h2>
             <p className="text-xl md:text-2xl text-blue-100 mb-8">
-              Be part of Africa's digital transformation. Collaborate, innovate,
+              Be part of Africa&apos;s digital transformation. Collaborate, innovate,
               and make history.
             </p>
           </div>
