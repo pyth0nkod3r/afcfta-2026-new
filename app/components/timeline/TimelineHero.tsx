@@ -8,16 +8,6 @@ export function TimelineHero() {
       className="relative isolate overflow-hidden bg-surface text-white"
       aria-labelledby="timeline-hero-heading"
     >
-import { motion } from "framer-motion";
-import { Button } from "~/components/ui/button";
-import { Calendar, Clock, MapPin } from "lucide-react";
-
-export function TimelineHero() {
-  return (
-    <section
-      className="relative isolate overflow-hidden bg-surface text-white"
-      aria-labelledby="timeline-hero-heading"
-    >
       {/* Background Image & Overlay */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('/images/hero-placeholder.png')] bg-cover bg-center opacity-40 md:opacity-60" />
