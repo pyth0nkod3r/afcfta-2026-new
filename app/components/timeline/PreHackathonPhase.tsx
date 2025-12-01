@@ -96,7 +96,7 @@ export function PreHackathonPhase() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="grid gap-6 md:grid-cols-3 text-center"
         >
-          <Card className="p-6 bg-gray-50! border-white/15">
+          <Card className="p-6 bg-gray-50! border-white/15 hover:shadow-lg transition-all duration-300 hover:scale-[1.03] cursor-pointer">
             <div className="space-y-2">
               <Calendar className="size-8 mx-auto text-primary" />
               <Heading as="h3" level="h4" className="text-gray-900!">
@@ -107,7 +107,7 @@ export function PreHackathonPhase() {
               </Body>
             </div>
           </Card>
-          <Card className="p-6 bg-gray-50! border-white/15">
+          <Card className="p-6 bg-gray-50! border-white/15 hover:shadow-lg transition-all duration-300 hover:scale-[1.03] cursor-pointer">
             <div className="space-y-2">
               <Users className="size-8 mx-auto text-primary" />
               <Heading as="h3" level="h4" className="text-gray-900!">
@@ -118,7 +118,7 @@ export function PreHackathonPhase() {
               </Body>
             </div>
           </Card>
-          <Card className="p-6 bg-gray-50! border-white/15">
+          <Card className="p-6 bg-gray-50! border-white/15 hover:shadow-lg transition-all duration-300 hover:scale-[1.03] cursor-pointer">
             <div className="space-y-2">
               <BookOpen className="size-8 mx-auto text-primary" />
               <Heading as="h3" level="h4" className="text-gray-900!">
@@ -143,7 +143,7 @@ export function PreHackathonPhase() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-6 hover:shadow-lg transition-shadow bg-gray-50! border-white/15">
+                <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] bg-gray-50! border-white/15 cursor-pointer">
                   <div className="flex gap-6">
                     <div className="flex flex-col items-center">
                       <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
