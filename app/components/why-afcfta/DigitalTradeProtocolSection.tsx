@@ -33,14 +33,14 @@ const pillars = [
 
 export function DigitalTradeProtocolSection() {
   return (
-    <Section className="py-16 md:py-24 bg-gradient-to-br from-purple-50 to-blue-50">
+    <Section className="py-16 md:py-24 bg-black!">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white! mb-6">
               Alignment with AfCFTA Digital Trade Protocol
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-white! max-w-3xl mx-auto">
               The Hackathon directly supports the implementation of the AfCFTA
               Digital Trade Protocol, focusing on five key pillars:
             </p>
@@ -52,7 +52,7 @@ export function DigitalTradeProtocolSection() {
               return (
                 <Card
                   key={index}
-                  className="hover:shadow-lg transition-shadow duration-300"
+                  className="hover:shadow-lg transition-shadow duration-300 bg-gray-50! border-white/20"
                 >
                   <CardContent className="p-6">
                     <div className="flex items-start gap-6">
@@ -62,10 +62,10 @@ export function DigitalTradeProtocolSection() {
                         </div>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        <h3 className="text-xl font-semibold text-gray-900! mb-2">
                           {pillar.title}
                         </h3>
-                        <p className="text-gray-700 leading-relaxed">
+                        <p className="text-gray-900! leading-relaxed">
                           {pillar.description}
                         </p>
                       </div>

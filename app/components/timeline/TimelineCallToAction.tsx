@@ -3,6 +3,7 @@ import { Section } from "~/components/ui/section";
 import { Heading, Body } from "~/components/ui/typography";
 import { Button } from "~/components/ui/button";
 import { Card } from "~/components/ui/card";
+import { Badge } from "~/components/ui/badge";
 import {
   ArrowRight,
   Calendar,
@@ -72,7 +73,7 @@ const upcomingMilestones = [
 
 export function TimelineCallToAction() {
   return (
-    <Section spacing="lg">
+    <Section background="muted" spacing="lg" className="bg-white text-black">
       <div className="space-y-12 md:space-y-16">
         {/* Main CTA Section */}
         <motion.div
@@ -84,13 +85,18 @@ export function TimelineCallToAction() {
         >
           <div className="space-y-6">
             <div className="space-y-4">
+              <Badge
+                variant="outline"
+                className="mb-4 bg-white/10 border-white/20 text-white"
+              >
+                🏁 6️⃣ Call to Action
+              </Badge>
               <Heading as="h2" level="h2" className="text-white">
-                Ready to Join Africa's Innovation Journey?
+                Your Innovation Can Shape Africa's Borderless Digital Future
               </Heading>
               <Body size="lg" className="max-w-3xl mx-auto text-white/90">
-                From registration to post-hackathon success, this comprehensive
-                timeline ensures you're prepared for every step of the journey.
-                Start your transformation today.
+                Be part of the movement redefining how Africa trades, connects,
+                and grows through technology.
               </Body>
             </div>
 
@@ -101,10 +107,7 @@ export function TimelineCallToAction() {
                 asChild
                 className="inline-flex items-center gap-2"
               >
-                <a href="/register">
-                  Register Your Interest
-                  <ArrowRight className="size-4" />
-                </a>
+                <a href="/register">📝 Register Now</a>
               </Button>
               <Button
                 variant="outline"
@@ -112,10 +115,15 @@ export function TimelineCallToAction() {
                 asChild
                 className="inline-flex items-center gap-2 border-white/20 text-white hover:bg-white/10"
               >
-                <a href="/assets/complete-timeline.pdf" download>
-                  <Download className="size-4" />
-                  Download Timeline
-                </a>
+                <a href="#full-schedule">📅 Add to Calendar</a>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                asChild
+                className="inline-flex items-center gap-2 border-white/20 text-white hover:bg-white/10"
+              >
+                <a href="/participant-guide">📘 View Participant Guide</a>
               </Button>
             </div>
           </div>

@@ -18,62 +18,33 @@ import {
 
 const formatComparison = {
   physical: {
-    title: "Physical Participation",
+    title: "Physical Experience (Abuja, Nigeria)",
     location: "Abuja, Nigeria",
     icon: Building,
     color: "bg-blue-500",
-    capacity: "500+ teams",
+    capacity: "",
     advantages: [
-      "Face-to-face collaboration and networking",
-      "Access to premium facilities and resources",
-      "Direct mentor interaction and support",
-      "Immersive hackathon atmosphere",
-      "Real-time technical assistance",
-      "Cultural exchange and community building",
+      "On-site innovation hub and demo zones",
+      "Access to government officials, investors, and policy experts",
+      "Networking lounges, exhibitions, and live pitching",
     ],
-    facilities: [
-      "State-of-the-art development labs",
-      "High-speed internet and power backup",
-      "24/7 food service and rest areas",
-      "Dedicated mentor and judge spaces",
-      "Presentation theaters and demo areas",
-      "Networking lounges and collaboration zones",
-    ],
-    requirements: [
-      "Valid travel documents",
-      "Accommodation arrangements",
-      "Local transportation planning",
-      "Health and safety compliance",
-    ],
+    facilities: [],
+    requirements: [],
   },
   virtual: {
-    title: "Virtual Participation",
-    location: "Across 54 African Countries",
+    title: "Virtual Experience (Across Africa)",
+    location: "Across Africa",
     icon: Monitor,
     color: "bg-green-500",
-    capacity: "4,500+ teams",
+    capacity: "",
     advantages: [
-      "Participate from anywhere in Africa",
-      "No travel or accommodation costs",
-      "Flexible working environment",
-      "Access to global collaboration tools",
-      "Recorded sessions for later review",
-      "Broader networking opportunities",
+      "Dedicated online platform for team collaboration",
+      "Livestreams of sessions, workshops, and keynotes",
+      "Real-time mentoring and judging integration",
+      "Digital showcase for prototypes and pitches",
     ],
-    facilities: [
-      "Dedicated virtual collaboration platform",
-      "24/7 technical support chat",
-      "Virtual mentor office hours",
-      "Online presentation and demo tools",
-      "Digital resource libraries",
-      "Virtual networking rooms",
-    ],
-    requirements: [
-      "Stable internet connection (minimum 10 Mbps)",
-      "Computer/laptop with webcam and microphone",
-      "Collaboration software installation",
-      "Quiet workspace setup",
-    ],
+    facilities: [],
+    requirements: [],
   },
 };
 
@@ -162,18 +133,20 @@ export function HybridFormatExplained() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-4"
         >
+          <Badge variant="outline" className="mb-4">
+            🌐 5️⃣ Hybrid Format Explained
+          </Badge>
           <Heading
             as="h2"
             level="h2"
             className="text-gray-900 dark:text-gray-50"
           >
-            Hybrid Format Explained
+            Hybrid Format: Physical + Virtual Experience
           </Heading>
           <Body size="lg" className="max-w-3xl mx-auto">
-            Experience the best of both worlds with our innovative hybrid
-            format. Whether you join us physically in Abuja or participate
-            virtually from anywhere in Africa, you'll have equal opportunities
-            to succeed.
+            To ensure inclusive participation, equal opportunity, and
+            cross-border collaboration consistent with the AfCFTA Digital Trade
+            Protocol.
           </Body>
         </motion.div>
 
@@ -300,64 +273,6 @@ export function HybridFormatExplained() {
                                   className="text-gray-700 dark:text-gray-300"
                                 >
                                   {advantage}
-                                </Body>
-                              </li>
-                            ),
-                          )}
-                        </ul>
-                      </div>
-
-                      {/* Facilities */}
-                      <div className="space-y-3">
-                        <Body
-                          size="sm"
-                          weight="semibold"
-                          transform="uppercase"
-                          color="muted"
-                        >
-                          Available Facilities:
-                        </Body>
-                        <ul className="space-y-1">
-                          {format.facilities.map((facility, facilityIndex) => (
-                            <li
-                              key={facilityIndex}
-                              className="flex items-start gap-2"
-                            >
-                              <ArrowRight className="size-3 text-primary mt-1 shrink-0" />
-                              <Body
-                                size="sm"
-                                className="text-gray-700 dark:text-gray-300"
-                              >
-                                {facility}
-                              </Body>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Requirements */}
-                      <div className="space-y-3">
-                        <Body
-                          size="sm"
-                          weight="semibold"
-                          transform="uppercase"
-                          color="muted"
-                        >
-                          Requirements:
-                        </Body>
-                        <ul className="space-y-1">
-                          {format.requirements.map(
-                            (requirement, requirementIndex) => (
-                              <li
-                                key={requirementIndex}
-                                className="flex items-start gap-2"
-                              >
-                                <div className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></div>
-                                <Body
-                                  size="sm"
-                                  className="text-gray-700 dark:text-gray-300"
-                                >
-                                  {requirement}
                                 </Body>
                               </li>
                             ),

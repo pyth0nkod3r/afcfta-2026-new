@@ -23,22 +23,22 @@ const initiatives = [
 
 export function NigeriaLeadershipSection() {
   return (
-    <Section className="py-16 md:py-24 bg-blue-50">
+    <Section className="py-16 md:py-24 bg-black!">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white! mb-6">
               Nigeria's Strategic Leadership
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-white! max-w-3xl mx-auto">
               As Africa's largest economy and tech hub, Nigeria plays a pivotal
               role in advancing the AfCFTA Digital Trade Protocol.
             </p>
           </div>
 
-          <Card className="mb-8">
+          <Card className="mb-8 bg-gray-50! border-white/20">
             <CardContent className="p-8">
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              <p className="text-lg text-gray-900! leading-relaxed mb-6">
                 The Nigeria AfCFTA Coordination Office, in partnership with the
                 Federal Ministry of Industry, Trade and Investment, is
                 championing this hackathon to:
@@ -52,7 +52,7 @@ export function NigeriaLeadershipSection() {
                       <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
                         <IconComponent className="h-5 w-5 text-blue-600" />
                       </div>
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-gray-900! leading-relaxed">
                         {initiative.text}
                       </p>
                     </div>
@@ -63,7 +63,7 @@ export function NigeriaLeadershipSection() {
           </Card>
 
           <div className="text-center">
-            <p className="text-lg text-gray-700 italic">
+            <p className="text-lg text-white! italic">
               Through collaboration, Nigerian innovators will lead the charge in
               connecting policy, innovation, and trade across borders.
             </p>

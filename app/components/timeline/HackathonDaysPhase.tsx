@@ -16,148 +16,113 @@ import {
 
 const hackathonSchedule = [
   {
-    day: "Friday",
-    date: "May 10, 2026",
-    theme: "Launch & Ideation",
+    day: "Day 1",
+    date: "April 8",
+    theme: "Launch & Ideation Sprint",
     icon: Rocket,
     color: "bg-blue-500",
     sessions: [
       {
-        time: "09:00 - 10:30",
+        time: "",
         title: "Opening Ceremony",
-        description: "Welcome, keynotes, and challenge presentations",
+        description: "Keynote by AfCFTA Secretariat",
         format: "Hybrid",
-        location: "Main Auditorium / Virtual Stream",
+        location: "",
       },
       {
-        time: "11:00 - 12:30",
-        title: "Team Formation Finalization",
-        description: "Last-minute team adjustments and introductions",
-        format: "Physical + Virtual",
-        location: "Networking Spaces",
+        time: "",
+        title: "Policy Forum on Digital Trade",
+        description: "",
+        format: "Hybrid",
+        location: "",
       },
       {
-        time: "14:00 - 17:00",
-        title: "Ideation & Planning",
-        description: "Solution brainstorming and project planning",
+        time: "",
+        title: "Team Setup & Ideation Workshops",
+        description: "",
         format: "Team-based",
-        location: "Team Workspaces",
-      },
-      {
-        time: "18:00 - 19:30",
-        title: "Mentor Speed Dating",
-        description: "Meet mentors and establish advisory relationships",
-        format: "Hybrid",
-        location: "Mentor Hub",
-      },
-      {
-        time: "20:00 - 22:00",
-        title: "Welcome Networking Dinner",
-        description: "Cultural exchange and relationship building",
-        format: "Physical",
-        location: "Event Center",
+        location: "",
       },
     ],
   },
   {
-    day: "Saturday",
-    date: "May 11, 2026",
-    theme: "Build & Develop",
+    day: "Day 2",
+    date: "April 9",
+    theme: "Build & Validate",
     icon: Code,
     color: "bg-green-500",
     sessions: [
       {
-        time: "08:00 - 09:00",
-        title: "Energizer & Daily Briefing",
-        description: "Morning motivation and day's agenda",
+        time: "",
+        title: "Solution Design",
+        description: "",
+        format: "Team-based",
+        location: "",
+      },
+      {
+        time: "",
+        title: "Mentorship Clinics",
+        description: "",
         format: "Hybrid",
-        location: "Main Stage",
+        location: "",
       },
       {
-        time: "09:00 - 12:00",
-        title: "Intensive Development Sprint 1",
-        description: "Core solution development and prototyping",
+        time: "",
+        title: "Prototype Development",
+        description: "",
         format: "Team-based",
-        location: "Development Labs",
+        location: "",
       },
       {
-        time: "13:00 - 16:00",
-        title: "Intensive Development Sprint 2",
-        description: "Feature implementation and testing",
-        format: "Team-based",
-        location: "Development Labs",
-      },
-      {
-        time: "16:30 - 17:30",
-        title: "Technical Workshops",
-        description: "Specialized skills and platform training",
+        time: "",
+        title: "AI & API Support Sessions",
+        description: "",
         format: "Hybrid",
-        location: "Workshop Rooms",
-      },
-      {
-        time: "18:00 - 19:00",
-        title: "Progress Check-ins",
-        description: "Mentor consultations and feedback sessions",
-        format: "Team-based",
-        location: "Mentor Stations",
-      },
-      {
-        time: "19:30 - 21:00",
-        title: "Cultural Night",
-        description: "Celebrating African diversity and innovation",
-        format: "Physical",
-        location: "Cultural Pavilion",
+        location: "",
       },
     ],
   },
   {
-    day: "Sunday",
-    date: "May 12, 2026",
-    theme: "Finalize & Present",
+    day: "Day 3",
+    date: "April 10",
+    theme: "Pitch & Celebrate",
     icon: Presentation,
     color: "bg-purple-500",
     sessions: [
       {
-        time: "08:00 - 09:00",
-        title: "Final Day Kickoff",
-        description: "Submission guidelines and presentation prep",
+        time: "",
+        title: "Demo Day",
+        description: "",
         format: "Hybrid",
-        location: "Main Stage",
+        location: "",
       },
       {
-        time: "09:00 - 12:00",
-        title: "Final Development Sprint",
-        description: "Last-minute features and bug fixes",
-        format: "Team-based",
-        location: "Development Labs",
-      },
-      {
-        time: "12:00 - 13:00",
-        title: "Solution Submission Deadline",
-        description: "Final submissions and documentation upload",
-        format: "Digital",
-        location: "Submission Portal",
-      },
-      {
-        time: "14:00 - 17:00",
-        title: "Team Presentations",
-        description: "5-minute pitches to judges and audience",
+        time: "",
+        title: "Final Pitches",
+        description: "",
         format: "Hybrid",
-        location: "Presentation Theaters",
+        location: "",
       },
       {
-        time: "17:30 - 18:30",
-        title: "Judging & Deliberation",
-        description: "Judge evaluation and winner selection",
+        time: "",
+        title: "Judging",
+        description: "",
         format: "Closed",
-        location: "Judging Room",
+        location: "",
       },
       {
-        time: "19:00 - 21:00",
-        title: "Awards Ceremony & Closing",
-        description: "Winner announcements and celebration",
+        time: "",
+        title: "Awards Ceremony",
+        description: "",
         format: "Hybrid",
-        location: "Main Auditorium",
+        location: "",
+      },
+      {
+        time: "",
+        title: "Launch of the Nigeria AfCFTA Whitepaper on Digital Trade & AI",
+        description: "",
+        format: "Hybrid",
+        location: "",
       },
     ],
   },
@@ -165,7 +130,7 @@ const hackathonSchedule = [
 
 export function HackathonDaysPhase() {
   return (
-    <Section spacing="lg">
+    <Section background="muted" spacing="lg">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -174,20 +139,17 @@ export function HackathonDaysPhase() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-4"
         >
-          <Badge variant="outline" className="mb-4">
-            Phase Two
+          <Badge variant="outline" className="mb-4 border-black/20 text-black">
+            💡 2️⃣ Phase Two
           </Badge>
-          <Heading
-            as="h2"
-            level="h2"
-            className="text-gray-900 dark:text-gray-50"
-          >
-            Hackathon Days
+          <Heading as="h2" level="h2" className="text-black">
+            Three Days of Innovation, Collaboration, and Action
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto">
-            Three intensive days of innovation, collaboration, and creation.
-            Teams work around the clock to transform their ideas into working
-            solutions that could reshape African trade.
+          <Body size="lg" className="max-w-3xl mx-auto text-black">
+            This is the heart of the AfCFTA Hackathon — where innovation meets
+            execution. Participants will co-create and prototype digital
+            solutions addressing continental trade challenges under expert
+            mentorship and policy guidance.
           </Body>
         </motion.div>
 
@@ -197,65 +159,38 @@ export function HackathonDaysPhase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid gap-6 md:grid-cols-4 text-center"
+          className="grid gap-6 md:grid-cols-3 text-center"
         >
           <Card className="p-6">
             <div className="space-y-2">
               <Clock className="size-8 mx-auto text-primary" />
-              <Heading
-                as="h3"
-                level="h4"
-                className="text-gray-900 dark:text-gray-50"
-              >
-                72 Hours
+              <Heading as="h3" level="h4" className="text-black">
+                April 8–10, 2026
               </Heading>
-              <Body size="sm" color="muted">
-                Non-stop innovation
+              <Body size="sm" className="text-black/70">
+                Hackathon Days
               </Body>
             </div>
           </Card>
           <Card className="p-6">
             <div className="space-y-2">
               <MapPin className="size-8 mx-auto text-primary" />
-              <Heading
-                as="h3"
-                level="h4"
-                className="text-gray-900 dark:text-gray-50"
-              >
-                Abuja, Nigeria
+              <Heading as="h3" level="h4" className="text-black">
+                Hybrid Format
               </Heading>
-              <Body size="sm" color="muted">
-                Physical hub location
+              <Body size="sm" className="text-black/70">
+                Physical (Abuja) + Virtual (Online)
               </Body>
             </div>
           </Card>
           <Card className="p-6">
             <div className="space-y-2">
               <Wifi className="size-8 mx-auto text-primary" />
-              <Heading
-                as="h3"
-                level="h4"
-                className="text-gray-900 dark:text-gray-50"
-              >
-                54 Countries
+              <Heading as="h3" level="h4" className="text-black">
+                Across Africa
               </Heading>
-              <Body size="sm" color="muted">
-                Virtual participation
-              </Body>
-            </div>
-          </Card>
-          <Card className="p-6">
-            <div className="space-y-2">
-              <Trophy className="size-8 mx-auto text-primary" />
-              <Heading
-                as="h3"
-                level="h4"
-                className="text-gray-900 dark:text-gray-50"
-              >
-                $500K+
-              </Heading>
-              <Body size="sm" color="muted">
-                Prizes at stake
+              <Body size="sm" className="text-black/70">
+                Online participation
               </Body>
             </div>
           </Card>
@@ -282,14 +217,10 @@ export function HackathonDaysPhase() {
                     <IconComponent className="size-8 text-white" />
                   </div>
                   <div>
-                    <Heading
-                      as="h3"
-                      level="h3"
-                      className="text-gray-900 dark:text-gray-50"
-                    >
+                    <Heading as="h3" level="h3" className="text-black">
                       {day.day} - {day.theme}
                     </Heading>
-                    <Body color="muted">{day.date}</Body>
+                    <Body className="text-black/70">{day.date}</Body>
                   </div>
                 </div>
 
@@ -315,7 +246,7 @@ export function HackathonDaysPhase() {
                               <Heading
                                 as="h4"
                                 level="h6"
-                                className="text-gray-900 dark:text-gray-50"
+                                className="text-black"
                               >
                                 {session.title}
                               </Heading>
@@ -336,13 +267,10 @@ export function HackathonDaysPhase() {
                                 </Badge>
                               </div>
                             </div>
-                            <Body
-                              size="sm"
-                              className="text-gray-600 dark:text-gray-400"
-                            >
+                            <Body size="sm" className="text-black/70">
                               {session.description}
                             </Body>
-                            <Body size="xs" color="muted">
+                            <Body size="xs" className="text-black/60">
                               📍 {session.location}
                             </Body>
                           </div>
@@ -356,7 +284,7 @@ export function HackathonDaysPhase() {
           })}
         </div>
 
-        {/* Support Services */}
+        {/* Special Sessions */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -366,53 +294,49 @@ export function HackathonDaysPhase() {
         >
           <div className="space-y-6">
             <div className="text-center">
-              <Heading
-                as="h3"
-                level="h4"
-                className="text-gray-900 dark:text-gray-50"
-              >
-                24/7 Support Services
+              <Heading as="h3" level="h4" className="text-black">
+                Special Sessions
               </Heading>
-              <Body color="muted" className="mt-2">
-                Comprehensive support throughout the hackathon weekend
+              <Body className="mt-2 text-black/70">
+                Additional activities throughout the hackathon
               </Body>
             </div>
 
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 text-center">
               <div className="space-y-2">
                 <Users className="size-8 mx-auto text-primary" />
-                <Body size="sm" weight="semibold">
-                  Technical Mentors
+                <Body size="sm" weight="semibold" className="text-black">
+                  Policy Dialogues
                 </Body>
-                <Body size="xs" color="muted">
-                  Expert guidance available
+                <Body size="xs" className="text-black/60">
+                  AfCFTA and Nigeria Coordination Office
                 </Body>
               </div>
               <div className="space-y-2">
                 <Code className="size-8 mx-auto text-primary" />
-                <Body size="sm" weight="semibold">
-                  Development Tools
+                <Body size="sm" weight="semibold" className="text-black">
+                  Mentorship Huddles
                 </Body>
-                <Body size="xs" color="muted">
-                  Cloud platforms & APIs
+                <Body size="xs" className="text-black/60">
+                  Trade, tech, and startup leaders
                 </Body>
               </div>
               <div className="space-y-2">
                 <Wifi className="size-8 mx-auto text-primary" />
-                <Body size="sm" weight="semibold">
-                  High-Speed Internet
+                <Body size="sm" weight="semibold" className="text-black">
+                  Investor Networking
                 </Body>
-                <Body size="xs" color="muted">
-                  Reliable connectivity
+                <Body size="xs" className="text-black/60">
+                  Ecosystem networking forum
                 </Body>
               </div>
               <div className="space-y-2">
-                <Clock className="size-8 mx-auto text-primary" />
-                <Body size="sm" weight="semibold">
-                  24/7 Facilities
+                <Trophy className="size-8 mx-auto text-primary" />
+                <Body size="sm" weight="semibold" className="text-black">
+                  Continental Demo
                 </Body>
-                <Body size="xs" color="muted">
-                  Food, rest areas, security
+                <Body size="xs" className="text-black/60">
+                  Hybrid broadcast showcase
                 </Body>
               </div>
             </div>

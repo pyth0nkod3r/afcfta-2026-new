@@ -27,10 +27,10 @@ const objectives = [
 
 export function ObjectivesSection() {
   return (
-    <Section className="py-16 md:py-24">
+    <Section background="muted" className="py-16 md:py-24 text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Objectives of the Hackathon
           </h2>
         </div>
@@ -41,16 +41,16 @@ export function ObjectivesSection() {
             return (
               <Card
                 key={index}
-                className="text-center hover:shadow-lg transition-shadow duration-300"
+                className="text-center hover:shadow-lg transition-shadow duration-300 bg-white/10 border-white/20"
               >
                 <CardContent className="p-6 space-y-4">
                   <div className="mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
                     <IconComponent className="h-8 w-8 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-xl font-semibold text-white">
                     {objective.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-white/80 leading-relaxed">
                     {objective.description}
                   </p>
                 </CardContent>

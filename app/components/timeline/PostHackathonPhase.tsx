@@ -15,85 +15,44 @@ import {
 
 const postHackathonActivities = [
   {
-    title: "Winner Announcement & Recognition",
-    date: "May 13-19, 2026",
-    duration: "1 week",
+    title: "🏆 Winners' Incubation Program",
+    date: "May–June 2026",
+    duration: "",
     icon: Award,
-    description: "Comprehensive winner recognition and media coverage campaign",
-    activities: [
-      "Official winner announcement ceremony",
-      "Media interviews and press coverage",
-      "Social media celebration campaigns",
-      "Winner profile features and case studies",
-      "Initial prize disbursement (50% of cash prizes)",
-    ],
-    outcomes: ["Public recognition", "Media coverage", "Initial funding"],
+    description:
+      "Selected teams receive funding, mentorship, and policy alignment support.",
+    activities: [],
+    outcomes: [],
   },
   {
-    title: "Incubation Program Onboarding",
-    date: "May 20 - June 15, 2026",
-    duration: "4 weeks",
+    title: "📊 Pilot Implementation & Partnerships",
+    date: "June–July 2026",
+    duration: "",
     icon: Building,
     description:
-      "Integration into comprehensive incubation and acceleration programs",
-    activities: [
-      "Incubation program enrollment and orientation",
-      "Mentor assignment and relationship establishment",
-      "Legal entity formation and IP protection",
-      "Business model refinement and validation",
-      "Technical architecture review and optimization",
-    ],
-    outcomes: ["Program enrollment", "Legal setup", "Mentor relationships"],
+      "Collaboration with government agencies, investors, and private sector partners to deploy pilot solutions.",
+    activities: [],
+    outcomes: [],
   },
   {
-    title: "Market Validation & Development",
-    date: "June 16 - August 31, 2026",
-    duration: "10 weeks",
+    title: "📘 Whitepaper Dissemination",
+    date: "July 2026",
+    duration: "",
     icon: TrendingUp,
-    description: "Intensive market validation and product development phase",
-    activities: [
-      "Customer discovery and market research",
-      "MVP development and iterative testing",
-      "Pilot program development with partners",
-      "Regulatory compliance and approval processes",
-      "Go-to-market strategy development",
-    ],
-    outcomes: ["Market validation", "MVP completion", "Pilot partnerships"],
+    description:
+      "Publication of the Nigeria AfCFTA Digital Trade Whitepaper, featuring policy insights and innovation outcomes from the hackathon.",
+    activities: [],
+    outcomes: [],
   },
   {
-    title: "Scaling & Investment Preparation",
-    date: "September 1 - November 30, 2026",
-    duration: "12 weeks",
-    icon: Rocket,
-    description: "Preparation for scaling and investment fundraising",
-    activities: [
-      "Investment readiness and pitch deck development",
-      "Due diligence preparation and documentation",
-      "Strategic partnership negotiations",
-      "Cross-border expansion planning",
-      "Team scaling and talent acquisition",
-    ],
-    outcomes: [
-      "Investment readiness",
-      "Strategic partnerships",
-      "Expansion plans",
-    ],
-  },
-  {
-    title: "Alumni Network Integration",
-    date: "December 1, 2026 - Ongoing",
-    duration: "Lifetime",
+    title: "🌍 Continental Showcase",
+    date: "Ongoing",
+    duration: "",
     icon: Network,
     description:
-      "Long-term integration into the AfCFTA Hackathon alumni ecosystem",
-    activities: [
-      "Alumni network onboarding and integration",
-      "Ongoing mentorship and advisory support",
-      "Peer collaboration and partnership opportunities",
-      "Future event participation and leadership roles",
-      "Continuous learning and development programs",
-    ],
-    outcomes: ["Alumni status", "Ongoing support", "Leadership opportunities"],
+      "Winning teams featured across regional AfCFTA innovation and trade events.",
+    activities: [],
+    outcomes: [],
   },
 ];
 
@@ -151,7 +110,7 @@ const supportPrograms = [
 
 export function PostHackathonPhase() {
   return (
-    <Section background="muted" spacing="lg">
+    <Section background="muted" spacing="lg" className="bg-white text-black">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -160,21 +119,16 @@ export function PostHackathonPhase() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-4"
         >
-          <Badge variant="outline" className="mb-4">
-            Phase Three
+          <Badge variant="outline" className="mb-4 border-black/20 text-black">
+            🚀 3️⃣ Phase Three
           </Badge>
-          <Heading
-            as="h2"
-            level="h2"
-            className="text-gray-900 dark:text-gray-50"
-          >
-            Post-Hackathon Phase
+          <Heading as="h2" level="h2" className="text-black">
+            From Prototype to Policy and Market
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto">
-            The journey doesn't end with the hackathon. Winners enter a
-            comprehensive support ecosystem designed to transform innovative
-            ideas into scalable businesses that can impact millions across
-            Africa.
+          <Body size="lg" className="max-w-3xl mx-auto text-black">
+            After the hackathon, selected innovations will move into incubation
+            and implementation under the AfCFTA innovation ecosystem —
+            connecting ideas to real-world impact.
           </Body>
         </motion.div>
 
@@ -189,45 +143,33 @@ export function PostHackathonPhase() {
           <Card className="p-6">
             <div className="space-y-2">
               <Calendar className="size-8 mx-auto text-primary" />
-              <Heading
-                as="h3"
-                level="h4"
-                className="text-gray-900 dark:text-gray-50"
-              >
-                6+ Months
+              <Heading as="h3" level="h4" className="text-black">
+                April – July 2026
               </Heading>
-              <Body size="sm" color="muted">
-                Structured support period
+              <Body size="sm" className="text-black/70">
+                Post-Hackathon Phase
               </Body>
             </div>
           </Card>
           <Card className="p-6">
             <div className="space-y-2">
               <TrendingUp className="size-8 mx-auto text-primary" />
-              <Heading
-                as="h3"
-                level="h4"
-                className="text-gray-900 dark:text-gray-50"
-              >
-                $2.75M+
+              <Heading as="h3" level="h4" className="text-black">
+                Incubation
               </Heading>
-              <Body size="sm" color="muted">
-                Non-cash support value
+              <Body size="sm" className="text-black/70">
+                Winners' program
               </Body>
             </div>
           </Card>
           <Card className="p-6">
             <div className="space-y-2">
               <Network className="size-8 mx-auto text-primary" />
-              <Heading
-                as="h3"
-                level="h4"
-                className="text-gray-900 dark:text-gray-50"
-              >
-                Lifetime
+              <Heading as="h3" level="h4" className="text-black">
+                Continental
               </Heading>
-              <Body size="sm" color="muted">
-                Alumni network access
+              <Body size="sm" className="text-black/70">
+                Showcase events
               </Body>
             </div>
           </Card>
@@ -259,11 +201,7 @@ export function PostHackathonPhase() {
                     <div className="flex-1 space-y-4">
                       <div className="flex items-start justify-between flex-wrap gap-4">
                         <div>
-                          <Heading
-                            as="h3"
-                            level="h5"
-                            className="text-gray-900 dark:text-gray-50"
-                          >
+                          <Heading as="h3" level="h5" className="text-black">
                             {activity.title}
                           </Heading>
                           <div className="flex gap-2 mt-1 flex-wrap">
@@ -275,65 +213,9 @@ export function PostHackathonPhase() {
                         </div>
                       </div>
 
-                      <Body className="text-gray-600 dark:text-gray-400">
+                      <Body className="text-black/70">
                         {activity.description}
                       </Body>
-
-                      <div className="grid gap-6 md:grid-cols-2">
-                        <div className="space-y-2">
-                          <Body
-                            size="sm"
-                            weight="semibold"
-                            transform="uppercase"
-                            color="muted"
-                          >
-                            Key Activities:
-                          </Body>
-                          <ul className="space-y-1">
-                            {activity.activities.map((item, itemIndex) => (
-                              <li
-                                key={itemIndex}
-                                className="flex items-start gap-2"
-                              >
-                                <CheckCircle className="size-4 text-green-600 mt-0.5 shrink-0" />
-                                <Body
-                                  size="sm"
-                                  className="text-gray-700 dark:text-gray-300"
-                                >
-                                  {item}
-                                </Body>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        <div className="space-y-2">
-                          <Body
-                            size="sm"
-                            weight="semibold"
-                            transform="uppercase"
-                            color="muted"
-                          >
-                            Expected Outcomes:
-                          </Body>
-                          <ul className="space-y-1">
-                            {activity.outcomes.map((outcome, outcomeIndex) => (
-                              <li
-                                key={outcomeIndex}
-                                className="flex items-start gap-2"
-                              >
-                                <div className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></div>
-                                <Body
-                                  size="sm"
-                                  className="text-gray-700 dark:text-gray-300"
-                                >
-                                  {outcome}
-                                </Body>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </Card>
@@ -351,14 +233,10 @@ export function PostHackathonPhase() {
           className="space-y-8"
         >
           <div className="text-center">
-            <Heading
-              as="h3"
-              level="h3"
-              className="text-gray-900 dark:text-gray-50"
-            >
+            <Heading as="h3" level="h3" className="text-black">
               Comprehensive Support Programs
             </Heading>
-            <Body color="muted" className="mt-2">
+            <Body className="mt-2 text-black/70">
               Multi-faceted support ecosystem for sustainable growth and impact
             </Body>
           </div>
@@ -376,11 +254,7 @@ export function PostHackathonPhase() {
                   <div className="space-y-4">
                     <div className="flex items-start justify-between">
                       <div>
-                        <Heading
-                          as="h4"
-                          level="h6"
-                          className="text-gray-900 dark:text-gray-50"
-                        >
+                        <Heading as="h4" level="h6" className="text-black">
                           {program.title}
                         </Heading>
                         <div className="flex gap-2 mt-1">
@@ -394,10 +268,7 @@ export function PostHackathonPhase() {
                       </div>
                     </div>
 
-                    <Body
-                      size="sm"
-                      className="text-gray-600 dark:text-gray-400"
-                    >
+                    <Body size="sm" className="text-black/70">
                       {program.description}
                     </Body>
 

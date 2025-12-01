@@ -14,85 +14,58 @@ import {
 
 const preHackathonActivities = [
   {
-    title: "Registration Opens",
-    date: "January 15, 2026",
-    duration: "8 weeks",
+    title: "📢 Call for Applications",
+    date: "January 10, 2026",
+    duration: "",
     icon: UserPlus,
-    description: "Team registration and individual participant signup begins",
-    activities: [
-      "Online registration portal launches",
-      "Team formation and recruitment",
-      "Individual skill-based matching",
-      "Early bird registration incentives",
-      "Regional information sessions",
-    ],
-    deliverables: [
-      "Registered teams",
-      "Participant profiles",
-      "Team compositions",
-    ],
+    description:
+      "Open invitation for innovators, startups, developers, and students across Africa.",
+    activities: [],
+    deliverables: [],
   },
   {
-    title: "Team Formation & Networking",
-    date: "February 1-28, 2026",
-    duration: "4 weeks",
+    title: "🧩 Team Formation & Idea Submission",
+    date: "January 15–March 1, 2026",
+    duration: "",
     icon: Users,
     description:
-      "Facilitated team building and cross-border collaboration setup",
-    activities: [
-      "Virtual networking events",
-      "Skill-based team matching",
-      "Cross-country team formation",
-      "Mentor introductions",
-      "Regional meetups and workshops",
-    ],
-    deliverables: ["Finalized teams", "Team agreements", "Mentor assignments"],
+      "Participants collaborate virtually, submit project ideas under selected challenge tracks.",
+    activities: [],
+    deliverables: [],
   },
   {
-    title: "Preparation & Training",
-    date: "March 1-31, 2026",
-    duration: "4 weeks",
+    title: "🎓 Capacity Building & Orientation",
+    date: "February 2026",
+    duration: "",
     icon: BookOpen,
     description:
-      "Intensive preparation phase with workshops and resource access",
-    activities: [
-      "Technical workshops and masterclasses",
-      "Business model development sessions",
-      "AfCFTA trade protocol training",
-      "Platform and tool familiarization",
-      "Pitch development workshops",
-    ],
-    deliverables: [
-      "Training certificates",
-      "Initial project concepts",
-      "Team readiness assessment",
-    ],
+      "Virtual workshops, webinars, and orientation sessions covering digital trade, AI, FinTech, and compliance frameworks.",
+    activities: [],
+    deliverables: [],
   },
   {
-    title: "Challenge Deep-Dive",
-    date: "April 1-15, 2026",
-    duration: "2 weeks",
+    title: "🤝 Mentorship Pairing",
+    date: "March 10, 2026",
+    duration: "",
     icon: Target,
-    description:
-      "Detailed exploration of challenge tracks and problem statements",
-    activities: [
-      "Challenge track selection",
-      "Problem statement analysis",
-      "Market research and validation",
-      "Stakeholder interviews",
-      "Solution ideation sessions",
-    ],
-    deliverables: [
-      "Challenge selection",
-      "Problem analysis",
-      "Initial solution concepts",
-    ],
+    description: "Selected teams matched with mentors and technical experts.",
+    activities: [],
+    deliverables: [],
+  },
+  {
+    title: "✅ Final Selection Announcement",
+    date: "March 15, 2026",
+    duration: "",
+    icon: CheckCircle,
+    description: "Official shortlist of hackathon teams published.",
+    activities: [],
+    deliverables: [],
   },
 ];
 
 export function PreHackathonPhase() {
   return (
-    <Section background="muted" spacing="lg">
+    <Section background="muted" spacing="lg" className="bg-black!">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -101,20 +74,17 @@ export function PreHackathonPhase() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-4"
         >
-          <Badge variant="outline" className="mb-4">
-            Phase One
+          <Badge variant="outline" className="mb-4 border-white/20 text-white">
+            1️⃣ Phase One
           </Badge>
-          <Heading
-            as="h2"
-            level="h2"
-            className="text-gray-900 dark:text-gray-50"
-          >
-            Pre-Hackathon Phase
+          <Heading as="h2" level="h2" className="text-white!">
+            Building the Foundation for Collaboration and Innovation
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto">
-            A comprehensive 4-month preparation period designed to ensure all
-            participants are equipped with the knowledge, tools, and networks
-            needed for success during the intensive hackathon days.
+          <Body size="lg" className="max-w-3xl mx-auto text-white!">
+            The pre-hackathon phase prepares participants with the knowledge,
+            tools, and context needed to align innovations with the AfCFTA
+            Digital Trade Protocol. This stage emphasizes capacity-building,
+            team formation, and problem definition.
           </Body>
         </motion.div>
 
@@ -126,48 +96,36 @@ export function PreHackathonPhase() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="grid gap-6 md:grid-cols-3 text-center"
         >
-          <Card className="p-6">
+          <Card className="p-6 bg-gray-50! border-white/15">
             <div className="space-y-2">
               <Calendar className="size-8 mx-auto text-primary" />
-              <Heading
-                as="h3"
-                level="h4"
-                className="text-gray-900 dark:text-gray-50"
-              >
-                January - April 2026
+              <Heading as="h3" level="h4" className="text-gray-900!">
+                January – March 2026
               </Heading>
-              <Body size="sm" color="muted">
-                4-month preparation period
+              <Body size="sm" className="text-gray-900!">
+                Pre-Hackathon Phase
               </Body>
             </div>
           </Card>
-          <Card className="p-6">
+          <Card className="p-6 bg-gray-50! border-white/15">
             <div className="space-y-2">
               <Users className="size-8 mx-auto text-primary" />
-              <Heading
-                as="h3"
-                level="h4"
-                className="text-gray-900 dark:text-gray-50"
-              >
-                5,000+ Participants
+              <Heading as="h3" level="h4" className="text-gray-900!">
+                Team Formation
               </Heading>
-              <Body size="sm" color="muted">
-                Expected registration volume
+              <Body size="sm" className="text-gray-900!">
+                Virtual collaboration
               </Body>
             </div>
           </Card>
-          <Card className="p-6">
+          <Card className="p-6 bg-gray-50! border-white/15">
             <div className="space-y-2">
               <BookOpen className="size-8 mx-auto text-primary" />
-              <Heading
-                as="h3"
-                level="h4"
-                className="text-gray-900 dark:text-gray-50"
-              >
-                50+ Workshops
+              <Heading as="h3" level="h4" className="text-gray-900!">
+                Capacity Building
               </Heading>
-              <Body size="sm" color="muted">
-                Training and preparation sessions
+              <Body size="sm" className="text-gray-900!">
+                Workshops & orientation
               </Body>
             </div>
           </Card>
@@ -185,14 +143,14 @@ export function PreHackathonPhase() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-6 hover:shadow-lg transition-shadow">
+                <Card className="p-6 hover:shadow-lg transition-shadow bg-gray-50! border-white/15">
                   <div className="flex gap-6">
                     <div className="flex flex-col items-center">
                       <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                         <IconComponent className="size-6 text-primary" />
                       </div>
                       {index < preHackathonActivities.length - 1 && (
-                        <div className="w-0.5 h-16 bg-gray-200 dark:bg-gray-700 mt-4"></div>
+                        <div className="w-0.5 h-16 bg-gray-400 mt-4"></div>
                       )}
                     </div>
 
@@ -202,80 +160,30 @@ export function PreHackathonPhase() {
                           <Heading
                             as="h3"
                             level="h5"
-                            className="text-gray-900 dark:text-gray-50"
+                            className="text-gray-900!"
                           >
                             {activity.title}
                           </Heading>
                           <div className="flex gap-2 mt-1 flex-wrap">
-                            <Badge variant="outline">{activity.date}</Badge>
-                            <Badge variant="secondary">
+                            <Badge
+                              variant="outline"
+                              className="border-gray-400 text-gray-700"
+                            >
+                              {activity.date}
+                            </Badge>
+                            <Badge
+                              variant="secondary"
+                              className="bg-gray-200 text-gray-700"
+                            >
                               {activity.duration}
                             </Badge>
                           </div>
                         </div>
                       </div>
 
-                      <Body className="text-gray-600 dark:text-gray-400">
+                      <Body className="text-gray-700!">
                         {activity.description}
                       </Body>
-
-                      <div className="grid gap-6 md:grid-cols-2">
-                        <div className="space-y-2">
-                          <Body
-                            size="sm"
-                            weight="semibold"
-                            transform="uppercase"
-                            color="muted"
-                          >
-                            Key Activities:
-                          </Body>
-                          <ul className="space-y-1">
-                            {activity.activities.map((item, itemIndex) => (
-                              <li
-                                key={itemIndex}
-                                className="flex items-start gap-2"
-                              >
-                                <CheckCircle className="size-4 text-green-600 mt-0.5 shrink-0" />
-                                <Body
-                                  size="sm"
-                                  className="text-gray-700 dark:text-gray-300"
-                                >
-                                  {item}
-                                </Body>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        <div className="space-y-2">
-                          <Body
-                            size="sm"
-                            weight="semibold"
-                            transform="uppercase"
-                            color="muted"
-                          >
-                            Deliverables:
-                          </Body>
-                          <ul className="space-y-1">
-                            {activity.deliverables.map(
-                              (deliverable, deliverableIndex) => (
-                                <li
-                                  key={deliverableIndex}
-                                  className="flex items-start gap-2"
-                                >
-                                  <div className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></div>
-                                  <Body
-                                    size="sm"
-                                    className="text-gray-700 dark:text-gray-300"
-                                  >
-                                    {deliverable}
-                                  </Body>
-                                </li>
-                              ),
-                            )}
-                          </ul>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </Card>
@@ -290,17 +198,13 @@ export function PreHackathonPhase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center bg-primary/5 rounded-2xl p-8"
+          className="text-center bg-gray-50! rounded-2xl p-8"
         >
           <div className="space-y-4">
-            <Heading
-              as="h3"
-              level="h4"
-              className="text-gray-900 dark:text-gray-50"
-            >
+            <Heading as="h3" level="h4" className="text-gray-900!">
               Ready for the Hackathon
             </Heading>
-            <Body className="max-w-2xl mx-auto">
+            <Body className="max-w-2xl mx-auto text-gray-700!">
               By the end of the pre-hackathon phase, all participants will have
               formed strong teams, developed deep understanding of their chosen
               challenges, and gained the skills needed to build impactful
