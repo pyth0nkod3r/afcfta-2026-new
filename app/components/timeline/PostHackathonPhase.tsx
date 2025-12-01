@@ -101,36 +101,6 @@ const supportPrograms = [
     value: "$400K+",
     benefits: [
       "Pilot programs",
-      "Government contracts",
-      "Corporate partnerships",
-      "Market entry support",
-    ],
-  },
-];
-
-export function PostHackathonPhase() {
-  return (
-    <Section background="muted" spacing="lg" className="bg-white text-black">
-      <div className="space-y-12 md:space-y-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-          className="text-center space-y-4"
-        >
-          <Badge variant="outline" className="mb-4 border-black/20 text-black">
-            🚀 3️⃣ Phase Three
-          </Badge>
-          <Heading as="h2" level="h2" className="text-black">
-            From Prototype to Policy and Market
-          </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto text-black">
-            After the hackathon, selected innovations will move into incubation
-            and implementation under the AfCFTA innovation ecosystem —
-            connecting ideas to real-world impact.
-          </Body>
-        </motion.div>
 
         {/* Phase Overview */}
         <motion.div
