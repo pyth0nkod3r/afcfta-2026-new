@@ -292,3 +292,7 @@
 .will-change-auto {
   will-change: auto;
 }
+/* Progress bar with custom width */
+.progress-bar {
+  width: var(--width);
+}

@@ -5,13 +5,13 @@ import {
   Globe2,
   Leaf,
   type LucideIcon,
-  Network,
   Radar,
-  ScanBarcode,
-  ServerCog,
   ShieldCheck,
   Store,
-  Users2,
+  Brain,
+  CreditCard,
+  Truck,
+  GraduationCap,
 } from "lucide-react";
 import { Link } from "react-router";
 
@@ -55,162 +55,182 @@ type JudgingCriterion = {
 
 const challengeTracks: ChallengeTrack[] = [
   {
-    id: "digital-trade-rails",
-    title: "Pan-African Digital Trade Rails",
+    id: "digital-trade-facilitation",
+    title: "Digital Trade Facilitation",
     summary:
-      "Interoperable payments, FX, and escrow services aligned with AfCFTA clearing systems.",
-    tags: ["Payments", "PAPSS", "FX"],
+      "Simplify and digitize cross-border trade processes through smart automation, blockchain, and real-time customs coordination.",
+    tags: ["Automation", "Blockchain", "Customs"],
     icon: Globe2,
     detail: {
       context:
-        "Create rails that let SMEs collect, settle, and reconcile multi-currency payments in seconds.",
+        "Focus areas: trade document exchange, border integration, data interoperability, and single-window systems.",
       deliverables: [
-        "API layer that bridges PAPSS, card, and mobile money switches",
-        "Risk + treasury dashboard for settlement visibility",
+        "Smart automation for trade document exchange",
+        "Real-time customs coordination systems",
+        "Data interoperability solutions",
+        "Single-window system implementations",
       ],
     },
   },
   {
-    id: "smart-customs",
-    title: "Smart Customs & Logistics",
+    id: "ai-trade-intelligence",
+    title: "AI for Trade Intelligence",
     summary:
-      "Digitized manifests, automated inspections, and cross-border tracking for faster clearance.",
-    tags: ["Logistics", "Tracking", "AI"],
-    icon: ScanBarcode,
+      "Leverage Artificial Intelligence to generate insights on trade trends, policy impact, and market opportunities across Africa.",
+    tags: ["AI", "Analytics", "Insights"],
+    icon: Brain,
     detail: {
       context:
-        "Slash port dwell time and leakages by combining IoT telemetry with customs risk models.",
+        "Focus areas: predictive analytics, trade data visualization, policy simulation, and smart decision support.",
       deliverables: [
-        "Unified cargo identity plus paperless declaration workflow",
-        "AI inspection assistant that scores anomalies in real time",
+        "Predictive analytics for trade trends",
+        "Trade data visualization platforms",
+        "Policy simulation tools",
+        "Smart decision support systems",
       ],
     },
   },
   {
-    id: "trusted-identity",
-    title: "Trusted Digital Identity",
+    id: "fintech-msme-financing",
+    title: "FinTech & MSME Financing",
     summary:
-      "Privacy-first identity wallets that travel with founders, teams, and products.",
-    tags: ["KYC", "Wallets", "Compliance"],
-    icon: ShieldCheck,
+      "Bridge Africa's financing gap by building inclusive digital financial tools for MSMEs and informal traders.",
+    tags: ["FinTech", "MSME", "Financing"],
+    icon: CreditCard,
     detail: {
       context:
-        "Enable instant onboarding for traders using verifiable credentials mapped to AfCFTA protocols.",
+        "Focus areas: credit scoring, alternative lending models, blockchain-based financing, and regional remittances.",
       deliverables: [
-        "Self-sovereign ID wallet with consent layer",
-        "Verifier portal that issues role-based access to border services",
+        "Credit scoring algorithms for MSMEs",
+        "Alternative lending model platforms",
+        "Blockchain-based financing solutions",
+        "Regional remittance systems",
       ],
     },
   },
   {
-    id: "trade-intelligence",
-    title: "Trade Intelligence & Forecasting",
+    id: "ecommerce-msme-empowerment",
+    title: "E-Commerce & MSME Empowerment",
     summary:
-      "Data copilots that surface demand gaps, price spreads, and policy updates per corridor.",
-    tags: ["AI", "Insights", "Data"],
-    icon: Radar,
-    detail: {
-      context:
-        "Give founders live, trusted market intelligence so they can decide where to launch next.",
-      deliverables: [
-        "Predictive model that scores corridor attractiveness",
-        "Narrative briefings (text + charts) consumable by policy teams",
-      ],
-    },
-  },
-  {
-    id: "regtech",
-    title: "RegTech & Compliance Automation",
-    summary:
-      "Rule engines and reporting pipelines that keep teams compliant across 54 markets.",
-    tags: ["Policy", "Automation", "Security"],
-    icon: FileCheck2,
-    detail: {
-      context:
-        "Automate repetitive regulatory filings and make AfCFTA compliance programmable.",
-      deliverables: [
-        "No-code rule builder tied to AfCFTA annex updates",
-        "Secure evidence vault + submission APIs to regulators",
-      ],
-    },
-  },
-  {
-    id: "green-corridors",
-    title: "Green Trade & Sustainability",
-    summary:
-      "Climate-aligned logistics, carbon accounting, and circular economy marketplaces.",
-    tags: ["Climate", "Traceability"],
-    icon: Leaf,
-    detail: {
-      context:
-        "Track sustainability KPIs per shipment and unlock incentives for low-carbon operations.",
-      deliverables: [
-        "Embedded MRV (measurement, reporting, verification) toolkit",
-        "Carbon credit or incentive exchange rails for compliant SMEs",
-      ],
-    },
-  },
-  {
-    id: "sme-marketplaces",
-    title: "SME Enablement Marketplaces",
-    summary:
-      "B2B exchanges that bundle talent, tooling, and financing for export-ready SMEs.",
-    tags: ["SMEs", "Marketplaces"],
+      "Enable small businesses to access continental markets through digital commerce and inclusive marketplaces.",
+    tags: ["E-Commerce", "Marketplaces", "Digital"],
     icon: Store,
     detail: {
       context:
-        "Blueprint onboarding + matchmaking so 10,000 SMEs can sell services across the bloc.",
+        "Focus areas: multi-currency e-commerce, logistics integration, digital payments, and merchant support tools.",
       deliverables: [
-        "Composable storefront + onboarding checklist",
-        "Integrated working capital offers per transaction risk score",
+        "Multi-currency e-commerce platforms",
+        "Logistics integration systems",
+        "Digital payment solutions",
+        "Merchant support tools",
       ],
     },
   },
   {
-    id: "infrastructure",
-    title: "Infrastructure & API Connectivity",
+    id: "smart-logistics-supply-chains",
+    title: "Smart Logistics & Supply Chains",
     summary:
-      "Developer platforms, observability, and policy sandboxes for continent-scale builders.",
-    tags: ["DevTools", "APIs"],
-    icon: ServerCog,
+      "Design logistics innovations that improve the movement of goods and reduce trade bottlenecks across borders.",
+    tags: ["Logistics", "IoT", "Supply Chain"],
+    icon: Truck,
     detail: {
       context:
-        "Abstract away infrastructure so teams can focus on customer value, not plumbing.",
+        "Focus areas: smart routing, IoT-enabled tracking, digital warehousing, and cross-border coordination.",
       deliverables: [
-        "One-click AfCFTA sandbox environment with seeded data",
-        "Observability console for cross-border latency + uptime",
+        "Smart routing algorithms",
+        "IoT-enabled tracking systems",
+        "Digital warehousing solutions",
+        "Cross-border coordination platforms",
       ],
     },
   },
   {
-    id: "policy-simulator",
-    title: "Policy Co-Creation Simulator",
+    id: "documentation-compliance-automation",
+    title: "Documentation & Compliance Automation",
     summary:
-      "Scenario engines that let governments and founders co-design trade interventions.",
-    tags: ["Simulation", "GovTech"],
-    icon: Network,
+      "Build digital solutions that simplify trade documentation, certifications, and regulatory compliance.",
+    tags: ["Documentation", "Compliance", "Automation"],
+    icon: FileCheck2,
     detail: {
       context:
-        "Translate complex policy drafts into interactive sandboxes with measurable outcomes.",
+        "Focus areas: digital certificates of origin, automated customs clearance, and trade data verification.",
       deliverables: [
-        "Scenario builder with adjustable policy levers",
-        "Impact reports comparing compliance cost vs. trade volume",
+        "Digital certificates of origin systems",
+        "Automated customs clearance solutions",
+        "Trade data verification platforms",
+        "Regulatory compliance automation tools",
       ],
     },
   },
   {
-    id: "talent-coalitions",
-    title: "Talent & Workforce Coalitions",
+    id: "sustainable-inclusive-trade",
+    title: "Sustainable & Inclusive Trade",
     summary:
-      "Collaboration hubs for mentors, diaspora experts, and technical reviewers.",
-    tags: ["Community", "Mentorship"],
-    icon: Users2,
+      "Promote green, gender-inclusive, and equitable trade practices through technology-driven solutions.",
+    tags: ["Sustainability", "Inclusion", "Green"],
+    icon: Leaf,
     detail: {
       context:
-        "Keep teams supported beyond demo day with structured mentorship and peer reviews.",
+        "Focus areas: carbon tracking, circular economy solutions, women-led trade platforms, and green supply chains.",
       deliverables: [
-        "Mentor marketplace with verified expertise signals",
-        "Async review workflow for prototypes and policy drafts",
+        "Carbon tracking systems",
+        "Circular economy solution platforms",
+        "Women-led trade platforms",
+        "Green supply chain management tools",
+      ],
+    },
+  },
+  {
+    id: "digital-identity-verification",
+    title: "Digital Identity & Verification",
+    summary:
+      "Strengthen trust and traceability in trade through interoperable digital identity frameworks.",
+    tags: ["Identity", "KYC", "Verification"],
+    icon: ShieldCheck,
+    detail: {
+      context:
+        "Focus areas: cross-border KYC systems, digital credentials, and identity-linked payment authorization.",
+      deliverables: [
+        "Cross-border KYC systems",
+        "Digital credential platforms",
+        "Identity-linked payment authorization",
+        "Interoperable identity frameworks",
+      ],
+    },
+  },
+  {
+    id: "agriculture-trade-value-chain",
+    title: "Agriculture & Trade Value Chain",
+    summary:
+      "Boost agribusiness trade by digitizing agricultural value chains and improving market access for smallholder farmers.",
+    tags: ["Agriculture", "Value Chain", "Farmers"],
+    icon: Radar,
+    detail: {
+      context:
+        "Focus areas: traceability, commodity pricing, digital cooperatives, and export facilitation.",
+      deliverables: [
+        "Agricultural traceability systems",
+        "Commodity pricing platforms",
+        "Digital cooperative management tools",
+        "Export facilitation solutions",
+      ],
+    },
+  },
+  {
+    id: "knowledge-learning-ecosystem",
+    title: "Knowledge & Learning Ecosystem",
+    summary:
+      "Foster digital trade literacy and innovation through accessible learning tools and capacity-building platforms.",
+    tags: ["Education", "Learning", "Capacity"],
+    icon: GraduationCap,
+    detail: {
+      context:
+        "Focus areas: digital trade education, mentorship platforms, and AI-driven learning ecosystems.",
+      deliverables: [
+        "Digital trade education platforms",
+        "Mentorship and networking systems",
+        "AI-driven learning ecosystems",
+        "Capacity-building tools",
       ],
     },
   },
@@ -218,46 +238,39 @@ const challengeTracks: ChallengeTrack[] = [
 
 const judgingCriteria: JudgingCriterion[] = [
   {
-    id: "impact",
-    title: "AfCFTA Impact & Scale",
+    id: "innovation-originality",
+    title: "Innovation & Originality",
     description:
-      "Market coverage, policy alignment, and continental relevance of the solution.",
-    weight: 30,
+      "Novel approach to solving a trade challenge with creative and unique solutions.",
+    weight: 25,
+  },
+  {
+    id: "afcfta-relevance",
+    title: "Relevance to AfCFTA Goals",
+    description:
+      "Alignment with Digital Trade Protocol objectives and AfCFTA implementation.",
+    weight: 25,
+  },
+  {
+    id: "scalability-sustainability",
+    title: "Scalability & Sustainability",
+    description:
+      "Potential for real-world adoption and impact across African markets.",
+    weight: 20,
   },
   {
     id: "technical-execution",
     title: "Technical Execution",
     description:
-      "Architecture quality, interoperability, security, and maturity of the build.",
-    weight: 20,
-  },
-  {
-    id: "regulatory-fit",
-    title: "Regulatory & Compliance Fit",
-    description:
-      "Clarity on standards, data protection, and how AfCFTA annexes are embedded.",
+      "Functionality, design, user experience, and technical implementation quality.",
     weight: 15,
   },
   {
-    id: "sustainability",
-    title: "Sustainability & Adoption",
+    id: "inclusiveness",
+    title: "Inclusiveness",
     description:
-      "Business model strength, go-to-market motion, and long-term viability.",
+      "Promotion of gender, youth, and regional participation in digital trade.",
     weight: 15,
-  },
-  {
-    id: "team",
-    title: "Team & Collaboration",
-    description:
-      "Cross-functional expertise, ability to partner with governments + private sector.",
-    weight: 10,
-  },
-  {
-    id: "story",
-    title: "Demo Narrative",
-    description:
-      "Clarity of storytelling, user journey, and ability to communicate measurable outcomes.",
-    weight: 10,
   },
 ];
 
@@ -274,21 +287,65 @@ export function ChallengeTracksPreviewSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.45 }}
-          className="mx-auto max-w-3xl space-y-4 text-center"
+          className="mx-auto max-w-4xl space-y-6 text-center"
         >
           <Badge
             variant="secondary"
             className="mx-auto bg-white/10 text-white/80 border-white/15"
           >
-            10 Challenge Tracks
+            🌍 Challenge Tracks Hero Section
           </Badge>
-          <Heading as="h2" level="h2" align="center" className="text-white!">
-            Challenge Tracks Preview
+          <Heading as="h2" level="h1" align="center" className="text-white!">
+            Build Solutions that Power Africa&apos;s Borderless Digital Economy
           </Heading>
           <Body size="lg" align="center" className="text-white/70">
-            Explore the AfCFTA Hackathon focus areas spanning trade rails, smart
-            customs, regtech, climate readiness, and the ecosystems that power
-            continental collaboration.
+            The AfCFTA Hackathon 2026 invites Africa&apos;s brightest innovators
+            to co-create solutions that accelerate the implementation of the
+            AfCFTA Digital Trade Protocol — advancing inclusive,
+            technology-driven trade across the continent.
+          </Body>
+          <div className="flex flex-wrap justify-center gap-4 pt-4">
+            <Button
+              asChild
+              size="lg"
+              variant="secondary"
+              className="bg-white text-black hover:bg-white/90"
+            >
+              <Link to="/submit">🔗 Submit Your Idea</Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white/20 text-white hover:bg-white/10"
+            >
+              <Link to="/track-guide">📘 Download Track Guide</Link>
+            </Button>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.45, delay: 0.2 }}
+          className="mx-auto max-w-4xl rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur"
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-2xl">🧭</span>
+            <Heading as="h3" level="h3" className="text-white!">
+              Shaping the Future of African Trade through Innovation
+            </Heading>
+          </div>
+          <Body className="text-white/80 leading-relaxed">
+            Each challenge track focuses on a critical pillar of Africa&apos;s
+            digital trade ecosystem. From cross-border payments to smart
+            logistics and AI-driven compliance, participants will design,
+            prototype, and showcase scalable innovations that bridge policy and
+            technology. Teams are encouraged to align their ideas with the
+            AfCFTA Digital Trade Protocol, the Pan-African Payment and
+            Settlement System (PAPSS), and the Agenda 2063 vision for a unified
+            African market.
           </Body>
         </motion.div>
 
@@ -367,24 +424,25 @@ export function ChallengeTracksPreviewSection() {
               transform="uppercase"
               className="tracking-[0.25em] text-white/60"
             >
-              Deep Dive
+              ⚙️ All Challenge Tracks
             </Body>
             <Heading
               as="h3"
               level="h3"
               className="mt-2 text-white! leading-tight"
             >
-              Track details & deliverables
+              Official tracks for AfCFTA Hackathon 2026
             </Heading>
             <Body className="mt-2 text-white/70">
-              Expand a track to see the core problem statement and what judges
-              expect to see in your submission.
+              Each represents a frontier for innovation, trade, and
+              collaboration across Africa. Expand a track to see focus areas and
+              expected deliverables.
             </Body>
 
             <Accordion
               type="single"
               collapsible
-              defaultValue="digital-trade-rails"
+              defaultValue="digital-trade-facilitation"
               className="mt-6 divide-y divide-white/10"
             >
               {challengeTracks.map((track) => (
@@ -434,18 +492,18 @@ export function ChallengeTracksPreviewSection() {
               transform="uppercase"
               className="tracking-[0.25em] text-white/60"
             >
-              Judging Framework
+              🏆 Evaluation Criteria
             </Body>
             <Heading
               as="h3"
               level="h4"
               className="mt-2 text-white! leading-tight"
             >
-              Weighted criteria table (100 pts)
+              How solutions will be evaluated
             </Heading>
             <Body className="mt-2 text-white/70">
-              Map your prototype and story to the scoring grid below to maximize
-              your pitch.
+              Each solution will be evaluated based on these weighted criteria
+              to ensure alignment with AfCFTA goals and real-world impact.
             </Body>
 
             <div className="mt-6 overflow-x-auto">
@@ -466,10 +524,17 @@ export function ChallengeTracksPreviewSection() {
                           <span className="font-semibold text-white">
                             {criterion.weight}%
                           </span>
-                          <div className="h-2 flex-1 rounded-full bg-white/20">
+                          <div className="h-2 flex-1 rounded-full bg-white/20 relative overflow-hidden">
                             <div
-                              className="h-full rounded-full bg-linear-to-r from-secondary via-primary to-white"
-                              style={{ width: `${criterion.weight}%` }}
+                              className={`h-full rounded-full bg-gradient-to-r from-secondary via-primary to-white transition-all duration-300 ${
+                                criterion.weight >= 30
+                                  ? "w-full"
+                                  : criterion.weight >= 20
+                                    ? "w-4/5"
+                                    : criterion.weight >= 15
+                                      ? "w-3/5"
+                                      : "w-2/5"
+                              }`}
                             />
                           </div>
                         </div>
@@ -483,20 +548,71 @@ export function ChallengeTracksPreviewSection() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.35 }}
-          className="flex justify-center"
+          transition={{ duration: 0.45 }}
+          className="mx-auto max-w-4xl rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur"
         >
-          <Button
-            asChild
-            size="lg"
-            variant="secondary"
-            className="bg-white text-black hover:bg-white/90"
-          >
-            <Link to="/challenge-tracks">View all challenge tracks</Link>
-          </Button>
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-2xl">🧩</span>
+            <Heading as="h3" level="h3" className="text-white!">
+              Track Collaboration & Cross-Impact
+            </Heading>
+          </div>
+          <Body className="text-white/80 leading-relaxed">
+            Participants are encouraged to form multi-disciplinary teams that
+            combine expertise from different tracks — for example, linking
+            FinTech + Digital Identity, or AI + Logistics — to develop holistic
+            trade solutions that reflect real-world interconnectivity.
+          </Body>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.45, delay: 0.1 }}
+          className="mx-auto max-w-4xl space-y-6 text-center"
+        >
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <span className="text-2xl">🚀</span>
+            <Heading as="h3" level="h2" className="text-white!">
+              Your Idea Could Power Africa&apos;s Next Digital Trade
+              Breakthrough
+            </Heading>
+          </div>
+          <Body size="lg" className="text-white/70 leading-relaxed">
+            Join innovators shaping Africa&apos;s borderless future. Whether
+            your focus is AI, FinTech, or logistics — your solution can help
+            unlock Africa&apos;s $4 trillion digital trade potential.
+          </Body>
+          <div className="flex flex-wrap justify-center gap-4 pt-4">
+            <Button
+              asChild
+              size="lg"
+              variant="secondary"
+              className="bg-white text-black hover:bg-white/90"
+            >
+              <Link to="/apply">📝 Apply Now</Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white/20 text-white hover:bg-white/10"
+            >
+              <Link to="/challenge-tracks">📘 Learn More About Tracks</Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white/20 text-white hover:bg-white/10"
+            >
+              <Link to="/partner">🤝 Partner With Us</Link>
+            </Button>
+          </div>
         </motion.div>
       </div>
     </Section>
