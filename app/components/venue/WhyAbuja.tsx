@@ -11,97 +11,97 @@ import {
 
 export function WhyAbuja() {
   return (
-    \u003cSection spacing="lg" className="bg-white text-black"\u003e
-      \u003cdiv className="space-y-12 md:space-y-16"\u003e
-        \u003cmotion.div
+    <Section spacing="lg" className="bg-white text-black">
+      <div className="space-y-12 md:space-y-16">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
           className="text-center space-y-4"
-        \u003e
-          \u003cHeading as="h2" level="h2" className="text-black"\u003e
+        >
+          <Heading as="h2" level="h2" className="text-black">
             Why Abuja, Nigeria?
-          \u003c/Heading\u003e
-        \u003c/motion.div\u003e
+          </Heading>
+        </motion.div>
 
         {/* Main Content */}
-        \u003cmotion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-4xl mx-auto space-y-6"
-        \u003e
-          \u003cBody className="text-center text-black/80 text-lg"\u003e
+        >
+          <Body className="text-center text-black/80 text-lg">
             Abuja stands at the crossroads of policy influence, regional trade
             leadership, and technology innovation. As the headquarters of
-            Nigeria\u0026apos;s AfCFTA Coordination Office and several regional
+            Nigeria&apos;s AfCFTA Coordination Office and several regional
             economic institutions, Abuja provides a fitting environment to host
             this continental collaboration of innovators and decision-makers.
-          \u003c/Body\u003e
+          </Body>
 
-          \u003cBody className="text-center text-black/80 text-lg"\u003e
-            Nigeria\u0026apos;s leadership in digital payments, fintech innovation,
+          <Body className="text-center text-black/80 text-lg">
+            Nigeria&apos;s leadership in digital payments, fintech innovation,
             and startup ecosystems positions it as a key driver of the AfCFTA
             Digital Trade Protocol, linking local solutions to continental
             opportunities.
-          \u003c/Body\u003e
-        \u003c/motion.div\u003e
+          </Body>
+        </motion.div>
 
         {/* Key Points */}
-        \u003cmotion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto"
-        \u003e
-          \u003cCard className="p-6 text-center border-black/10 hover:shadow-lg transition-shadow"\u003e
-            \u003cdiv className="space-y-4"\u003e
-              \u003cdiv className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center"\u003e
-                \u003cBuilding2 className="size-6 text-primary" /\u003e
-              \u003c/div\u003e
-              \u003cBody size="sm" weight="semibold" className="text-black"\u003e
+        >
+          <Card className="p-6 text-center border-black/10 hover:shadow-lg transition-shadow">
+            <div className="space-y-4">
+              <div className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center">
+                <Building2 className="size-6 text-primary" />
+              </div>
+              <Body size="sm" weight="semibold" className="text-black">
                 Policy Influence
-              \u003c/Body\u003e
-            \u003c/div\u003e
-          \u003c/Card\u003e
+              </Body>
+            </div>
+          </Card>
 
-          \u003cCard className="p-6 text-center border-black/10 hover:shadow-lg transition-shadow"\u003e
-            \u003cdiv className="space-y-4"\u003e
-              \u003cdiv className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center"\u003e
-                \u003cTrendingUp className="size-6 text-primary" /\u003e
-              \u003c/div\u003e
-              \u003cBody size="sm" weight="semibold" className="text-black"\u003e
+          <Card className="p-6 text-center border-black/10 hover:shadow-lg transition-shadow">
+            <div className="space-y-4">
+              <div className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center">
+                <TrendingUp className="size-6 text-primary" />
+              </div>
+              <Body size="sm" weight="semibold" className="text-black">
                 Trade Leadership
-              \u003c/Body\u003e
-            \u003c/div\u003e
-          \u003c/Card\u003e
+              </Body>
+            </div>
+          </Card>
 
-          \u003cCard className="p-6 text-center border-black/10 hover:shadow-lg transition-shadow"\u003e
-            \u003cdiv className="space-y-4"\u003e
-              \u003cdiv className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center"\u003e
-                \u003cNetwork className="size-6 text-primary" /\u003e
-              \u003c/div\u003e
-              \u003cBody size="sm" weight="semibold" className="text-black"\u003e
+          <Card className="p-6 text-center border-black/10 hover:shadow-lg transition-shadow">
+            <div className="space-y-4">
+              <div className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center">
+                <Network className="size-6 text-primary" />
+              </div>
+              <Body size="sm" weight="semibold" className="text-black">
                 Tech Innovation
-              \u003c/Body\u003e
-            \u003c/div\u003e
-          \u003c/Card\u003e
+              </Body>
+            </div>
+          </Card>
 
-          \u003cCard className="p-6 text-center border-black/10 hover:shadow-lg transition-shadow"\u003e
-            \u003cdiv className="space-y-4"\u003e
-              \u003cdiv className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center"\u003e
-                \u003cMapPin className="size-6 text-primary" /\u003e
-              \u003c/div\u003e
-              \u003cBody size="sm" weight="semibold" className="text-black"\u003e
+          <Card className="p-6 text-center border-black/10 hover:shadow-lg transition-shadow">
+            <div className="space-y-4">
+              <div className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center">
+                <MapPin className="size-6 text-primary" />
+              </div>
+              <Body size="sm" weight="semibold" className="text-black">
                 Strategic Location
-              \u003c/Body\u003e
-            \u003c/div\u003e
-          \u003c/Card\u003e
-        \u003c/motion.div\u003e
-      \u003c/div\u003e
-    \u003c/Section\u003e
+              </Body>
+            </div>
+          </Card>
+        </motion.div>
+      </div>
+    </Section>
   );
 }

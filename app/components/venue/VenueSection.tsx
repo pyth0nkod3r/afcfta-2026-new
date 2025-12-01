@@ -36,157 +36,157 @@ const venueHighlights = [
 
 const tentativeVenues = [
   "Abuja Continental Hotel Conference Centre",
-  "NITDA Technology \u0026 Innovation Complex",
+  "NITDA Technology & Innovation Complex",
   "AfCFTA Nigeria Coordination Office Event Pavilion",
 ];
 
 export function VenueSection() {
   return (
-    \u003cSection id="venue-details" spacing="lg" className="bg-white text-black"\u003e
-      \u003cdiv className="space-y-12 md:space-y-16"\u003e
-        \u003cmotion.div
+    <Section id="venue-details" spacing="lg" className="bg-white text-black">
+      <div className="space-y-12 md:space-y-16">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
           className="text-center space-y-4"
-        \u003e
-          \u003cHeading as="h2" level="h2" className="text-black"\u003e
+        >
+          <Heading as="h2" level="h2" className="text-black">
             Venue — Abuja, Nigeria (Physical Hub)
-          \u003c/Heading\u003e
-          \u003cBody size="lg" className="max-w-3xl mx-auto text-black/80"\u003e
+          </Heading>
+          <Body size="lg" className="max-w-3xl mx-auto text-black/80">
             The physical component of AfCFTA Hackathon 2026 will be hosted in
-            Abuja, Nigeria, Africa\u0026apos;s policy and innovation capital — a
+            Abuja, Nigeria, Africa&apos;s policy and innovation capital — a
             symbolic location connecting trade, technology, and continental
             collaboration.
-          \u003c/Body\u003e
-        \u003c/motion.div\u003e
+          </Body>
+        </motion.div>
 
         {/* Description */}
-        \u003cmotion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-4xl mx-auto"
-        \u003e
-          \u003cBody className="text-center text-black/80"\u003e
+        >
+          <Body className="text-center text-black/80">
             The venue has been selected to enable seamless interaction between
             innovators and policymakers, reflecting the spirit of the AfCFTA
             Digital Trade Protocol.
-          \u003c/Body\u003e
-        \u003c/motion.div\u003e
+          </Body>
+        </motion.div>
 
         {/* Venue Highlights */}
-        \u003cmotion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="space-y-6"
-        \u003e
-          \u003cdiv className="text-center"\u003e
-            \u003cHeading as="h3" level="h3" className="text-black"\u003e
+        >
+          <div className="text-center">
+            <Heading as="h3" level="h3" className="text-black">
               Venue Highlights
-            \u003c/Heading\u003e
-          \u003c/div\u003e
+            </Heading>
+          </div>
 
-          \u003cdiv className="grid gap-6 md:grid-cols-2 lg:grid-cols-4"\u003e
-            {venueHighlights.map((highlight, index) =\u003e {
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {venueHighlights.map((highlight, index) => {
               const IconComponent = highlight.icon;
               return (
-                \u003cmotion.div
+                <motion.div
                   key={highlight.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                \u003e
-                  \u003cCard className="h-full p-6 hover:shadow-lg transition-shadow text-center border-black/10"\u003e
-                    \u003cdiv className="space-y-4"\u003e
-                      \u003cdiv className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center"\u003e
-                        \u003cIconComponent className="size-6 text-primary" /\u003e
-                      \u003c/div\u003e
-                      \u003cdiv className="space-y-2"\u003e
-                        \u003cHeading as="h4" level="h6" className="text-black"\u003e
+                >
+                  <Card className="h-full p-6 hover:shadow-lg transition-shadow text-center border-black/10">
+                    <div className="space-y-4">
+                      <div className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center">
+                        <IconComponent className="size-6 text-primary" />
+                      </div>
+                      <div className="space-y-2">
+                        <Heading as="h4" level="h6" className="text-black">
                           {highlight.title}
-                        \u003c/Heading\u003e
-                        \u003cBody size="sm" className="text-black/70"\u003e
+                        </Heading>
+                        <Body size="sm" className="text-black/70">
                           {highlight.description}
-                        \u003c/Body\u003e
-                      \u003c/div\u003e
-                    \u003c/div\u003e
-                  \u003c/Card\u003e
-                \u003c/motion.div\u003e
+                        </Body>
+                      </div>
+                    </div>
+                  </Card>
+                </motion.div>
               );
             })}
-          \u003c/div\u003e
-        \u003c/motion.div\u003e
+          </div>
+        </motion.div>
 
         {/* Tentative Venue Options */}
-        \u003cmotion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="space-y-6"
-        \u003e
-          \u003cdiv className="text-center"\u003e
-            \u003cHeading as="h3" level="h4" className="text-black"\u003e
+        >
+          <div className="text-center">
+            <Heading as="h3" level="h4" className="text-black">
               Tentative Venue Options
-            \u003c/Heading\u003e
-          \u003c/div\u003e
+            </Heading>
+          </div>
 
-          \u003cCard className="p-6 max-w-2xl mx-auto border-black/10"\u003e
-            \u003cul className="space-y-3"\u003e
-              {tentativeVenues.map((venue, index) =\u003e (
-                \u003cmotion.li
+          <Card className="p-6 max-w-2xl mx-auto border-black/10">
+            <ul className="space-y-3">
+              {tentativeVenues.map((venue, index) => (
+                <motion.li
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.5 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start gap-3"
-                \u003e
-                  \u003cBuilding2 className="size-5 text-primary mt-0.5 shrink-0" /\u003e
-                  \u003cBody className="text-black/80"\u003e{venue}\u003c/Body\u003e
-                \u003c/motion.li\u003e
+                >
+                  <Building2 className="size-5 text-primary mt-0.5 shrink-0" />
+                  <Body className="text-black/80">{venue}</Body>
+                </motion.li>
               ))}
-            \u003c/ul\u003e
-            \u003cBody size="sm" color="muted" className="mt-6 text-center italic"\u003e
+            </ul>
+            <Body size="sm" color="muted" className="mt-6 text-center italic">
               (Final venue details to be confirmed and published by March 2026.)
-            \u003c/Body\u003e
-          \u003c/Card\u003e
-        \u003c/motion.div\u003e
+            </Body>
+          </Card>
+        </motion.div>
 
         {/* Map Placeholder */}
-        \u003cmotion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           className="bg-gray-100 rounded-2xl p-8"
-        \u003e
-          \u003cdiv className="space-y-4"\u003e
-            \u003cdiv className="text-center"\u003e
-              \u003cHeading as="h3" level="h4" className="text-black"\u003e
-                Location \u0026 Map
-              \u003c/Heading\u003e
-            \u003c/div\u003e
+        >
+          <div className="space-y-4">
+            <div className="text-center">
+              <Heading as="h3" level="h4" className="text-black">
+                Location & Map
+              </Heading>
+            </div>
 
             {/* Map Placeholder */}
-            \u003cdiv className="bg-gray-200 rounded-lg h-64 flex items-center justify-center"\u003e
-              \u003cdiv className="text-center space-y-2"\u003e
-                \u003cMapPin className="size-12 mx-auto text-gray-400" /\u003e
-                \u003cBody color="muted"\u003eInteractive Map Coming Soon\u003c/Body\u003e
-                \u003cBody size="sm" color="muted"\u003e
+            <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
+              <div className="text-center space-y-2">
+                <MapPin className="size-12 mx-auto text-gray-400" />
+                <Body color="muted">Interactive Map Coming Soon</Body>
+                <Body size="sm" color="muted">
                   Detailed venue location and transportation guide
-                \u003c/Body\u003e
-              \u003c/div\u003e
-            \u003c/div\u003e
-          \u003c/div\u003e
-        \u003c/motion.div\u003e
-      \u003c/div\u003e
-    \u003c/Section\u003e
+                </Body>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </Section>
   );
 }
