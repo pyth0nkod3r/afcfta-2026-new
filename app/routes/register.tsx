@@ -31,30 +31,31 @@ import {
   MapPin,
   Briefcase,
   GraduationCap,
+  Handshake,
 } from "lucide-react";
 import { useToast } from "~/hooks/use-toast";
 
 const registrationTypes = [
   {
-    id: "participant",
+    id: "team",
     icon: Users,
-    title: "Team Participant",
+    title: "Register Your Team",
     description: "Join as a team member (3-4 people per team)",
     color: "bg-blue-100 text-blue-600",
   },
   {
-    id: "individual",
-    icon: User,
-    title: "Individual Participant",
-    description: "Register individually and get matched with a team",
-    color: "bg-green-100 text-green-600",
-  },
-  {
     id: "mentor",
     icon: UserCheck,
-    title: "Mentor",
+    title: "Mentor Signup",
     description: "Guide and support hackathon teams",
     color: "bg-purple-100 text-purple-600",
+  },
+  {
+    id: "partner",
+    icon: Handshake,
+    title: "Partner Signup",
+    description: "Collaborate with us to build the future",
+    color: "bg-orange-100 text-orange-600",
   },
 ];
 
@@ -66,12 +67,12 @@ const registrationDetails = [
     icon: Users,
   },
   {
-    title: "Pan-African participation",
+    title: "Pan-African participation encouraged",
     description: "Open to innovators from all African countries.",
     icon: Globe2,
   },
   {
-    title: "Hybrid format",
+    title: "Hybrid format (Physical & Virtual)",
     description: "Participate in-person in Abuja or join virtually.",
     icon: Radio,
   },
@@ -129,13 +130,13 @@ export default function Register() {
   return (
     <>
       <PageHero
-        title="Register for AfCFTA Hackathon 2026"
-        subtitle="Join Africa's premier digital trade innovation event"
+        title="Ready to Shape Africa’s Trade Future?"
+        subtitle="Join the AfCFTA Hackathon 2026"
         description="Be part of building technology-driven solutions that accelerate Africa's digital transformation under the AfCFTA framework."
       />
 
       {/* Registration Details Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-black!">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -145,10 +146,10 @@ export default function Register() {
               transition={{ duration: 0.6 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-white! mb-4">
                 Registration Information
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-white/80">
                 Everything you need to know about joining the hackathon
               </p>
             </motion.div>
@@ -185,7 +186,7 @@ export default function Register() {
       </section>
 
       {/* Registration Form Section */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -259,11 +260,10 @@ export default function Register() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                        {selectedType === "participant" &&
-                          "Team Participant Registration"}
-                        {selectedType === "individual" &&
-                          "Individual Participant Registration"}
+                        {selectedType === "team" &&
+                          "Team Registration"}
                         {selectedType === "mentor" && "Mentor Registration"}
+                        {selectedType === "partner" && "Partner Registration"}
                       </h3>
                       <p className="text-gray-600">
                         Fill out the form below to complete your registration
@@ -451,7 +451,7 @@ export default function Register() {
                     </div>
 
                     {/* Team Information (for team participants) */}
-                    {selectedType === "participant" && (
+                    {selectedType === "team" && (
                       <div className="space-y-4">
                         <h4 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
                           <Users className="w-5 h-5 text-primary" />

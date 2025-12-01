@@ -1,43 +1,43 @@
 import { PageHero } from "~/components/ui/page-hero";
-import { COMMON_LINKS, PRIZE_INFO } from "~/lib/constants";
-import { Trophy, DollarSign, Gift } from "lucide-react";
+import { COMMON_LINKS } from "~/lib/constants";
+import { Trophy, Globe, Target } from "lucide-react";
 
 export function RewardsHero() {
   return (
     <PageHero
       id="rewards-hero"
       badge={{
-        text: "Prizes & Recognition",
+        text: "Celebrating Innovation, Impact, and Inclusion",
         icon: Trophy,
       }}
-      title="Rewards & Incentives"
-      description={`Compete for over ${PRIZE_INFO.totalPrizePool} in prizes, grants, and opportunities. Beyond monetary rewards, winners gain access to mentorship, investment opportunities, and a platform to scale across Africa.`}
+      title="Rewarding Ideas that Shape Africa's Digital Trade Future"
+      description="The AfCFTA Hackathon 2026 goes beyond cash prizes — it's about enabling lasting impact. Outstanding teams will receive monetary rewards, thematic recognitions, incubation support, and integration opportunities with AfCFTA digital systems and national trade frameworks."
       stats={[
         {
-          icon: DollarSign,
-          value: PRIZE_INFO.totalPrizePool,
+          icon: Trophy,
+          value: "₦60 Million",
           label: "Total Prize Pool",
         },
         {
-          icon: Trophy,
-          value: PRIZE_INFO.awardCategories,
-          label: "Award Categories",
+          icon: Globe,
+          value: "Continental Recognition",
+          label: "Across AfCFTA, ECOWAS, and Partner Institutions",
         },
         {
-          icon: Gift,
-          value: PRIZE_INFO.nonCashBenefits,
-          label: "Non-Cash Benefits",
+          icon: Target,
+          value: "Impact Focus",
+          label: "Turning prototypes into deployable trade solutions",
         },
       ]}
       actions={[
         {
-          label: "View Prize Categories",
-          href: "#prize-categories",
+          label: "Apply to Compete",
+          href: COMMON_LINKS.register,
           variant: "primary",
         },
         {
-          label: "Register to Compete",
-          href: COMMON_LINKS.register,
+          label: "View Prize Categories",
+          href: "#prize-categories",
           variant: "outline",
         },
       ]}
