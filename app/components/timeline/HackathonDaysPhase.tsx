@@ -142,7 +142,7 @@ export function HackathonDaysPhase() {
           <Badge variant="outline" className="mb-4 border-black/20 text-black">
             💡 2️⃣ Phase Two
           </Badge>
-          <Heading as="h2" level="h2" className="text-black">
+          <Heading as="h2" level="h2" className="text-white">
             Three Days of Innovation, Collaboration, and Action
           </Heading>
           <Body size="lg" className="max-w-3xl mx-auto text-black">
@@ -164,10 +164,10 @@ export function HackathonDaysPhase() {
           <Card className="p-6">
             <div className="space-y-2">
               <Clock className="size-8 mx-auto text-primary" />
-              <Heading as="h3" level="h4" className="text-black">
+              <Heading as="h3" level="h4" className="text-white">
                 April 8–10, 2026
               </Heading>
-              <Body size="sm" className="text-black/70">
+              <Body size="sm" className="text-white/70">
                 Hackathon Days
               </Body>
             </div>
@@ -175,10 +175,10 @@ export function HackathonDaysPhase() {
           <Card className="p-6">
             <div className="space-y-2">
               <MapPin className="size-8 mx-auto text-primary" />
-              <Heading as="h3" level="h4" className="text-black">
+              <Heading as="h3" level="h4" className="text-white">
                 Hybrid Format
               </Heading>
-              <Body size="sm" className="text-black/70">
+              <Body size="sm" className="text-white/70">
                 Physical (Abuja) + Virtual (Online)
               </Body>
             </div>
@@ -186,10 +186,10 @@ export function HackathonDaysPhase() {
           <Card className="p-6">
             <div className="space-y-2">
               <Wifi className="size-8 mx-auto text-primary" />
-              <Heading as="h3" level="h4" className="text-black">
+              <Heading as="h3" level="h4" className="text-white">
                 Across Africa
               </Heading>
-              <Body size="sm" className="text-black/70">
+              <Body size="sm" className="text-white/70">
                 Online participation
               </Body>
             </div>
@@ -217,10 +217,10 @@ export function HackathonDaysPhase() {
                     <IconComponent className="size-8 text-white" />
                   </div>
                   <div>
-                    <Heading as="h3" level="h3" className="text-black">
+                    <Heading as="h3" level="h3" className="text-white">
                       {day.day} - {day.theme}
                     </Heading>
-                    <Body className="text-black/70">{day.date}</Body>
+                    <Body className="text-white/70">{day.date}</Body>
                   </div>
                 </div>
 
@@ -246,7 +246,7 @@ export function HackathonDaysPhase() {
                               <Heading
                                 as="h4"
                                 level="h6"
-                                className="text-black"
+                                className="text-white"
                               >
                                 {session.title}
                               </Heading>
@@ -267,10 +267,10 @@ export function HackathonDaysPhase() {
                                 </Badge>
                               </div>
                             </div>
-                            <Body size="sm" className="text-black/70">
+                            <Body size="sm" className="text-white/70">
                               {session.description}
                             </Body>
-                            <Body size="xs" className="text-black/60">
+                            <Body size="xs" className="text-white/60">
                               📍 {session.location}
                             </Body>
                           </div>
@@ -294,7 +294,7 @@ export function HackathonDaysPhase() {
         >
           <div className="space-y-6">
             <div className="text-center">
-              <Heading as="h3" level="h4" className="text-black">
+              <Heading as="h3" level="h4" className="text-white">
                 Special Sessions
               </Heading>
               <Body className="mt-2 text-black/70">
@@ -305,37 +305,37 @@ export function HackathonDaysPhase() {
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 text-center">
               <div className="space-y-2">
                 <Users className="size-8 mx-auto text-primary" />
-                <Body size="sm" weight="semibold" className="text-black">
+                <Body size="sm" weight="semibold" className="text-white">
                   Policy Dialogues
                 </Body>
-                <Body size="xs" className="text-black/60">
+                <Body size="xs" className="text-white/60">
                   AfCFTA and Nigeria Coordination Office
                 </Body>
               </div>
               <div className="space-y-2">
                 <Code className="size-8 mx-auto text-primary" />
-                <Body size="sm" weight="semibold" className="text-black">
+                <Body size="sm" weight="semibold" className="text-white">
                   Mentorship Huddles
                 </Body>
-                <Body size="xs" className="text-black/60">
+                <Body size="xs" className="text-white/60">
                   Trade, tech, and startup leaders
                 </Body>
               </div>
               <div className="space-y-2">
                 <Wifi className="size-8 mx-auto text-primary" />
-                <Body size="sm" weight="semibold" className="text-black">
+                <Body size="sm" weight="semibold" className="text-white">
                   Investor Networking
                 </Body>
-                <Body size="xs" className="text-black/60">
+                <Body size="xs" className="text-white/60">
                   Ecosystem networking forum
                 </Body>
               </div>
               <div className="space-y-2">
                 <Trophy className="size-8 mx-auto text-primary" />
-                <Body size="sm" weight="semibold" className="text-black">
+                <Body size="sm" weight="semibold" className="text-white">
                   Continental Demo
                 </Body>
-                <Body size="xs" className="text-black/60">
+                <Body size="xs" className="text-white/60">
                   Hybrid broadcast showcase
                 </Body>
               </div>

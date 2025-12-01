@@ -143,10 +143,10 @@ export function PostHackathonPhase() {
           <Card className="p-6">
             <div className="space-y-2">
               <Calendar className="size-8 mx-auto text-primary" />
-              <Heading as="h3" level="h4" className="text-black">
+              <Heading as="h3" level="h4" className="text-white">
                 April – July 2026
               </Heading>
-              <Body size="sm" className="text-black/70">
+              <Body size="sm" className="text-white/70">
                 Post-Hackathon Phase
               </Body>
             </div>
@@ -154,10 +154,10 @@ export function PostHackathonPhase() {
           <Card className="p-6">
             <div className="space-y-2">
               <TrendingUp className="size-8 mx-auto text-primary" />
-              <Heading as="h3" level="h4" className="text-black">
+              <Heading as="h3" level="h4" className="text-white">
                 Incubation
               </Heading>
-              <Body size="sm" className="text-black/70">
+              <Body size="sm" className="text-white/70">
                 Winners' program
               </Body>
             </div>
@@ -165,10 +165,10 @@ export function PostHackathonPhase() {
           <Card className="p-6">
             <div className="space-y-2">
               <Network className="size-8 mx-auto text-primary" />
-              <Heading as="h3" level="h4" className="text-black">
+              <Heading as="h3" level="h4" className="text-white">
                 Continental
               </Heading>
-              <Body size="sm" className="text-black/70">
+              <Body size="sm" className="text-white/70">
                 Showcase events
               </Body>
             </div>
@@ -201,7 +201,7 @@ export function PostHackathonPhase() {
                     <div className="flex-1 space-y-4">
                       <div className="flex items-start justify-between flex-wrap gap-4">
                         <div>
-                          <Heading as="h3" level="h5" className="text-black">
+                          <Heading as="h3" level="h5" className="text-white">
                             {activity.title}
                           </Heading>
                           <div className="flex gap-2 mt-1 flex-wrap">
@@ -213,7 +213,7 @@ export function PostHackathonPhase() {
                         </div>
                       </div>
 
-                      <Body className="text-black/70">
+                      <Body className="text-white/70">
                         {activity.description}
                       </Body>
                     </div>
@@ -233,10 +233,10 @@ export function PostHackathonPhase() {
           className="space-y-8"
         >
           <div className="text-center">
-            <Heading as="h3" level="h3" className="text-black">
+            <Heading as="h3" level="h3" className="text-white">
               Comprehensive Support Programs
             </Heading>
-            <Body className="mt-2 text-black/70">
+            <Body className="mt-2 text-white/70">
               Multi-faceted support ecosystem for sustainable growth and impact
             </Body>
           </div>
@@ -254,7 +254,7 @@ export function PostHackathonPhase() {
                   <div className="space-y-4">
                     <div className="flex items-start justify-between">
                       <div>
-                        <Heading as="h4" level="h6" className="text-black">
+                        <Heading as="h4" level="h6" className="text-white">
                           {program.title}
                         </Heading>
                         <div className="flex gap-2 mt-1">
@@ -268,7 +268,7 @@ export function PostHackathonPhase() {
                       </div>
                     </div>
 
-                    <Body size="sm" className="text-black/70">
+                    <Body size="sm" className="text-white/70">
                       {program.description}
                     </Body>
 

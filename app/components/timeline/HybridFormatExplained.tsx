@@ -139,7 +139,7 @@ export function HybridFormatExplained() {
           <Heading
             as="h2"
             level="h2"
-            className="text-gray-900 dark:text-gray-50"
+            className="text-white"
           >
             Hybrid Format: Physical + Virtual Experience
           </Heading>
@@ -173,7 +173,7 @@ export function HybridFormatExplained() {
                   </Heading>
                   <Body
                     weight="semibold"
-                    className="text-gray-900 dark:text-gray-50"
+                    className="text-white"
                   >
                     {stat.label}
                   </Body>
@@ -198,7 +198,7 @@ export function HybridFormatExplained() {
             <Heading
               as="h3"
               level="h3"
-              className="text-gray-900 dark:text-gray-50"
+              className="text-white"
             >
               Choose Your Participation Mode
             </Heading>
@@ -232,7 +232,7 @@ export function HybridFormatExplained() {
                           <Heading
                             as="h4"
                             level="h4"
-                            className="text-gray-900 dark:text-gray-50"
+                            className="text-white"
                           >
                             {format.title}
                           </Heading>
@@ -270,7 +270,7 @@ export function HybridFormatExplained() {
                                 <CheckCircle className="size-4 text-green-600 mt-0.5 shrink-0" />
                                 <Body
                                   size="sm"
-                                  className="text-gray-700 dark:text-gray-300"
+                                  className="text-white/90"
                                 >
                                   {advantage}
                                 </Body>
@@ -299,7 +299,7 @@ export function HybridFormatExplained() {
             <Heading
               as="h3"
               level="h3"
-              className="text-gray-900 dark:text-gray-50"
+              className="text-white"
             >
               Hybrid Integration Features
             </Heading>
@@ -328,7 +328,7 @@ export function HybridFormatExplained() {
                         <Heading
                           as="h4"
                           level="h6"
-                          className="text-gray-900 dark:text-gray-50"
+                          className="text-white"
                         >
                           {feature.title}
                         </Heading>
@@ -336,7 +336,7 @@ export function HybridFormatExplained() {
 
                       <Body
                         size="sm"
-                        className="text-gray-600 dark:text-gray-400"
+                        className="text-white/80"
                       >
                         {feature.description}
                       </Body>
@@ -359,7 +359,7 @@ export function HybridFormatExplained() {
                               <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
                               <Body
                                 size="xs"
-                                className="text-gray-700 dark:text-gray-300"
+                                className="text-white/90"
                               >
                                 {benefit}
                               </Body>
@@ -389,7 +389,7 @@ export function HybridFormatExplained() {
               <Heading
                 as="h3"
                 level="h4"
-                className="text-gray-900 dark:text-gray-50"
+                className="text-white"
               >
                 Technology Requirements
               </Heading>
