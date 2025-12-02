@@ -7,86 +7,64 @@ import { Check, Crown, Diamond, Award, Star } from "lucide-react";
 
 const tiers = [
   {
-    name: "Platinum",
+    name: "Platinum Partners",
     icon: Crown,
     color: "bg-gradient-to-br from-purple-600 to-purple-800",
-    badge: "Premier Partner",
-    investment: "$50,000+",
+    badge: "Leading Institutions",
+    description: "Leading institutions driving continental innovation.",
     benefits: [
-      "Exclusive title sponsor recognition",
-      "Prime booth location at venue",
-      "Speaking slot at opening ceremony",
-      "Logo on all marketing materials",
-      "Access to all participant data",
-      "Private networking session with winners",
-      "Custom branded challenge track",
-      "Year-round partnership benefits",
-      "Executive advisory board seat",
-      "First access to winning solutions",
+      "Premier brand visibility across all hackathon platforms, digital campaigns, and event media",
+      "Co-branding on event materials, website, and press releases",
+      "Opportunity to host keynote sessions or innovation challenges",
+      "Access to curated networking with top startups, innovators, and policymakers",
+      "Exclusive recognition during awards and hackathon closing ceremonies",
     ],
   },
   {
-    name: "Diamond",
+    name: "Diamond Partners",
     icon: Diamond,
     color: "bg-gradient-to-br from-blue-600 to-blue-800",
-    badge: "Strategic Partner",
-    investment: "$25,000+",
+    badge: "High-Impact Organizations",
+    description: "High-impact organizations supporting digital trade and innovation.",
     benefits: [
-      "Co-sponsor recognition",
-      "Premium booth location",
-      "Panel discussion opportunity",
-      "Logo on event materials",
-      "Access to participant profiles",
-      "Networking session access",
-      "Branded workshop session",
-      "6-month partnership benefits",
-      "Mentorship program participation",
-      "Early access to project demos",
+      "Prominent logo placement across communications and digital assets",
+      "Speaking opportunities in panels, workshops, or mentorship sessions",
+      "Inclusion in official post-event reports and partner recognition campaigns",
+      "Access to startup deal flow and partnership matchmaking",
+      "Mentorship or evaluation role during the hackathon",
     ],
   },
   {
-    name: "Gold",
+    name: "Gold Partners",
     icon: Award,
     color: "bg-gradient-to-br from-yellow-600 to-yellow-800",
-    badge: "Supporting Partner",
-    investment: "$10,000+",
+    badge: "Key Enablers",
+    description: "Key enablers supporting startup growth and skills development.",
     benefits: [
-      "Partner recognition",
-      "Standard booth space",
-      "Workshop hosting opportunity",
-      "Logo on website and programs",
-      "Access to networking events",
-      "Recruitment opportunities",
-      "Social media mentions",
-      "3-month partnership benefits",
-      "Access to talent pipeline",
-      "Project showcase viewing",
+      "Featured branding on select event platforms",
+      "Participation in mentorship, judging panels, or training workshops",
+      "Access to curated partnership opportunities with innovators and SMEs",
+      "Highlighted presence in social media and event newsletters",
     ],
   },
   {
-    name: "Silver",
+    name: "Silver Partners",
     icon: Star,
     color: "bg-gradient-to-br from-gray-600 to-gray-800",
-    badge: "Community Partner",
-    investment: "$5,000+",
+    badge: "Supporting Institutions",
+    description: "Supporting institutions contributing to the hackathon's impact.",
     benefits: [
-      "Community partner listing",
-      "Shared booth space available",
-      "Networking event access",
-      "Website logo placement",
-      "Social media recognition",
-      "Volunteer opportunities",
-      "Event documentation access",
-      "1-month partnership benefits",
-      "Community engagement",
-      "Future event priority",
+      "Logo presence on event website and materials",
+      "Recognition during event sessions and workshops",
+      "Opportunity to engage with participants and showcase innovations",
+      "Access to select networking events and roundtables",
     ],
   },
 ];
 
 export function PartnershipTiers() {
   return (
-    <Section background="muted" spacing="lg">
+    <Section id="partnership-tiers" background="muted" spacing="lg" className="bg-white text-black">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,14 +76,12 @@ export function PartnershipTiers() {
           <Heading
             as="h2"
             level="h2"
-            className="text-gray-900 dark:text-gray-50"
+            className="text-black"
           >
-            Partnership Tiers
+            💎 Maximize Your Impact Through Strategic Collaboration
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto">
-            Choose the partnership level that aligns with your organization&apos;s
-            goals and investment capacity. Each tier offers unique benefits and
-            opportunities to engage with Africa&apos;s brightest innovators.
+          <Body size="lg" className="max-w-3xl mx-auto text-black/80">
+            We offer multiple partnership tiers tailored to your organization&apos;s objectives and desired level of visibility.
           </Body>
         </motion.div>
 
@@ -120,7 +96,7 @@ export function PartnershipTiers() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full p-6 hover:shadow-lg transition-shadow">
+                <Card className="h-full p-6 hover:shadow-lg transition-shadow bg-white border-gray-200">
                   <div className="space-y-6">
                     {/* Tier Header */}
                     <div className="text-center space-y-3">
@@ -133,7 +109,7 @@ export function PartnershipTiers() {
                         <Heading
                           as="h3"
                           level="h4"
-                          className="text-gray-900 dark:text-gray-50"
+                          className="text-black"
                         >
                           {tier.name}
                         </Heading>
@@ -141,15 +117,15 @@ export function PartnershipTiers() {
                           {tier.badge}
                         </Badge>
                       </div>
-                      <Body size="lg" weight="semibold" color="primary">
-                        {tier.investment}
+                      <Body size="sm" className="text-gray-700">
+                        {tier.description}
                       </Body>
                     </div>
 
                     {/* Benefits List */}
                     <div className="space-y-3">
-                      <Body weight="semibold" size="sm" transform="uppercase">
-                        Benefits Include:
+                      <Body weight="semibold" size="sm" transform="uppercase" className="text-black">
+                        Benefits:
                       </Body>
                       <ul className="space-y-2">
                         {tier.benefits.map((benefit, benefitIndex) => (
@@ -160,7 +136,7 @@ export function PartnershipTiers() {
                             <Check className="size-4 text-green-600 mt-0.5 shrink-0" />
                             <Body
                               size="sm"
-                              className="text-gray-700 dark:text-gray-300"
+                              className="text-gray-700"
                             >
                               {benefit}
                             </Body>

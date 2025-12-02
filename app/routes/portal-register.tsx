@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { Button } from "~/components/ui/button";
 import { Card } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
@@ -21,22 +21,67 @@ import {
 } from "lucide-react";
 import Header from "~/components/portal/Header";
 import { useToast } from "~/hooks/use-toast";
+import { portalApi } from "~/lib/portal-api";
 
 const Register = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const totalSteps = 3;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Form data state
+  const [formData, setFormData] = useState({
+    companyName: "",
+    registrationNumber: "",
+    country: "",
+    industry: "",
+    address: "",
+    contactName: "",
+    email: "",
+    phone: "",
+    tin: "",
+    vat: "",
+    password: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
     if (step < totalSteps) {
       setStep((prev) => prev + 1);
     } else {
-      toast({
-        title: "Registration Submitted!",
-        description:
-          "Your application has been received and is being processed. We'll contact you within 2-3 business days.",
-      });
+      // Final step - submit registration
+      setIsSubmitting(true);
+      
+      try {
+        await portalApi.register(formData);
+        
+        // Show 5-second toast notification
+        toast({
+          title: "Registration Successful!",
+          description:
+            "Your application has been received. You can now login to access your dashboard.",
+          duration: 5000,
+        });
+        
+        // Redirect to login after 5 seconds
+        setTimeout(() => {
+          navigate("/portal/login");
+        }, 5000);
+        
+      } catch (error) {
+        toast({
+          title: "Registration Failed",
+          description: error instanceof Error ? error.message : "An error occurred during registration",
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -104,6 +149,8 @@ const Register = () => {
                           id="company-name"
                           required
                           placeholder="Enter your company name"
+                          value={formData.companyName}
+                          onChange={(e) => handleInputChange("companyName", e.target.value)}
                         />
                       </div>
 
@@ -115,12 +162,14 @@ const Register = () => {
                           id="registration-number"
                           required
                           placeholder="Enter registration number"
+                          value={formData.registrationNumber}
+                          onChange={(e) => handleInputChange("registrationNumber", e.target.value)}
                         />
                       </div>
 
                       <div>
                         <Label htmlFor="country">Country *</Label>
-                        <Select required>
+                        <Select required value={formData.country} onValueChange={(value) => handleInputChange("country", value)}>
                           <SelectTrigger id="country">
                             <SelectValue placeholder="Select your country" />
                           </SelectTrigger>
@@ -136,7 +185,7 @@ const Register = () => {
 
                       <div>
                         <Label htmlFor="industry">Industry Sector *</Label>
-                        <Select required>
+                        <Select required value={formData.industry} onValueChange={(value) => handleInputChange("industry", value)}>
                           <SelectTrigger id="industry">
                             <SelectValue placeholder="Select industry" />
                           </SelectTrigger>
@@ -162,6 +211,8 @@ const Register = () => {
                           id="address"
                           required
                           placeholder="Enter complete business address"
+                          value={formData.address}
+                          onChange={(e) => handleInputChange("address", e.target.value)}
                         />
                       </div>
                     </div>
@@ -186,6 +237,8 @@ const Register = () => {
                           id="contact-name"
                           required
                           placeholder="Full name"
+                          value={formData.contactName}
+                          onChange={(e) => handleInputChange("contactName", e.target.value)}
                         />
                       </div>
 
@@ -196,6 +249,8 @@ const Register = () => {
                           type="email"
                           required
                           placeholder="contact@company.com"
+                          value={formData.email}
+                          onChange={(e) => handleInputChange("email", e.target.value)}
                         />
                       </div>
 
@@ -206,6 +261,8 @@ const Register = () => {
                           type="tel"
                           required
                           placeholder="+234 xxx xxx xxxx"
+                          value={formData.phone}
+                          onChange={(e) => handleInputChange("phone", e.target.value)}
                         />
                       </div>
 
@@ -213,7 +270,7 @@ const Register = () => {
                         <Label htmlFor="tin">
                           Tax Identification Number (TIN) *
                         </Label>
-                        <Input id="tin" required placeholder="Enter TIN" />
+                        <Input id="tin" required placeholder="Enter TIN" value={formData.tin} onChange={(e) => handleInputChange("tin", e.target.value)} />
                       </div>
 
                       <div>
@@ -221,6 +278,20 @@ const Register = () => {
                         <Input
                           id="vat"
                           placeholder="Enter VAT number (if applicable)"
+                          value={formData.vat}
+                          onChange={(e) => handleInputChange("vat", e.target.value)}
+                        />
+                      </div>
+
+                      <div>
+                        <Label htmlFor="password">Password *</Label>
+                        <Input
+                          id="password"
+                          type="password"
+                          required
+                          placeholder="Create a strong password"
+                          value={formData.password}
+                          onChange={(e) => handleInputChange("password", e.target.value)}
                         />
                       </div>
                     </div>
@@ -307,9 +378,15 @@ const Register = () => {
                     </Button>
                   )}
 
-                  <Button type="submit" className={step === 1 ? "ml-auto" : ""}>
-                    {step === totalSteps ? "Submit Registration" : "Continue"}
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button type="submit" className={step === 1 ? "ml-auto" : ""} disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <div className="h-5 w-5 animate-spin rounded-full border-2 border-primary-foreground border-t-transparent" />
+                    ) : (
+                      <>
+                        {step === totalSteps ? "Submit Registration" : "Continue"}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </>
+                    )}
                   </Button>
                 </div>
               </form>

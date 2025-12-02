@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "~/components/ui/button";
-import { Handshake, ArrowRight, Download } from "lucide-react";
+import { Handshake, ArrowRight, FileText } from "lucide-react";
 
 export function PartnersHero() {
   return (
@@ -25,18 +25,19 @@ export function PartnersHero() {
           <div className="space-y-4">
             <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
               <Handshake className="mr-2 size-4" aria-hidden />
-              Strategic Partnerships
+              Partners
             </span>
             <h1
               id="partners-hero-heading"
               className="text-3xl font-heading font-bold leading-tight sm:text-4xl lg:text-5xl xl:text-6xl"
             >
-              Partner with AfCFTA Hackathon 2026
+              Driving Africa&apos;s Digital Trade Ecosystem Together
             </h1>
+            <p className="text-2xl font-semibold text-white sm:text-3xl">
+              Our Partners Power Innovation Across Africa
+            </p>
             <p className="max-w-2xl text-lg text-white/90 sm:text-xl">
-              Join us in shaping the future of African trade. Connect with top
-              talent, drive innovation, and demonstrate your commitment to
-              continental growth.
+              The AfCFTA Hackathon 2026 thrives on strategic partnerships. From global corporates to regional innovation hubs, partners play a crucial role in enabling Africa&apos;s brightest innovators to build solutions for digital trade, AI, fintech, logistics, and MSME empowerment.
             </p>
           </div>
 
@@ -58,9 +59,9 @@ export function PartnersHero() {
               asChild
               className="inline-flex items-center gap-2 bg-white/10 border-white/20 text-white hover:bg-white/20"
             >
-              <a href="/assets/partnership-brochure.pdf" download>
-                <Download className="size-4" aria-hidden />
-                Partnership Brochure
+              <a href="#partnership-tiers">
+                <FileText className="size-4" aria-hidden />
+                View Partnership Benefits
               </a>
             </Button>
           </div>

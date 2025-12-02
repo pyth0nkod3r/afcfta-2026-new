@@ -3,93 +3,35 @@ import { Section } from "~/components/ui/section";
 import { Heading, Body } from "~/components/ui/typography";
 import { Card } from "~/components/ui/card";
 import {
-  Building2,
-  Landmark,
-  GraduationCap,
-  Briefcase,
-  Globe,
-  Users,
-  ArrowRight,
+  Eye,
+  Lightbulb,
+  TrendingUp,
 } from "lucide-react";
 
-const partnerCategories = [
+const benefits = [
   {
-    title: "Government & Policy",
-    icon: Landmark,
+    title: "Maximum Visibility",
+    icon: Eye,
     description:
-      "African Union, national governments, and policy-making institutions driving continental integration.",
-    partners: [
-      "African Union Commission",
-      "AfCFTA Secretariat",
-      "National Trade Ministries",
-      "Development Finance Institutions",
-    ],
+      "Continental and regional exposure for your brand across all hackathon platforms, events, and media channels.",
   },
   {
-    title: "Technology & Innovation",
-    icon: Building2,
+    title: "Co-Creation Opportunities",
+    icon: Lightbulb,
     description:
-      "Leading tech companies, startups, and innovation hubs across Africa and globally.",
-    partners: [
-      "Major Tech Companies",
-      "African Innovation Hubs",
-      "Fintech Leaders",
-      "E-commerce Platforms",
-    ],
+      "Collaborate directly with innovators on solutions aligned with the AfCFTA Digital Trade Protocol.",
   },
   {
-    title: "Academic & Research",
-    icon: GraduationCap,
+    title: "Impact & Legacy",
+    icon: TrendingUp,
     description:
-      "Universities, research institutions, and educational organizations fostering innovation.",
-    partners: [
-      "African Universities",
-      "Research Institutes",
-      "Innovation Centers",
-      "Educational Foundations",
-    ],
-  },
-  {
-    title: "Financial Services",
-    icon: Briefcase,
-    description:
-      "Banks, investment firms, and financial institutions supporting African entrepreneurship.",
-    partners: [
-      "Development Banks",
-      "Commercial Banks",
-      "Investment Funds",
-      "Microfinance Institutions",
-    ],
-  },
-  {
-    title: "International Organizations",
-    icon: Globe,
-    description:
-      "Global organizations and multilateral institutions supporting African development.",
-    partners: [
-      "World Bank Group",
-      "UN Organizations",
-      "International NGOs",
-      "Bilateral Agencies",
-    ],
-  },
-  {
-    title: "Industry Associations",
-    icon: Users,
-    description:
-      "Trade associations, chambers of commerce, and professional organizations.",
-    partners: [
-      "Chambers of Commerce",
-      "Trade Associations",
-      "Professional Bodies",
-      "Industry Networks",
-    ],
+      "Contribute to sustainable innovation, inclusive trade, and MSME empowerment across Africa.",
   },
 ];
 
 export function StrategicPartnerNetwork() {
   return (
-    <Section spacing="lg">
+    <Section spacing="lg" className="bg-black! text-white">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -101,29 +43,27 @@ export function StrategicPartnerNetwork() {
           <Heading
             as="h2"
             level="h2"
-            className="text-gray-900 dark:text-gray-50"
+            className="text-white!"
           >
-            Strategic Partner Network
+            🌐 Connecting Africa&apos;s Ecosystem for Maximum Impact
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto">
-            Our diverse ecosystem of partners spans across sectors, bringing
-            together the expertise, resources, and networks needed to drive
-            meaningful innovation in African trade and commerce.
+          <Body size="lg" className="max-w-3xl mx-auto text-white!">
+            The AfCFTA Hackathon Partner Network brings together strategic partners across finance, technology, telecommunications, policy, and innovation ecosystems, providing:
           </Body>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {partnerCategories.map((category, index) => {
-            const IconComponent = category.icon;
+        <div className="grid gap-6 md:grid-cols-3">
+          {benefits.map((benefit, index) => {
+            const IconComponent = benefit.icon;
             return (
               <motion.div
-                key={category.title}
+                key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full p-6 hover:shadow-lg transition-all group">
+                <Card className="h-full p-6 hover:shadow-lg transition-all group bg-gray-50! border-gray-200">
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -132,79 +72,24 @@ export function StrategicPartnerNetwork() {
                       <Heading
                         as="h3"
                         level="h5"
-                        className="text-gray-900 dark:text-gray-50"
+                        className="text-gray-900!"
                       >
-                        {category.title}
+                        {benefit.title}
                       </Heading>
                     </div>
 
                     <Body
                       size="sm"
-                      className="text-gray-600 dark:text-gray-400"
+                      className="text-gray-700!"
                     >
-                      {category.description}
+                      {benefit.description}
                     </Body>
-
-                    <div className="space-y-2">
-                      <Body
-                        size="sm"
-                        weight="semibold"
-                        transform="uppercase"
-                        color="muted"
-                      >
-                        Partner Types:
-                      </Body>
-                      <ul className="space-y-1">
-                        {category.partners.map((partner, partnerIndex) => (
-                          <li
-                            key={partnerIndex}
-                            className="flex items-center gap-2"
-                          >
-                            <ArrowRight className="size-3 text-primary" />
-                            <Body
-                              size="sm"
-                              className="text-gray-700 dark:text-gray-300"
-                            >
-                              {partner}
-                            </Body>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
                   </div>
                 </Card>
               </motion.div>
             );
           })}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center bg-gray-50 dark:bg-gray-900 rounded-2xl p-8 md:p-12"
-        >
-          <div className="space-y-4">
-            <Heading
-              as="h3"
-              level="h3"
-              className="text-gray-900 dark:text-gray-50"
-            >
-              Join Our Growing Network
-            </Heading>
-            <Body className="max-w-2xl mx-auto">
-              We&apos;re actively building partnerships across all sectors. Whether
-              you&apos;re a government institution, private company, academic
-              organization, or international body, there&apos;s a place for you in
-              our ecosystem.
-            </Body>
-            <Body size="sm" color="muted">
-              Current network includes 50+ strategic partners across 25 African
-              countries
-            </Body>
-          </div>
-        </motion.div>
       </div>
     </Section>
   );

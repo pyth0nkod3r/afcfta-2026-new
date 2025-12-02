@@ -16,8 +16,8 @@ const Results = () => {
     }
   }, [searchParams]);
 
-  const isPassed = score === 100;
-  const isClose = score >= 75 && score < 100;
+  const isPassed = score >= 70;
+  const isClose = score >= 60 && score < 70;
 
   const getStatusIcon = () => {
     if (isPassed) return <CheckCircle2 className="w-16 h-16 text-success" />;
@@ -31,14 +31,14 @@ const Results = () => {
       return {
         title: "Congratulations! You're Ready",
         description:
-          "Your business meets all the requirements to participate in AfCFTA trade. You can proceed with registration immediately.",
+          "Your business meets the requirements to participate in AfCFTA trade. You can proceed with registration to access your dashboard.",
       };
     }
     if (isClose) {
       return {
         title: "Almost There!",
         description:
-          "You're very close to meeting all requirements. Review the areas below and complete the missing items to achieve 100%.",
+          "You're very close to meeting the requirements. Review the areas below and complete the missing items to achieve at least 70%.",
       };
     }
     return {
@@ -168,12 +168,17 @@ const Results = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               {isPassed ? (
-                <Button size="lg" asChild>
-                  <Link to="/portal/register">
-                    Proceed to Registration
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
+                <>
+                  <Button size="lg" asChild>
+                    <Link to="/portal/register">
+                      Proceed to Registration
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button size="lg" variant="outline" asChild>
+                    <Link to="/portal/login">Already Registered? Login</Link>
+                  </Button>
+                </>
               ) : (
                 <Button size="lg" variant="outline" asChild>
                   <Link to="/portal/assessment">Retake Assessment</Link>

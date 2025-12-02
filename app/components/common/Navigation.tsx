@@ -28,7 +28,7 @@ const navLinks: NavItem[] = [
     href: "#",
     label: "More",
     children: [
-      { href: "/strategic-plan", label: "Strategic Plan" },
+      { href: "/venue", label: "Venue" },
       { href: "/partners", label: "Partners" },
       { href: "/media-resources", label: "Media & Resources" },
       { href: "/faq", label: "FAQ" },
@@ -37,7 +37,7 @@ const navLinks: NavItem[] = [
 ];
 
 const forcedOverflow = [
-  "/strategic-plan",
+  "/venue",
   "/media-resources",
   "/faq",
   "/partners",

@@ -8,7 +8,7 @@ export default [
   route("/rewards-incentives", "routes/rewards-incentives.tsx"),
   route("/register", "routes/register.tsx"),
   route("/contact", "routes/contact.tsx"),
-  route("/strategic-plan", "routes/strategic-plan.tsx"),
+  route("/venue", "routes/venue.tsx"),
   route("/partners", "routes/partners.tsx"),
   route("/media-resources", "routes/media-resources.tsx"),
   route("/faq", "routes/faq.tsx"),
@@ -20,6 +20,10 @@ export default [
   route("/portal/assessment", "routes/portal-assessment.tsx"),
   route("/portal/results", "routes/portal-results.tsx"),
   route("/portal/register", "routes/portal-register.tsx"),
+  route("/portal/login", "routes/portal-login.tsx"),
+  route("/portal/dashboard", "routes/portal-dashboard.tsx"),
+  route("/portal/profile", "routes/portal-profile.tsx"),
+  route("/portal/settings", "routes/portal-settings.tsx"),
 
   // 404 catch-all route
   route("*", "routes/$.tsx"),
