@@ -60,19 +60,19 @@ const Header = () => {
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                  <Link to="/portal/dashboard">
+                  <Link to="/dashboard">
                     <LayoutDashboard className="mr-2 h-4 w-4" />
                     <span>Dashboard</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/portal/profile">
+                  <Link to="/profile">
                     <User className="mr-2 h-4 w-4" />
                     <span>Profile</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/portal/settings">
+                  <Link to="/settings">
                     <Settings className="mr-2 h-4 w-4" />
                     <span>Settings</span>
                   </Link>
@@ -86,7 +86,7 @@ const Header = () => {
             </DropdownMenu>
           ) : (
             <Button asChild variant="default">
-              <Link to="/portal/login">Login</Link>
+              <Link to="/login">Login</Link>
             </Button>
           )}
         </div>

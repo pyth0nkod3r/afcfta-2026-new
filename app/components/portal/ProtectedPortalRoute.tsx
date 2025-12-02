@@ -13,7 +13,7 @@ export function ProtectedPortalRoute({ children }: { children: React.ReactNode }
   }
 
   if (!isAuthenticated) {
-    return <Navigate to="/portal/login" replace />;
+    return <Navigate to="/login" replace />;
   }
 
   return <>{children}</>;

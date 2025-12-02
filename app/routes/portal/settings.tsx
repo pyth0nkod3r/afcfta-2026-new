@@ -51,7 +51,7 @@ function SettingsContent() {
       title: "Logged out",
       description: "You have been successfully logged out.",
     });
-    navigate("/portal/login");
+    navigate("/login");
   };
 
   const handleSaveNotifications = () => {
@@ -84,7 +84,7 @@ function SettingsContent() {
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-4">
-              <Link to="/portal/dashboard" className="flex items-center gap-2">
+              <Link to="/dashboard" className="flex items-center gap-2">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary">
                   <LayoutDashboard className="h-5 w-5 text-primary-foreground" />
                 </div>
@@ -113,19 +113,19 @@ function SettingsContent() {
                   </DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem asChild>
-                    <Link to="/portal/dashboard">
+                    <Link to="/dashboard">
                       <LayoutDashboard className="mr-2 h-4 w-4" />
                       <span>Dashboard</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/portal/profile">
+                    <Link to="/profile">
                       <UserIcon className="mr-2 h-4 w-4" />
                       <span>Profile</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/portal/settings">
+                    <Link to="/settings">
                       <SettingsIcon className="mr-2 h-4 w-4" />
                       <span>Settings</span>
                     </Link>

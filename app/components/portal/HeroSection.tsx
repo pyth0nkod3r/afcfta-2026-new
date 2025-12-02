@@ -35,7 +35,7 @@ const HeroSection = () => {
               className="px-8 py-6 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               asChild
             >
-              <Link to="/portal/assessment">
+              <Link to="/assessment">
                 Begin Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

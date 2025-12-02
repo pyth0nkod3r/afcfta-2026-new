@@ -71,7 +71,7 @@ const Register = () => {
         
         // Redirect to login after 5 seconds
         setTimeout(() => {
-          navigate("/portal/login");
+          navigate("/login");
         }, 5000);
         
       } catch (error) {
@@ -94,7 +94,7 @@ const Register = () => {
           <div className="max-w-3xl mx-auto">
             <div className="mb-8">
               <Link
-                to="/portal/results?score=100"
+                to="/results?score=100"
                 className="text-primary hover:underline inline-flex items-center gap-2 mb-4"
               >
                 <ArrowLeft className="w-4 h-4" />

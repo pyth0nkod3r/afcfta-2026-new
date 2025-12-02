@@ -97,7 +97,7 @@ export default function PortalAssessment() {
         (answer) => answer === "Yes",
       ).length;
       const score = Math.round((yesCount / questions.length) * 100);
-      navigate(`/portal/results?score=${score}`);
+      navigate(`/results?score=${score}`);
     } else {
       setCurrentQuestion((prev) => prev + 1);
     }

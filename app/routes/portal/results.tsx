@@ -170,18 +170,18 @@ const Results = () => {
               {isPassed ? (
                 <>
                   <Button size="lg" asChild>
-                    <Link to="/portal/register">
+                    <Link to="/register">
                       Proceed to Registration
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </Button>
                   <Button size="lg" variant="outline" asChild>
-                    <Link to="/portal/login">Already Registered? Login</Link>
+                    <Link to="/login">Already Registered? Login</Link>
                   </Button>
                 </>
               ) : (
                 <Button size="lg" variant="outline" asChild>
-                  <Link to="/portal/assessment">Retake Assessment</Link>
+                  <Link to="/assessment">Retake Assessment</Link>
                 </Button>
               )}
 

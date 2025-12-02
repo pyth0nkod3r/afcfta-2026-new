@@ -42,7 +42,7 @@ export default function PortalLogin() {
         title: "Welcome back!",
         description: "You have successfully logged in.",
       });
-      navigate("/portal/dashboard");
+      navigate("/dashboard");
     } catch (error) {
       toast({
         title: "Login failed",
@@ -216,7 +216,7 @@ export default function PortalLogin() {
                       Check if you&apos;re qualified to register
                     </p>
                     <Button variant="outline" asChild className="w-full">
-                      <Link to="/portal/assessment">
+                      <Link to="/assessment">
                         <ClipboardCheck className="mr-2 h-4 w-4" />
                         Take the Assessment
                       </Link>

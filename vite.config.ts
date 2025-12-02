@@ -11,4 +11,11 @@ export default defineConfig({
       "~": fileURLToPath(new URL("./app", import.meta.url)),
     },
   },
+  server: {
+    host: true, // Allow access from network
+    port: 5173,
+    strictPort: false,
+    // This allows both localhost and portal.localhost to work
+    // You can access: http://localhost:5173 (main site) and http://portal.localhost:5173 (portal)
+  },
 });

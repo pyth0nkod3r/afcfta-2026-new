@@ -66,7 +66,7 @@ const HowItWorksSection = () => {
               className="px-8 py-6 text-base font-semibold rounded-xl hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               asChild
             >
-              <Link to="/portal/assessment">
+              <Link to="/assessment">
                 Start Your Assessment Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
