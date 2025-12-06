@@ -17,9 +17,8 @@ export function VenueHero() {
       <div className="relative container mx-auto px-4 py-16 sm:py-24 lg:py-36">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
-          transition={{ duration: 0.6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
           className="space-y-8"
         >
           <div className="space-y-4">
@@ -42,9 +41,8 @@ export function VenueHero() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className="bg-white/10 rounded-lg p-4 text-center"
             >
               <Calendar className="size-8 mx-auto mb-2 text-accent" />
@@ -53,9 +51,8 @@ export function VenueHero() {
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
               className="bg-white/10 rounded-lg p-4 text-center"
             >
               <MapPin className="size-8 mx-auto mb-2 text-accent" />
@@ -64,9 +61,8 @@ export function VenueHero() {
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
               className="bg-white/10 rounded-lg p-4 text-center"
             >
               <Globe className="size-8 mx-auto mb-2 text-accent" />

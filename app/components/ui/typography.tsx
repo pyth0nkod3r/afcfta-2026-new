@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "~/lib/utils";
 
 const headingVariants = cva(
-  "font-heading font-bold text-gray-900 dark:text-gray-50",
+  "font-heading font-bold text-gray-900",
   {
     variants: {
       level: {
@@ -21,11 +21,11 @@ const headingVariants = cva(
         right: "text-right",
       },
       color: {
-        default: "text-gray-900 dark:text-gray-50",
+        default: "text-gray-900",
         primary: "text-primary",
         secondary: "text-secondary",
         accent: "text-accent",
-        muted: "text-gray-600 dark:text-gray-400",
+        muted: "text-gray-600",
       },
     },
     defaultVariants: {
@@ -64,7 +64,7 @@ function Heading({
   );
 }
 
-const bodyVariants = cva("font-sans text-gray-700 dark:text-gray-300", {
+const bodyVariants = cva("font-sans text-gray-700", {
   variants: {
     size: {
       xs: "text-xs md:text-sm leading-relaxed",
@@ -83,8 +83,8 @@ const bodyVariants = cva("font-sans text-gray-700 dark:text-gray-300", {
       right: "text-right",
     },
     color: {
-      default: "text-gray-700 dark:text-gray-300",
-      muted: "text-gray-600 dark:text-gray-400",
+      default: "text-gray-700",
+      muted: "text-gray-600",
       primary: "text-primary",
     },
     transform: {

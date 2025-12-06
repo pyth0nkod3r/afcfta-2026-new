@@ -135,31 +135,8 @@
     --radius: 0.75rem;
   }
 
-  .dark {
-    --background: 220 25% 8%;
-    --foreground: 220 15% 95%;
-    --card: 220 20% 12%;
-    --card-foreground: 220 15% 95%;
-    --popover: 220 20% 12%;
-    --popover-foreground: 220 15% 95%;
-    --primary: 220 85% 55%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 220 20% 18%;
-    --secondary-foreground: 220 15% 95%;
-    --muted: 220 20% 18%;
-    --muted-foreground: 220 10% 60%;
-    --accent: 45 95% 60%;
-    --accent-foreground: 220 15% 10%;
-    --success: 145 65% 50%;
-    --success-foreground: 0 0% 100%;
-    --highlight: 45 85% 25%;
-    --highlight-foreground: 45 100% 85%;
-    --destructive: 0 62.8% 50%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 220 20% 20%;
-    --input: 220 20% 20%;
-    --ring: 220 85% 55%;
-  }
+  /* Dark mode removed */
+  @custom-variant dark (&:where(.dark, .dark *));
 
   * {
     @apply border-border;

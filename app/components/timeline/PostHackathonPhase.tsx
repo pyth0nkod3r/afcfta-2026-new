@@ -108,7 +108,7 @@ const supportPrograms = [
 
 export function PostHackathonPhase() {
   return (
-    <Section background="muted" spacing="lg" className="bg-black text-white">
+    <Section background="muted" spacing="lg" className="bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200 text-black">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -117,13 +117,11 @@ export function PostHackathonPhase() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-4"
         >
-          <Badge variant="outline" className="mb-4 border-white/20 text-white">
-            🚀 3️⃣ Phase Three
-          </Badge>
-          <Heading as="h2" level="h2" className="text-white">
+
+          <Heading as="h2" level="h2" className="text-black">
             From Prototype to Policy and Market
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto text-white">
+          <Body size="lg" className="max-w-3xl mx-auto text-black">
             After the hackathon, selected innovations will move into incubation
             and implementation under the AfCFTA innovation ecosystem —
             connecting ideas to real-world impact.
@@ -138,35 +136,35 @@ export function PostHackathonPhase() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="grid gap-6 md:grid-cols-3 text-center"
         >
-          <Card className="p-6">
+          <Card className="p-6 bg-white/60 border-white/40">
             <div className="space-y-2">
-              <Calendar className="size-8 mx-auto text-primary" />
-              <Heading as="h3" level="h4" className="text-white">
+              <Calendar className="size-8 mx-auto text-blue-600" />
+              <Heading as="h3" level="h4" className="text-black">
                 April – July 2026
               </Heading>
-              <Body size="sm" className="text-white/70">
+              <Body size="sm" className="text-black">
                 Post-Hackathon Phase
               </Body>
             </div>
           </Card>
-          <Card className="p-6">
+          <Card className="p-6 bg-white/60 border-white/40">
             <div className="space-y-2">
-              <TrendingUp className="size-8 mx-auto text-primary" />
-              <Heading as="h3" level="h4" className="text-white">
+              <TrendingUp className="size-8 mx-auto text-blue-600" />
+              <Heading as="h3" level="h4" className="text-black">
                 Incubation
               </Heading>
-              <Body size="sm" className="text-white/70">
+              <Body size="sm" className="text-black">
                 Winners&apos; program
               </Body>
             </div>
           </Card>
-          <Card className="p-6">
+          <Card className="p-6 bg-white/60 border-white/40">
             <div className="space-y-2">
-              <Network className="size-8 mx-auto text-primary" />
-              <Heading as="h3" level="h4" className="text-white">
+              <Network className="size-8 mx-auto text-blue-600" />
+              <Heading as="h3" level="h4" className="text-black">
                 Continental
               </Heading>
-              <Body size="sm" className="text-white/70">
+              <Body size="sm" className="text-black">
                 Showcase events
               </Body>
             </div>
@@ -185,33 +183,33 @@ export function PostHackathonPhase() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-6 hover:shadow-lg transition-shadow">
+                <Card className="p-6 hover:shadow-lg transition-shadow bg-white/60 border-white/40">
                   <div className="flex gap-6">
                     <div className="flex flex-col items-center">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                        <IconComponent className="size-6 text-primary" />
+                      <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                        <IconComponent className="size-6 text-blue-600" />
                       </div>
                       {index < postHackathonActivities.length - 1 && (
-                        <div className="w-0.5 h-16 bg-gray-200 dark:bg-gray-700 mt-4"></div>
+                        <div className="w-0.5 h-16 bg-black/10 mt-4"></div>
                       )}
                     </div>
 
                     <div className="flex-1 space-y-4">
                       <div className="flex items-start justify-between flex-wrap gap-4">
                         <div>
-                          <Heading as="h3" level="h5" className="text-white">
+                          <Heading as="h3" level="h5" className="text-black">
                             {activity.title}
                           </Heading>
                           <div className="flex gap-2 mt-1 flex-wrap">
-                            <Badge variant="outline">{activity.date}</Badge>
-                            <Badge variant="secondary">
+                            <Badge variant="outline" className="border-black/20 text-black">{activity.date}</Badge>
+                            <Badge variant="secondary" className="bg-blue-100 text-blue-800">
                               {activity.duration}
                             </Badge>
                           </div>
                         </div>
                       </div>
 
-                      <Body className="text-white/70">
+                      <Body className="text-black">
                         {activity.description}
                       </Body>
                     </div>
@@ -231,10 +229,10 @@ export function PostHackathonPhase() {
           className="space-y-8"
         >
           <div className="text-center">
-            <Heading as="h3" level="h3" className="text-white">
+            <Heading as="h3" level="h3" className="text-black">
               Comprehensive Support Programs
             </Heading>
-            <Body className="mt-2 text-white/70">
+            <Body className="mt-2 text-black">
               Multi-faceted support ecosystem for sustainable growth and impact
             </Body>
           </div>
@@ -248,25 +246,25 @@ export function PostHackathonPhase() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full p-6 hover:shadow-lg transition-shadow">
+                <Card className="h-full p-6 hover:shadow-lg transition-shadow bg-white/60 border-white/40">
                   <div className="space-y-4">
                     <div className="flex items-start justify-between">
                       <div>
-                        <Heading as="h4" level="h6" className="text-white">
+                        <Heading as="h4" level="h6" className="text-black">
                           {program.title}
                         </Heading>
                         <div className="flex gap-2 mt-1">
-                          <Badge variant="outline" className="text-xs">
+                          <Badge variant="outline" className="text-xs border-black/20 text-black">
                             {program.duration}
                           </Badge>
-                          <Badge variant="secondary" className="text-xs">
+                          <Badge variant="secondary" className="text-xs bg-blue-100 text-blue-800">
                             {program.value}
                           </Badge>
                         </div>
                       </div>
                     </div>
 
-                    <Body size="sm" className="text-white/70">
+                    <Body size="sm" className="text-black">
                       {program.description}
                     </Body>
 
@@ -276,6 +274,7 @@ export function PostHackathonPhase() {
                         weight="semibold"
                         transform="uppercase"
                         color="muted"
+                        className="text-black"
                       >
                         Key Benefits:
                       </Body>
@@ -285,10 +284,10 @@ export function PostHackathonPhase() {
                             key={benefitIndex}
                             className="flex items-center gap-2"
                           >
-                            <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0"></div>
                             <Body
                               size="xs"
-                              className="text-gray-700 dark:text-gray-300"
+                              className="text-black"
                             >
                               {benefit}
                             </Body>
@@ -309,7 +308,7 @@ export function PostHackathonPhase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center bg-primary text-white rounded-2xl p-8"
+          className="text-center bg-blue-600 text-white rounded-2xl p-8"
         >
           <div className="space-y-4">
             <Heading as="h3" level="h4" className="text-white">

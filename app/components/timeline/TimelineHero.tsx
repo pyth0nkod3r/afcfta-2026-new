@@ -17,16 +17,15 @@ export function TimelineHero() {
       <div className="relative container mx-auto px-4 py-20 sm:py-28 lg:py-40">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="space-y-10"
         >
           <div className="space-y-6">
             <motion.span 
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
+              transition={{ delay: 0.1, duration: 0.4 }}
               className="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white/90 border border-white/20"
             >
               <Clock className="mr-2 size-4" aria-hidden />A Three-Phase Journey
@@ -50,9 +49,8 @@ export function TimelineHero() {
           <div className="grid gap-6 sm:grid-cols-3 max-w-4xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
               whileHover={{ scale: 1.05, y: -5 }}
               className="group relative bg-white/10 backdrop-blur-md rounded-xl p-6 text-center border border-white/20 transition-all duration-300 hover:bg-white/20 hover:shadow-xl hover:shadow-accent/20 cursor-pointer"
             >
@@ -67,9 +65,8 @@ export function TimelineHero() {
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
               whileHover={{ scale: 1.05, y: -5 }}
               className="group relative bg-white/10 backdrop-blur-md rounded-xl p-6 text-center border border-white/20 transition-all duration-300 hover:bg-white/20 hover:shadow-xl hover:shadow-accent/20 cursor-pointer"
             >
@@ -84,9 +81,8 @@ export function TimelineHero() {
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
               whileHover={{ scale: 1.05, y: -5 }}
               className="group relative bg-white/10 backdrop-blur-md rounded-xl p-6 text-center border border-white/20 transition-all duration-300 hover:bg-white/20 hover:shadow-xl hover:shadow-accent/20 cursor-pointer"
             >
@@ -103,9 +99,8 @@ export function TimelineHero() {
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className="flex gap-4 flex-wrap pt-2"
           >
             <Button

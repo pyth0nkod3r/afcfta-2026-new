@@ -1,5 +1,5 @@
 import type { Route } from "./+types/contact";
-import { ContactPage } from "~/components/pages/ContactPage";
+import { ContactPage } from "~/components/contact/ContactPage";
 
 export const meta: Route.MetaFunction = () => [
   { title: "Contact Us — AfCFTA Hackathon 2026" },

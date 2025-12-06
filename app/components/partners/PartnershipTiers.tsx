@@ -64,7 +64,7 @@ const tiers = [
 
 export function PartnershipTiers() {
   return (
-    <Section id="partnership-tiers" background="muted" spacing="lg" className="bg-white text-black">
+    <Section id="partnership-tiers" background="muted" spacing="lg" className="bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200 text-black">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -96,7 +96,7 @@ export function PartnershipTiers() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full p-6 hover:shadow-lg transition-shadow bg-white border-gray-200">
+                <Card className="h-full p-6 hover:shadow-lg transition-shadow bg-white/60 border-white/40">
                   <div className="space-y-6">
                     {/* Tier Header */}
                     <div className="text-center space-y-3">
@@ -113,7 +113,7 @@ export function PartnershipTiers() {
                         >
                           {tier.name}
                         </Heading>
-                        <Badge variant="secondary" className="mt-1">
+                        <Badge variant="secondary" className="mt-1 bg-white/50 text-blue-900 border-white/60">
                           {tier.badge}
                         </Badge>
                       </div>
@@ -136,7 +136,7 @@ export function PartnershipTiers() {
                             <Check className="size-4 text-green-600 mt-0.5 shrink-0" />
                             <Body
                               size="sm"
-                              className="text-gray-700"
+                              className="text-black/80"
                             >
                               {benefit}
                             </Body>

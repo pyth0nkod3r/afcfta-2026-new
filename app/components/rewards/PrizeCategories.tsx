@@ -46,7 +46,7 @@ const prizeCategories = [
 
 export function PrizeCategories() {
   return (
-    <Section id="prize-categories" background="muted" spacing="lg" className="bg-black!">
+    <Section id="prize-categories" background="muted" spacing="lg" className="bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,11 +58,11 @@ export function PrizeCategories() {
           <Heading
             as="h2"
             level="h2"
-            className="text-white"
+            className="text-black"
           >
             Celebrating Africa&apos;s Top Digital Trade Innovators
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto text-white/90">
+          <Body size="lg" className="max-w-3xl mx-auto text-black">
             Outstanding teams will receive monetary rewards, thematic recognitions, 
             incubation support, and integration opportunities with AfCFTA digital 
             systems and national trade frameworks.
@@ -81,7 +81,7 @@ export function PrizeCategories() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full p-6 hover:shadow-lg transition-shadow bg-white/10 border-white/20">
+                <Card className="h-full p-6 hover:shadow-lg transition-shadow bg-white/60 border-white/40">
                   <div className="space-y-4">
                     <div className="text-center space-y-3">
                       <div
@@ -90,33 +90,33 @@ export function PrizeCategories() {
                         <IconComponent className="size-8 text-white" />
                       </div>
                       <div>
-                        <Badge variant="secondary" className="mb-2 bg-white/20 text-white border-white/30">
+                        <Badge variant="secondary" className="mb-2 bg-white/50 text-blue-900 border-white/60">
                           {category.badge}
                         </Badge>
                         <Heading
                           as="h3"
                           level="h6"
-                          className="text-white"
+                          className="text-black"
                         >
                           {category.title}
                         </Heading>
-                        <div className="text-2xl font-bold text-white mt-2">
+                        <div className="text-2xl font-bold text-blue-700 mt-2">
                           {category.amount}
                         </div>
                         {category.amountDetail && (
-                          <div className="text-sm text-white/70">
+                          <div className="text-sm text-black">
                             {category.amountDetail}
                           </div>
                         )}
                         {category.extraBenefit && (
-                          <div className="text-sm text-white/80 font-medium mt-1">
+                          <div className="text-sm text-black font-medium mt-1">
                             {category.extraBenefit}
                           </div>
                         )}
                       </div>
                       <Body
                         size="sm"
-                        className="text-white/80"
+                        className="text-black"
                       >
                         {category.description}
                       </Body>
@@ -134,21 +134,21 @@ export function PrizeCategories() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center bg-white/10 border border-white/20 rounded-2xl p-8"
+          className="text-center bg-white/60 border border-white/40 rounded-2xl p-8"
         >
           <div className="space-y-4">
             <Heading
               as="h3"
               level="h3"
-              className="text-white"
+              className="text-black"
             >
               Total Cash Reward: ₦60 Million
             </Heading>
-            <Body className="max-w-2xl mx-auto text-white/90">
+            <Body className="max-w-2xl mx-auto text-black/90">
               Non-Cash Rewards: Access to mentorship, incubation, and regional 
               partnership programs.
             </Body>
-            <Body size="sm" className="text-white/70">
+            <Body size="sm" className="text-black">
               Distributed among top 10 teams with continental recognition across 
               AfCFTA, ECOWAS, and Partner Institutions.
             </Body>

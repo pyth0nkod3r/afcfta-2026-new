@@ -51,7 +51,7 @@ const frameworkStages = [
 
 export function DeliveryFramework() {
   return (
-    <Section spacing="lg" background="muted" className="bg-white text-black">
+    <Section spacing="lg" background="muted" className="bg-gradient-to-br from-indigo-200 via-blue-200 to-purple-200 text-black">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -63,11 +63,11 @@ export function DeliveryFramework() {
           <Heading
             as="h2"
             level="h2"
-            className="text-gray-900 dark:text-gray-50"
+            className="text-black"
           >
             Turning Innovation into Action
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto">
+          <Body size="lg" className="max-w-3xl mx-auto text-black">
             Winning solutions will be integrated into the AfCFTA Digital Trade 
             Innovation Ecosystem, linking innovators to implementation pathways 
             through partnerships, pilots, and incubation.
@@ -86,7 +86,7 @@ export function DeliveryFramework() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-6 hover:shadow-lg transition-shadow">
+                <Card className="p-6 hover:shadow-lg transition-shadow bg-white/60 border-white/40">
                   <div className="flex gap-6">
                     <div className="flex flex-col items-center">
                       <div
@@ -95,19 +95,19 @@ export function DeliveryFramework() {
                         <IconComponent className="size-6 text-white" />
                       </div>
                       {index < frameworkStages.length - 1 && (
-                        <div className="w-0.5 h-16 bg-gray-200 dark:bg-gray-700 mt-4"></div>
+                        <div className="w-0.5 h-16 bg-black/20 mt-4"></div>
                       )}
                     </div>
 
                     <div className="flex-1 space-y-3">
                       <div>
-                        <Badge variant="outline" className="mb-2">
+                        <Badge variant="outline" className="mb-2 border-black/20 text-black">
                           Stage {index + 1}
                         </Badge>
                         <Heading
                           as="h3"
                           level="h5"
-                          className="text-gray-900 dark:text-gray-50"
+                          className="text-black"
                         >
                           {stage.stage}
                         </Heading>
@@ -115,7 +115,7 @@ export function DeliveryFramework() {
 
                       <Body
                         size="sm"
-                        className="text-gray-700 dark:text-gray-300"
+                        className="text-black"
                       >
                         {stage.description}
                       </Body>
@@ -125,13 +125,14 @@ export function DeliveryFramework() {
                           size="sm"
                           weight="semibold"
                           transform="uppercase"
-                          color="muted"
+                          color="default"
+                          className="text-black"
                         >
                           Lead Partner(s):
                         </Body>
                         <Body
                           size="sm"
-                          className="text-primary font-medium"
+                          className="text-blue-700 font-medium"
                         >
                           {stage.leadPartners}
                         </Body>
@@ -150,17 +151,17 @@ export function DeliveryFramework() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center bg-primary/5 rounded-2xl p-8"
+          className="text-center bg-white/60 border border-white/40 rounded-2xl p-8"
         >
           <div className="space-y-4">
             <Heading
               as="h3"
               level="h4"
-              className="text-gray-900 dark:text-gray-50"
+              className="text-black"
             >
               Outcome: Sustainable, Scalable Solutions
             </Heading>
-            <Body className="max-w-2xl mx-auto">
+            <Body className="max-w-2xl mx-auto text-black">
               Our framework ensures the development of sustainable, scalable 
               solutions that strengthen Africa&apos;s digital trade ecosystem and 
               empower local innovators to drive the AfCFTA&apos;s implementation.

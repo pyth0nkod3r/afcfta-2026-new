@@ -34,7 +34,11 @@ const objectives = [
 
 export function AboutSection() {
   return (
-    <Section id="about" background="muted" className="bg-black!">
+    <Section
+      id="about"
+      background="muted"
+      className="bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200"
+    >
       <div className="mx-auto flex max-w-5xl flex-col gap-12">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -43,10 +47,10 @@ export function AboutSection() {
           transition={{ duration: 0.5 }}
           className="space-y-4 text-center"
         >
-          <Heading as="h2" level="h2" align="center" className="text-white!">
+          <Heading as="h2" level="h2" align="center" className="text-black">
             Empowering Africa&apos;s Digital Trade Future
           </Heading>
-          <Body size="lg" align="center" className="text-white!">
+          <Body size="lg" align="center" className="text-black/80">
             The AfCFTA Hackathon 2026 brings together innovators, developers,
             policymakers, and entrepreneurs to build technology-driven trade
             solutions that accelerate Africa&apos;s digital transformation under
@@ -63,7 +67,7 @@ export function AboutSection() {
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
               className={cn(
-                "group flex h-full flex-col gap-4 rounded-2xl border border-border/80 bg-gray-50! p-6 shadow-sm",
+                "group flex h-full flex-col gap-4 rounded-2xl border border-white/40 bg-white/60 p-6 shadow-sm",
                 "transition-all duration-300 hover:-translate-y-1 hover:shadow-lg",
               )}
             >

@@ -42,13 +42,13 @@ const launchDate = new Date("2025-11-10T09:00:00+01:00");
 const registrationCTAs = [
   {
     label: "Register Your Team",
-    href: "/portal/register",
+    href: "/register",
     icon: Users,
     accent: "primary",
   },
   {
     label: "Mentor Signup",
-    href: "/portal/register?type=mentor",
+    href: "/register?type=mentor",
     icon: UserPlus,
     accent: "muted",
   },
@@ -762,10 +762,10 @@ export function RegistrationSection() {
       id="registration"
       background="muted"
       spacing="xl"
-      className="relative overflow-hidden bg-white text-black"
+      className="relative overflow-hidden bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200 text-black"
     >
       <div className="absolute inset-0 -z-10 bg-linear-to-br from-white/12 via-white/5 to-transparent" />
-      <div className="rounded-[36px] border border-white/15 bg-black/60 p-10 text-white shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
+      <div className="rounded-[36px] border border-black/10 bg-white/60 p-10 text-black shadow-xl backdrop-blur-sm">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <motion.div
             initial={{ opacity: 0, y: 32 }}
@@ -778,16 +778,16 @@ export function RegistrationSection() {
               as="p"
               size="sm"
               transform="uppercase"
-              className="tracking-[0.4em] text-white/65"
+              className="tracking-[0.4em] text-black/65"
             >
               Registration
             </Body>
 
-            <Heading as="h2" level="h2" className="text-white!">
+            <Heading as="h2" level="h2" className="text-black">
               Ready to Shape Africa&apos;s Trade Future?
             </Heading>
 
-            <Body size="lg" className="text-white/80">
+            <Body size="lg" className="text-black/80">
               Join the AfCFTA Hackathon 2026 and be part of building
               technology-driven solutions that accelerate Africa&apos;s digital
               transformation. Register your team, become a mentor, or partner
@@ -805,11 +805,11 @@ export function RegistrationSection() {
                     className={cn(
                       "group flex items-center gap-2 rounded-2xl px-5",
                       cta.accent === "primary" &&
-                        "bg-white text-black hover:bg-white/90",
+                        "bg-black text-white hover:bg-black/90",
                       cta.accent === "muted" &&
-                        "bg-white/10 text-white hover:bg-white/20",
+                        "bg-black/10 text-black hover:bg-black/20",
                       cta.accent === "outline" &&
-                        "border border-white/30 text-white hover:bg-white hover:text-black",
+                        "border border-black/30 text-black hover:bg-black hover:text-white",
                     )}
                   >
                     <Link to={cta.href}>
@@ -822,7 +822,7 @@ export function RegistrationSection() {
               })}
             </div>
 
-            <Body size="sm" className="text-white/65">
+            <Body size="sm" className="text-black/65">
               Registration closes March 15, 2026. Accepted teams receive
               onboarding information and mentorship pairings within five
               business days.
@@ -845,16 +845,16 @@ export function RegistrationSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="flex gap-4 rounded-3xl border border-white/15 bg-white/5 p-5 text-white backdrop-blur-sm"
+                  className="flex gap-4 rounded-3xl border border-black/10 bg-white/60 p-5 text-black backdrop-blur-sm"
                 >
-                  <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-white/12 text-white">
+                  <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                     <Icon className="size-5" aria-hidden />
                   </span>
                   <div className="space-y-1">
-                    <p className="text-xl font-semibold text-white">
+                    <p className="text-xl font-semibold text-black">
                       {detail.title}
                     </p>
-                    <p className="text-sm text-white/70">
+                    <p className="text-sm text-black/70">
                       {detail.description}
                     </p>
                   </div>

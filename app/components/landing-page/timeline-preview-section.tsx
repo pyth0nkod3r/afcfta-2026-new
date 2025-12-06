@@ -39,7 +39,11 @@ const timelinePhases: TimelineItem[] = [
 
 export function TimelinePreviewSection() {
   return (
-    <Section id="timeline-preview" background="muted" className="bg-black!">
+    <Section
+      id="timeline-preview"
+      background="muted"
+      className="bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200"
+    >
       <div className="flex flex-col gap-12">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -48,10 +52,10 @@ export function TimelinePreviewSection() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl space-y-4 text-center mx-auto"
         >
-          <Heading as="h2" level="h2" align="center" className="text-white!">
+          <Heading as="h2" level="h2" align="center" className="text-black">
             Hackathon Journey — From Vision to Impact
           </Heading>
-          <Body size="lg" align="center" className="text-white!">
+          <Body size="lg" align="center" className="text-black/80">
             Three phases structure the AfCFTA Hackathon 2026, from preparation
             through execution to post-event scaling and integration.
           </Body>
@@ -62,7 +66,7 @@ export function TimelinePreviewSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="[&_[data-slot='timeline-item']_div]:bg-gray-50! [&_[data-slot='timeline-item']_div]:text-gray-900! [&_[data-slot='timeline-item']_h3]:text-gray-900! [&_[data-slot='timeline-item']_p]:text-gray-900! [&_[data-slot='timeline-item']>div:last-child]:h-full [&_[data-slot='timeline-item']>div:last-child]:flex"
+          className="[&_[data-slot='timeline-item']_div]:bg-white/60! [&_[data-slot='timeline-item']_div]:text-gray-900! [&_[data-slot='timeline-item']_h3]:text-gray-900! [&_[data-slot='timeline-item']_p]:text-gray-900! [&_[data-slot='timeline-item']>div:last-child]:h-full [&_[data-slot='timeline-item']>div:last-child]:flex"
         >
           <Timeline
             items={timelinePhases}
@@ -83,7 +87,7 @@ export function TimelinePreviewSection() {
             asChild
             size="lg"
             variant="outline"
-            className="border-white/20 text-white hover:bg-white hover:text-black"
+            className="border-black/20 text-black hover:bg-black hover:text-white"
           >
             <Link to="/timeline-format">See Full Schedule</Link>
           </Button>

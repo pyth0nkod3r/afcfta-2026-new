@@ -92,7 +92,7 @@ const partnersRow2 = pastPartners.slice(8, 16);
 
 export function PastPartners() {
   return (
-    <Section spacing="lg" className="bg-black! text-white">
+    <Section spacing="lg" className="bg-gradient-to-br from-indigo-200 via-blue-200 to-purple-200 text-black">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -104,11 +104,11 @@ export function PastPartners() {
           <Heading
             as="h2"
             level="h2"
-            className="text-white!"
+            className="text-black"
           >
             📌 Highlighted Past Partners
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto text-white!">
+          <Body size="lg" className="max-w-3xl mx-auto text-black/80">
             We&apos;re proud to have collaborated with leading organizations across
             Africa and globally. Join this distinguished network of innovation
             partners.
@@ -128,7 +128,7 @@ export function PastPartners() {
               size="sm"
               weight="semibold"
               transform="uppercase"
-              className="text-white/70"
+              className="text-black/70"
             >
               Trusted by Leading Organizations
             </Body>
@@ -140,18 +140,18 @@ export function PastPartners() {
               {[...partnersRow1, ...partnersRow1].map((partner, index) => (
                 <div
                   key={`row1-${index}`}
-                  className="flex-shrink-0 w-48 h-24 mx-4 bg-gray-50! rounded-lg border border-gray-200 flex items-center justify-center hover:shadow-md transition-shadow"
+                  className="flex-shrink-0 w-48 h-24 mx-4 bg-white/60 rounded-lg border border-white/40 flex items-center justify-center hover:shadow-md transition-shadow"
                 >
                   {/* Placeholder for partner logo */}
                   <div className="text-center p-4">
                     <Body
                       size="sm"
                       weight="semibold"
-                      className="text-gray-900!"
+                      className="text-black"
                     >
                       {partner.name}
                     </Body>
-                    <Body size="xs" className="text-gray-600!">
+                    <Body size="xs" className="text-black/60">
                       {partner.category}
                     </Body>
                   </div>
@@ -166,18 +166,18 @@ export function PastPartners() {
               {[...partnersRow2, ...partnersRow2].map((partner, index) => (
                 <div
                   key={`row2-${index}`}
-                  className="flex-shrink-0 w-48 h-24 mx-4 bg-gray-50! rounded-lg border border-gray-200 flex items-center justify-center hover:shadow-md transition-shadow"
+                  className="flex-shrink-0 w-48 h-24 mx-4 bg-white/60 rounded-lg border border-white/40 flex items-center justify-center hover:shadow-md transition-shadow"
                 >
                   {/* Placeholder for partner logo */}
                   <div className="text-center p-4">
                     <Body
                       size="sm"
                       weight="semibold"
-                      className="text-gray-900!"
+                      className="text-black"
                     >
                       {partner.name}
                     </Body>
-                    <Body size="xs" className="text-gray-600!">
+                    <Body size="xs" className="text-black/60">
                       {partner.category}
                     </Body>
                   </div>

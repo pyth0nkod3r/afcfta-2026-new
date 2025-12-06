@@ -17,9 +17,8 @@ export function PartnersHero() {
       <div className="relative container mx-auto px-4 py-16 sm:py-24 lg:py-36">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
-          transition={{ duration: 0.6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
           className="space-y-8"
         >
           <div className="space-y-4">

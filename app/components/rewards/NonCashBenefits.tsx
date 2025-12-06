@@ -58,7 +58,7 @@ const keyBenefits = [
 
 export function NonCashBenefits() {
   return (
-    <Section background="muted" spacing="lg" className="bg-black!">
+    <Section background="muted" spacing="lg" className="bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -70,11 +70,11 @@ export function NonCashBenefits() {
           <Heading
             as="h2"
             level="h2"
-            className="text-white"
+            className="text-black"
           >
             Beyond Prizes — Empowering Long-Term Impact
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto text-white/90">
+          <Body size="lg" className="max-w-3xl mx-auto text-black">
             The AfCFTA Hackathon 2026 provides extensive post-event benefits to 
             ensure innovators continue to grow, deploy, and scale.
           </Body>
@@ -92,24 +92,24 @@ export function NonCashBenefits() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full p-6 hover:shadow-lg transition-shadow bg-white/10 border-white/20">
+                <Card className="h-full p-6 hover:shadow-lg transition-shadow bg-white/60 border-white/40">
                   <div className="space-y-4">
                     <div className="text-center space-y-3">
-                      <div className="w-16 h-16 mx-auto rounded-full bg-white/20 flex items-center justify-center">
-                        <IconComponent className="size-8 text-white" />
+                      <div className="w-16 h-16 mx-auto rounded-full bg-white/50 flex items-center justify-center">
+                        <IconComponent className="size-8 text-blue-700" />
                       </div>
                       <div>
                         <Heading
                           as="h3"
                           level="h6"
-                          className="text-white"
+                          className="text-black"
                         >
                           {benefit.title}
                         </Heading>
                       </div>
                       <Body
                         size="sm"
-                        className="text-white/80"
+                        className="text-black"
                       >
                         {benefit.description}
                       </Body>
@@ -127,22 +127,22 @@ export function NonCashBenefits() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center bg-white/10 border border-white/20 rounded-2xl p-8"
+          className="text-center bg-white/60 border border-white/40 rounded-2xl p-8"
         >
           <div className="space-y-4">
             <Heading
               as="h3"
               level="h4"
-              className="text-white"
+              className="text-black"
             >
               Comprehensive Post-Event Support
             </Heading>
-            <Body className="max-w-2xl mx-auto text-white/90">
+            <Body className="max-w-2xl mx-auto text-black">
               Winners gain access to invaluable resources, networks, and opportunities 
               that can accelerate their growth and impact across African markets. The 
               total value of support extends far beyond monetary prizes.
             </Body>
-            <Body size="sm" className="text-white/70">
+            <Body size="sm" className="text-black">
               Benefits are allocated based on prize category, with customized packages 
               tailored to team needs and solution focus areas.
             </Body>

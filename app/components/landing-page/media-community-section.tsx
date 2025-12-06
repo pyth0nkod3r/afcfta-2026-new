@@ -59,7 +59,7 @@ export function MediaCommunitySection() {
     <Section
       id="media-community"
       background="muted"
-      className="relative overflow-hidden bg-black! text-white!"
+      className="relative overflow-hidden bg-gradient-to-br from-indigo-200 via-blue-200 to-purple-200 text-black"
     >
       <div className="absolute inset-0 -z-10 bg-linear-to-br from-white/12 via-white/6 to-transparent" />
       <div className="mx-auto max-w-7xl">
@@ -76,14 +76,14 @@ export function MediaCommunitySection() {
                 as="p"
                 size="sm"
                 transform="uppercase"
-                className="tracking-[0.35em] text-white/60"
+                className="tracking-[0.35em] text-black/60"
               >
                 Stay Connected
               </Body>
-              <Heading as="h2" level="h2" className="text-white!">
+              <Heading as="h2" level="h2" className="text-black">
                 Join the AfCFTA Community
               </Heading>
-              <Body size="lg" className="text-white/80">
+              <Body size="lg" className="text-black/80">
                 Connect with innovators, policymakers, and entrepreneurs from
                 across Africa. Follow our social channels for live updates,
                 behind-the-scenes content, and community discussions.
@@ -101,19 +101,19 @@ export function MediaCommunitySection() {
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.4, delay: index * 0.05 }}
                   >
-                    <Card className="group h-full border-white/15 bg-white/5 text-white shadow-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                    <Card className="group h-full border-black/10 bg-white/60 text-black shadow-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                       <CardContent className="flex items-center gap-4 p-6">
-                        <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-white/15 text-white transition-colors duration-300 group-hover:bg-white group-hover:text-black">
+                        <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
                           <Icon className="size-5" aria-hidden />
                         </div>
                         <div className="flex-1 space-y-1">
-                          <p className="font-semibold text-white">
+                          <p className="font-semibold text-black">
                             {platform.name}
                           </p>
-                          <p className="text-sm text-white/70">
+                          <p className="text-sm text-black/70">
                             {platform.handle}
                           </p>
-                          <p className="text-xs text-white/60">
+                          <p className="text-xs text-black/60">
                             {platform.description}
                           </p>
                         </div>
@@ -121,7 +121,7 @@ export function MediaCommunitySection() {
                           asChild
                           size="sm"
                           variant="ghost"
-                          className="shrink-0 text-white hover:bg-white hover:text-black"
+                          className="shrink-0 text-black hover:bg-black hover:text-white"
                         >
                           <Link
                             to={platform.url}
@@ -142,7 +142,7 @@ export function MediaCommunitySection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-black hover:bg-white/90"
+                className="bg-black text-white hover:bg-black/90"
               >
                 <Link to="/community">
                   <Users className="size-4" aria-hidden />
@@ -153,7 +153,7 @@ export function MediaCommunitySection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white/30 text-white hover:bg-white hover:text-black"
+                className="border-black/30 text-black hover:bg-black hover:text-white"
               >
                 <Link to="/media">
                   <Share2 className="size-4" aria-hidden />
@@ -170,11 +170,11 @@ export function MediaCommunitySection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="space-y-6"
           >
-            <Card className="border-white/15 bg-white/5 shadow-xl">
+            <Card className="border-black/10 bg-white/60 shadow-xl">
               <CardContent className="p-6">
                 <div className="mb-4 flex items-center gap-3">
-                  <Users className="size-5 text-white" />
-                  <Heading as="h3" level="h4" className="text-white!">
+                  <Users className="size-5 text-black" />
+                  <Heading as="h3" level="h4" className="text-black">
                     Community Impact
                   </Heading>
                 </div>
@@ -182,12 +182,12 @@ export function MediaCommunitySection() {
                   {communityStats.map((stat) => (
                     <div
                       key={stat.label}
-                      className="rounded-2xl border border-white/15 bg-black/40 p-4 text-center shadow-sm"
+                      className="rounded-2xl border border-black/10 bg-white/40 p-4 text-center shadow-sm"
                     >
-                      <p className="text-2xl font-bold text-white">
+                      <p className="text-2xl font-bold text-black">
                         {stat.value}
                       </p>
-                      <p className="mt-1 text-sm text-white/70">{stat.label}</p>
+                      <p className="mt-1 text-sm text-black/70">{stat.label}</p>
                     </div>
                   ))}
                 </div>
@@ -195,23 +195,23 @@ export function MediaCommunitySection() {
             </Card>
 
             {/* Twitter spotlight */}
-            <Card className="border-white/15 bg-white/5 text-white shadow-xl">
+            <Card className="border-black/10 bg-white/60 text-black shadow-xl">
               <CardContent className="flex flex-col items-center justify-center gap-3 p-6 text-center">
-                <div className="inline-flex size-16 items-center justify-center rounded-full bg-white/15 text-white">
+                <div className="inline-flex size-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <Twitter className="size-8" />
                 </div>
                 <div className="space-y-2">
-                  <Heading as="h4" level="h5" className="text-white!">
+                  <Heading as="h4" level="h5" className="text-black">
                     Live Twitter Feed
                   </Heading>
-                  <Body size="sm" className="text-white/70">
+                  <Body size="sm" className="text-black/70">
                     Real-time updates and conversations using #AfCFTAHackathon
                   </Body>
                 </div>
                 <Button
                   variant="outline"
                   size="sm"
-                  className="border-white/30 text-white hover:bg-white hover:text-black"
+                  className="border-black/30 text-black hover:bg-black hover:text-white"
                 >
                   <MessageSquare className="size-4" aria-hidden />
                   View Feed
@@ -220,23 +220,23 @@ export function MediaCommunitySection() {
             </Card>
 
             {/* Instagram spotlight */}
-            <Card className="border-white/15 bg-white/5 text-white shadow-xl">
+            <Card className="border-black/10 bg-white/60 text-black shadow-xl">
               <CardContent className="flex flex-col items-center justify-center gap-3 p-6 text-center">
-                <div className="inline-flex size-16 items-center justify-center rounded-full bg-white/15 text-white">
+                <div className="inline-flex size-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <Instagram className="size-8" />
                 </div>
                 <div className="space-y-2">
-                  <Heading as="h4" level="h5" className="text-white!">
+                  <Heading as="h4" level="h5" className="text-black">
                     Instagram Stories
                   </Heading>
-                  <Body size="sm" className="text-white/70">
+                  <Body size="sm" className="text-black/70">
                     Behind-the-scenes highlights and participant spotlights
                   </Body>
                 </div>
                 <Button
                   variant="outline"
                   size="sm"
-                  className="border-white/30 text-white hover:bg-white hover:text-black"
+                  className="border-black/30 text-black hover:bg-black hover:text-white"
                 >
                   <Heart className="size-4" aria-hidden />
                   View Stories

@@ -131,7 +131,7 @@ export function RegisterPage() {
       />
 
       {/* Registration Details Section */}
-      <section className="py-16 bg-black!">
+      <section className="py-16 bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -141,10 +141,10 @@ export function RegisterPage() {
               transition={{ duration: 0.6 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-white! mb-4">
+              <h2 className="text-3xl font-bold text-black mb-4">
                 Registration Information
               </h2>
-              <p className="text-lg text-white/80">
+              <p className="text-lg text-black/80">
                 Everything you need to know about joining the hackathon
               </p>
             </motion.div>
@@ -159,18 +159,18 @@ export function RegisterPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="flex gap-4 p-6 bg-white rounded-lg shadow-sm"
+                    className="flex gap-4 p-6 bg-white/60 rounded-lg shadow-sm border border-white/40"
                   >
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center">
+                      <div className="w-12 h-12 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center">
                         <Icon className="w-6 h-6" />
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      <h3 className="text-lg font-semibold text-black mb-2">
                         {detail.title}
                       </h3>
-                      <p className="text-gray-600">{detail.description}</p>
+                      <p className="text-black/70">{detail.description}</p>
                     </div>
                   </motion.div>
                 );
@@ -181,7 +181,7 @@ export function RegisterPage() {
       </section>
 
       {/* Registration Form Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-br from-indigo-200 via-blue-200 to-purple-200">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -191,10 +191,10 @@ export function RegisterPage() {
               transition={{ duration: 0.6 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-black mb-4">
                 Choose Your Registration Type
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-black/80">
                 Select how you&apos;d like to participate in the hackathon
               </p>
             </motion.div>
@@ -212,10 +212,10 @@ export function RegisterPage() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                   >
                     <Card
-                      className={`cursor-pointer transition-all duration-300 hover:shadow-lg ${
+                      className={`cursor-pointer transition-all duration-300 hover:shadow-lg bg-white/60 border-white/40 ${
                         selectedType === type.id
-                          ? "ring-2 ring-primary border-primary"
-                          : "hover:border-primary/50"
+                          ? "ring-2 ring-blue-500 border-blue-500"
+                          : "hover:border-blue-500/50"
                       }`}
                       onClick={() => setSelectedType(type.id)}
                     >
@@ -228,7 +228,7 @@ export function RegisterPage() {
                         <CardTitle className="text-xl">{type.title}</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-gray-600 text-center">
+                        <p className="text-black/70 text-center">
                           {type.description}
                         </p>
                         {selectedType === type.id && (
@@ -251,16 +251,16 @@ export function RegisterPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <Card className="p-8">
+                <Card className="p-8 bg-white/80 border-white/50">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="text-center mb-8">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      <h3 className="text-2xl font-bold text-black mb-2">
                         {selectedType === "team" &&
                           "Team Registration"}
                         {selectedType === "mentor" && "Mentor Registration"}
                         {selectedType === "partner" && "Partner Registration"}
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-black/70">
                         Fill out the form below to complete your registration
                       </p>
                     </div>
@@ -576,20 +576,20 @@ export function RegisterPage() {
               transition={{ duration: 0.6 }}
               className="mt-12 text-center"
             >
-              <p className="text-gray-600 mb-6">
+              <p className="text-black/80 mb-6">
                 Need more information before registering?
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild variant="outline">
+                <Button asChild variant="outline" className="bg-white/60 border-black/20 text-black hover:bg-white/80">
                   <Link to="/faq">View FAQs</Link>
                 </Button>
-                <Button asChild variant="outline">
+                <Button asChild variant="outline" className="bg-white/60 border-black/20 text-black hover:bg-white/80">
                   <Link to="/timeline-format">Event Timeline</Link>
                 </Button>
-                <Button asChild variant="outline">
+                <Button asChild variant="outline" className="bg-white/60 border-black/20 text-black hover:bg-white/80">
                   <Link to="/challenge-tracks">Challenge Tracks</Link>
                 </Button>
-                <Button asChild variant="outline">
+                <Button asChild variant="outline" className="bg-white/60 border-black/20 text-black hover:bg-white/80">
                   <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>

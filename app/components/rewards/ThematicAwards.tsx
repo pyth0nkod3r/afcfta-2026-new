@@ -80,7 +80,7 @@ const thematicAwards = [
 
 export function ThematicAwards() {
   return (
-    <Section spacing="lg" background="muted" className="bg-white text-black">
+    <Section spacing="lg" background="muted" className="bg-gradient-to-br from-indigo-200 via-blue-200 to-purple-200 text-black">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -92,11 +92,11 @@ export function ThematicAwards() {
           <Heading
             as="h2"
             level="h2"
-            className="text-gray-900 dark:text-gray-50"
+            className="text-black"
           >
             Recognizing Excellence Across Innovation Themes
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto">
+          <Body size="lg" className="max-w-3xl mx-auto text-black">
             These awards highlight outstanding solutions across key challenge tracks 
             and strategic focus areas within the AfCFTA Digital Trade ecosystem.
           </Body>
@@ -113,17 +113,17 @@ export function ThematicAwards() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full p-6 hover:shadow-lg transition-all group">
+                <Card className="h-full p-6 hover:shadow-lg transition-all group bg-white/60 border-white/40">
                   <div className="space-y-4">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
-                        <IconComponent className="size-6 text-primary" />
+                      <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center group-hover:bg-blue-200 transition-colors shrink-0">
+                        <IconComponent className="size-6 text-blue-700" />
                       </div>
                       <div className="space-y-1 flex-1">
                         <Heading
                           as="h3"
                           level="h6"
-                          className="text-gray-900 dark:text-gray-50"
+                          className="text-black"
                         >
                           {award.title}
                         </Heading>
@@ -136,13 +136,14 @@ export function ThematicAwards() {
                           size="sm"
                           weight="semibold"
                           transform="uppercase"
-                          color="muted"
+                          color="default"
+                          className="text-black"
                         >
                           Focus Area:
                         </Body>
                         <Body
                           size="sm"
-                          className="text-gray-600 dark:text-gray-400 mt-1"
+                          className="text-black mt-1"
                         >
                           {award.focus}
                         </Body>
@@ -153,13 +154,14 @@ export function ThematicAwards() {
                           size="sm"
                           weight="semibold"
                           transform="uppercase"
-                          color="muted"
+                          color="default"
+                          className="text-black"
                         >
                           Recognition:
                         </Body>
                         <Body
                           size="sm"
-                          className="text-primary font-medium mt-1"
+                          className="text-blue-700 font-medium mt-1"
                         >
                           {award.recognition}
                         </Body>
@@ -178,17 +180,17 @@ export function ThematicAwards() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center bg-primary/5 rounded-2xl p-8"
+          className="text-center bg-white/60 border border-white/40 rounded-2xl p-8"
         >
           <div className="space-y-4">
             <Heading
               as="h3"
               level="h4"
-              className="text-gray-900 dark:text-gray-50"
+              className="text-black"
             >
               Multiple Recognition Opportunities
             </Heading>
-            <Body className="max-w-2xl mx-auto">
+            <Body className="max-w-2xl mx-auto text-black/90">
               Teams can win multiple thematic awards in addition to main prize
               categories. Outstanding solutions across different themes receive
               recognition, partnerships, and integration support to maximize impact.

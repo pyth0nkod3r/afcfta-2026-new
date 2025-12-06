@@ -11,7 +11,7 @@ import {
 
 export function WhyAbuja() {
   return (
-    <Section spacing="lg" className="bg-white text-black">
+    <Section spacing="lg" className="bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200 text-black">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,10 +57,10 @@ export function WhyAbuja() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto"
         >
-          <Card className="p-6 text-center border-black/10 hover:shadow-lg transition-shadow">
+          <Card className="p-6 text-center bg-white/60 border-white/40 hover:shadow-lg transition-shadow">
             <div className="space-y-4">
-              <div className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center">
-                <Building2 className="size-6 text-primary" />
+              <div className="w-12 h-12 mx-auto rounded-lg bg-blue-100 flex items-center justify-center">
+                <Building2 className="size-6 text-blue-700" />
               </div>
               <Body size="sm" weight="semibold" className="text-black">
                 Policy Influence
@@ -68,10 +68,10 @@ export function WhyAbuja() {
             </div>
           </Card>
 
-          <Card className="p-6 text-center border-black/10 hover:shadow-lg transition-shadow">
+          <Card className="p-6 text-center bg-white/60 border-white/40 hover:shadow-lg transition-shadow">
             <div className="space-y-4">
-              <div className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center">
-                <TrendingUp className="size-6 text-primary" />
+              <div className="w-12 h-12 mx-auto rounded-lg bg-blue-100 flex items-center justify-center">
+                <TrendingUp className="size-6 text-blue-700" />
               </div>
               <Body size="sm" weight="semibold" className="text-black">
                 Trade Leadership
@@ -79,10 +79,10 @@ export function WhyAbuja() {
             </div>
           </Card>
 
-          <Card className="p-6 text-center border-black/10 hover:shadow-lg transition-shadow">
+          <Card className="p-6 text-center bg-white/60 border-white/40 hover:shadow-lg transition-shadow">
             <div className="space-y-4">
-              <div className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center">
-                <Network className="size-6 text-primary" />
+              <div className="w-12 h-12 mx-auto rounded-lg bg-blue-100 flex items-center justify-center">
+                <Network className="size-6 text-blue-700" />
               </div>
               <Body size="sm" weight="semibold" className="text-black">
                 Tech Innovation
@@ -90,10 +90,10 @@ export function WhyAbuja() {
             </div>
           </Card>
 
-          <Card className="p-6 text-center border-black/10 hover:shadow-lg transition-shadow">
+          <Card className="p-6 text-center bg-white/60 border-white/40 hover:shadow-lg transition-shadow">
             <div className="space-y-4">
-              <div className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center">
-                <MapPin className="size-6 text-primary" />
+              <div className="w-12 h-12 mx-auto rounded-lg bg-blue-100 flex items-center justify-center">
+                <MapPin className="size-6 text-blue-700" />
               </div>
               <Body size="sm" weight="semibold" className="text-black">
                 Strategic Location

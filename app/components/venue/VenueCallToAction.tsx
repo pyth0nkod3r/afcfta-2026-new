@@ -6,7 +6,7 @@ import { FileDown, Globe, PenSquare } from "lucide-react";
 
 export function VenueCallToAction() {
   return (
-    <Section background="muted" spacing="lg" className="bg-black!">
+    <Section background="muted" spacing="lg" className="bg-gradient-to-br from-indigo-200 via-blue-200 to-purple-200">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,10 +15,10 @@ export function VenueCallToAction() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-6"
         >
-          <Heading as="h2" level="h2" className="text-white!">
+          <Heading as="h2" level="h2" className="text-black">
             Be Part of Africa&apos;s Digital Trade Revolution
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto text-white/80!">
+          <Body size="lg" className="max-w-3xl mx-auto text-black/80">
             Whether in Abuja or online, your participation shapes the future of
             trade, innovation, and collaboration across Africa.
           </Body>
@@ -47,7 +47,7 @@ export function VenueCallToAction() {
             variant="outline"
             size="lg"
             asChild
-            className="inline-flex items-center gap-2 bg-white/10 border-white/20 text-white hover:bg-white/20"
+            className="inline-flex items-center gap-2 bg-white/60 border-black/20 text-black hover:bg-white/80"
           >
             <a href="#">
               <FileDown className="size-5" />
@@ -58,7 +58,7 @@ export function VenueCallToAction() {
             variant="outline"
             size="lg"
             asChild
-            className="inline-flex items-center gap-2 bg-white/10 border-white/20 text-white hover:bg-white/20"
+            className="inline-flex items-center gap-2 bg-white/60 border-black/20 text-black hover:bg-white/80"
           >
             <a href="/register">
               <Globe className="size-5" />

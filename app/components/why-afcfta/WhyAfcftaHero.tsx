@@ -55,7 +55,7 @@ export function WhyAfcftaHero() {
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-900"
               >
-                <Link to="/portal/register">Register Now</Link>
+                <Link to="/register">Register Now</Link>
               </Button>
             </div>
           </div>

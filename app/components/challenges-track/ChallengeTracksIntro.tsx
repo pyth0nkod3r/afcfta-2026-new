@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function ChallengeTracksIntro() {
   return (
-    <section className="w-full bg-linear-to-br from-slate-900 via-slate-800 to-slate-700 py-8 sm:py-12">
+    <section className="w-full bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200 py-8 sm:py-12">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -11,15 +11,15 @@ export function ChallengeTracksIntro() {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-4xl"
         >
-          <div className="rounded-3xl border border-white/15 bg-white/5 p-8 sm:p-12 shadow-xl backdrop-blur-sm">
+          <div className="rounded-3xl border border-white/40 bg-white/60 p-8 sm:p-12 shadow-xl">
             <div className="text-center space-y-5">
-              <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+              <span className="inline-flex items-center rounded-full bg-blue-100 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-800">
                 🧭 Introduction
               </span>
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-black">
                 Shaping the Future of African Trade through Innovation
               </h2>
-              <p className="text-base sm:text-lg text-white/80">
+              <p className="text-base sm:text-lg text-black/80">
                 Each challenge track focuses on a critical pillar of Africa’s
                 digital trade ecosystem. From cross-border payments to smart
                 logistics and AI-driven compliance, participants will design,

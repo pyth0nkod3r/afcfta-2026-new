@@ -47,10 +47,10 @@ export function PageHero({
   return (
     <section
       className={cn(
-        "relative isolate overflow-hidden bg-surface text-white",
-        `bg-[url('${backgroundImage}')] bg-cover bg-center`,
+        "relative isolate overflow-hidden bg-surface text-white bg-cover bg-center",
         className,
       )}
+      style={{ backgroundImage: `url('${backgroundImage}')` }}
       aria-labelledby={id ? `${id}-heading` : undefined}
     >
       {/* Background Overlay */}
@@ -59,8 +59,7 @@ export function PageHero({
       <div className="relative container mx-auto px-4 py-16 sm:py-24 lg:py-36">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="space-y-8"
         >

@@ -52,7 +52,7 @@ export function WhitepaperLaunchSection() {
       id="whitepaper"
       background="muted"
       spacing="lg"
-      className="relative bg-black! text-white! pb-32 min-h-[600px]"
+      className="relative bg-gradient-to-br from-indigo-200 via-blue-200 to-purple-200 text-black pb-32 min-h-[600px]"
     >
       <div className="absolute inset-0 -z-10 bg-linear-to-br from-white/10 via-white/5 to-transparent" />
       <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
@@ -67,15 +67,15 @@ export function WhitepaperLaunchSection() {
             as="p"
             size="sm"
             transform="uppercase"
-            className="tracking-[0.35em] text-white/60"
+            className="tracking-[0.35em] text-black/60"
           >
             Whitepaper Launch
           </Body>
-          <Heading as="h2" level="h2" className="text-white!">
+          <Heading as="h2" level="h2" className="text-black">
             Launch of the AfCFTA Nigeria Whitepaper on Digital Trade, Technology
             & Innovation
           </Heading>
-          <Body size="lg" className="text-white/80">
+          <Body size="lg" className="text-black/80">
             Strengthen Nigeria&apos;s leadership in AfCFTA Digital Trade. This
             whitepaper aligns policy with innovation and launches during the
             Hackathon Opening Ceremony.
@@ -85,7 +85,7 @@ export function WhitepaperLaunchSection() {
             <Button
               asChild
               size="lg"
-              className="bg-white text-black hover:bg-white/90"
+              className="bg-black text-white hover:bg-black/90"
             >
               <Link to="/assets/afcfta-digital-trade-whitepaper.pdf">
                 <Download className="size-4" aria-hidden />
@@ -96,7 +96,7 @@ export function WhitepaperLaunchSection() {
               asChild
               size="lg"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white hover:text-black"
+              className="border-black/30 text-black hover:bg-black hover:text-white"
             >
               <Link to="/media/whitepaper-briefing">
                 <PlayCircle className="size-4" aria-hidden />
@@ -109,18 +109,18 @@ export function WhitepaperLaunchSection() {
             {releaseStats.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-2xl border border-white/15 bg-white/5 p-4 text-center shadow-sm"
+                className="rounded-2xl border border-black/15 bg-white/60 p-4 text-center shadow-sm"
               >
-                <p className="text-3xl font-semibold text-white">
+                <p className="text-3xl font-semibold text-black">
                   {stat.value}
                 </p>
-                <p className="mt-1 text-sm text-white/70">{stat.label}</p>
+                <p className="mt-1 text-sm text-black/70">{stat.label}</p>
               </div>
             ))}
           </div>
 
           {/* Key Points */}
-          <ul className="space-y-3 text-sm text-white/70">
+          <ul className="space-y-3 text-sm text-black/70">
             <li className="flex items-start gap-2">
               <span className="mt-1 h-2 w-2 rounded-full bg-secondary" />
               <span>
@@ -150,23 +150,23 @@ export function WhitepaperLaunchSection() {
             return (
               <Card
                 key={feature.title}
-                className="overflow-hidden border-white/15 bg-white/5 text-white"
+                className="overflow-hidden border-black/15 bg-white/60 text-black"
               >
                 <CardHeader className="flex items-start gap-4">
-                  <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-white/10 text-white">
+                  <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                     <Icon className="size-5" aria-hidden />
                   </span>
                   <div>
-                    <CardTitle className="text-xl text-white">
+                    <CardTitle className="text-xl text-black">
                       {feature.title}
                     </CardTitle>
-                    <CardDescription className="text-base text-white/70">
+                    <CardDescription className="text-base text-black/70">
                       {feature.description}
                     </CardDescription>
                   </div>
                 </CardHeader>
                 {index === 0 && (
-                  <CardContent className="pt-0 text-sm text-white/60">
+                  <CardContent className="pt-0 text-sm text-black/60">
                     Updated quarterly with field intelligence from AfCFTA pilot
                     corridors.
                   </CardContent>

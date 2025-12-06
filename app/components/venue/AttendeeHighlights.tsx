@@ -34,7 +34,7 @@ const highlights = [
 
 export function AttendeeHighlights() {
   return (
-    <Section spacing="lg" className="bg-white text-black">
+    <Section spacing="lg" className="bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200 text-black">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,10 +59,10 @@ export function AttendeeHighlights() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-start gap-4 p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors border border-black/5"
+                className="flex items-start gap-4 p-6 rounded-xl bg-white/60 hover:bg-white/70 transition-colors border border-white/40"
               >
-                <div className="w-12 h-12 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <IconComponent className="size-6 text-primary" />
+                <div className="w-12 h-12 shrink-0 rounded-lg bg-blue-100 flex items-center justify-center">
+                  <IconComponent className="size-6 text-blue-700" />
                 </div>
                 <Body className="text-black/80 pt-2">{highlight.text}</Body>
               </motion.div>

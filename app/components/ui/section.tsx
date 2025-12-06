@@ -22,7 +22,7 @@ const sectionVariants = cva("w-full", {
       default: "bg-transparent",
       subtle: "bg-surface",
       primary: "bg-primary text-white",
-      muted: "bg-gray-50 dark:bg-neutral-900",
+      muted: "bg-gray-50",
     },
   },
   defaultVariants: {

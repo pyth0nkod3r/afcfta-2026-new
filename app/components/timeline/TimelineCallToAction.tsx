@@ -84,12 +84,7 @@ export function TimelineCallToAction() {
         >
           <div className="space-y-6">
             <div className="space-y-4">
-              <Badge
-                variant="outline"
-                className="mb-4 bg-white/10 border-white/20 text-white"
-              >
-                🏁 6️⃣ Call to Action
-              </Badge>
+
               <Heading as="h2" level="h2" className="text-white">
                 Your Innovation Can Shape Africa&apos;s Borderless Digital Future
               </Heading>

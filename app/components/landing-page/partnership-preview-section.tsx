@@ -61,7 +61,8 @@ export function PartnershipPreviewSection() {
     <Section
       id="partnership"
       background="muted"
-      className="relative bg-white text-black"
+      spacing="lg"
+      className="bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200 text-black"
     >
       {/* <div className="rounded-[36px] border border-white/15 bg-black/60 p-10 text-white shadow-[0_20px_80px_rgba(0,0,0,0.45)]"> */}
 
@@ -73,10 +74,10 @@ export function PartnershipPreviewSection() {
         className="mx-auto flex max-w-7xl flex-col gap-10"
       >
         <div className="space-y-5 text-center">
-          <Heading as="h2" level="h2" align="center" className="text-white!">
+          <Heading as="h2" level="h2" align="center" className="text-black">
             ₦60 Million in Prizes + Mentorship & Acceleration Opportunities
           </Heading>
-          <Body size="lg" align="center" className="text-white/80">
+          <Body size="lg" align="center" className="text-black/80">
             Significant cash prizes, implementation grants, and non-cash
             benefits accelerate winning teams from prototype to pilot across the
             continent.
@@ -89,21 +90,21 @@ export function PartnershipPreviewSection() {
               <Card
                 key={tier.name}
                 className={cn(
-                  "h-full border-white/15 bg-white/5 text-white shadow-xl backdrop-blur-sm",
+                  "h-full border-black/10 bg-white/60 text-black shadow-xl backdrop-blur-sm",
                   tier.highlight &&
-                    "bg-linear-to-br from-primary/40 via-primary/20 to-secondary/40 border-white/25",
+                    "bg-linear-to-br from-primary/10 via-primary/5 to-secondary/10 border-black/10",
                 )}
               >
                 <CardHeader className="flex flex-col items-center gap-2 text-center">
-                  <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-white/15 text-white">
+                  <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                     <Icon className="size-5" aria-hidden />
                   </span>
-                  <CardTitle className="text-xl text-white">
+                  <CardTitle className="text-xl text-black">
                     {tier.name} Partner
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-sm text-white/80">
+                  <ul className="space-y-2 text-sm text-black/80">
                     {tier.perks.map((perk) => (
                       <li key={perk} className="flex items-center gap-2">
                         <span className="h-2 w-2 rounded-full bg-secondary" />
@@ -118,8 +119,8 @@ export function PartnershipPreviewSection() {
                     className={cn(
                       "w-full",
                       tier.highlight
-                        ? "bg-white text-black hover:bg-white/90"
-                        : "border-white/30 text-white hover:bg-white hover:text-black",
+                        ? "bg-black text-white hover:bg-black/90"
+                        : "border-black/30 text-black hover:bg-black hover:text-white",
                     )}
                     variant={tier.highlight ? "secondary" : "outline"}
                   >

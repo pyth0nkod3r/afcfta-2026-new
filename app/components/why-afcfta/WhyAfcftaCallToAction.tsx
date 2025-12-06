@@ -25,7 +25,7 @@ export function WhyAfcftaCallToAction() {
               size="lg"
               className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold min-w-[200px]"
             >
-              <Link to="/portal/register">
+              <Link to="/register">
                 <Rocket className="mr-2 h-5 w-5" />
                 Register Now
               </Link>
@@ -49,7 +49,7 @@ export function WhyAfcftaCallToAction() {
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-blue-900 min-w-[200px]"
             >
-              <Link to="/portal">
+              <Link to="/register">
                 <Video className="mr-2 h-5 w-5" />
                 Join Virtually
               </Link>

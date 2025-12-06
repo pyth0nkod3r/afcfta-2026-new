@@ -35,7 +35,7 @@ const virtualFeatures = [
 
 export function VirtualParticipation() {
   return (
-    <Section background="muted" spacing="lg" className="bg-black!">
+    <Section background="muted" spacing="lg" className="bg-gradient-to-br from-indigo-200 via-blue-200 to-purple-200">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,10 +44,10 @@ export function VirtualParticipation() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-4"
         >
-          <Heading as="h2" level="h2" className="text-white!">
+          <Heading as="h2" level="h2" className="text-black">
             Virtual Participation Across Africa
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto text-white/80!">
+          <Body size="lg" className="max-w-3xl mx-auto text-black/80">
             A Truly Pan-African Digital Event
           </Body>
         </motion.div>
@@ -60,13 +60,13 @@ export function VirtualParticipation() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-4xl mx-auto space-y-6"
         >
-          <Body className="text-center text-white/80!">
+          <Body className="text-center text-black/80">
             To ensure inclusive participation, AfCFTA Hackathon 2026 will run
             concurrently online, connecting innovators across all 55 African
             countries.
           </Body>
 
-          <Body className="text-center text-white/80!">
+          <Body className="text-center text-black/80">
             Registered virtual participants will have access to:
           </Body>
         </motion.div>
@@ -89,16 +89,16 @@ export function VirtualParticipation() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full p-6 bg-white/5 border-white/10 hover:bg-white/10 transition-all">
+                <Card className="h-full p-6 bg-white/60 border-white/40 hover:bg-white/70 transition-all">
                   <div className="space-y-4 text-center">
-                    <div className="w-12 h-12 mx-auto rounded-lg bg-primary/20 flex items-center justify-center">
-                      <IconComponent className="size-6 text-primary" />
+                    <div className="w-12 h-12 mx-auto rounded-lg bg-blue-100 flex items-center justify-center">
+                      <IconComponent className="size-6 text-blue-700" />
                     </div>
                     <div className="space-y-2">
-                      <Heading as="h4" level="h6" className="text-white!">
+                      <Heading as="h4" level="h6" className="text-black">
                         {feature.title}
                       </Heading>
-                      <Body size="sm" className="text-white/70!">
+                      <Body size="sm" className="text-black/70">
                         {feature.description}
                       </Body>
                     </div>
@@ -115,15 +115,15 @@ export function VirtualParticipation() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center bg-white/5 rounded-2xl p-8 max-w-4xl mx-auto border border-white/10"
+          className="text-center bg-white/60 rounded-2xl p-8 max-w-4xl mx-auto border border-white/40"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Globe className="size-8 text-primary" />
-            <Heading as="h3" level="h4" className="text-white!">
+            <Globe className="size-8 text-blue-700" />
+            <Heading as="h3" level="h4" className="text-black">
               Borderless Innovation
             </Heading>
           </div>
-          <Body className="text-white/80!">
+          <Body className="text-black/80">
             This hybrid approach ensures that no innovator is left behind —
             reflecting AfCFTA&apos;s commitment to a borderless, digitally
             integrated Africa.

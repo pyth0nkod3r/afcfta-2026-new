@@ -31,7 +31,7 @@ const benefits = [
 
 export function StrategicPartnerNetwork() {
   return (
-    <Section spacing="lg" className="bg-black! text-white">
+    <Section spacing="lg" className="bg-gradient-to-br from-indigo-200 via-blue-200 to-purple-200 text-black">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,11 +43,11 @@ export function StrategicPartnerNetwork() {
           <Heading
             as="h2"
             level="h2"
-            className="text-white!"
+            className="text-black"
           >
             🌐 Connecting Africa&apos;s Ecosystem for Maximum Impact
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto text-white!">
+          <Body size="lg" className="max-w-3xl mx-auto text-black/80">
             The AfCFTA Hackathon Partner Network brings together strategic partners across finance, technology, telecommunications, policy, and innovation ecosystems, providing:
           </Body>
         </motion.div>
@@ -63,16 +63,16 @@ export function StrategicPartnerNetwork() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full p-6 hover:shadow-lg transition-all group bg-gray-50! border-gray-200">
+                <Card className="h-full p-6 hover:shadow-lg transition-all group bg-white/60 border-white/40">
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                        <IconComponent className="size-6 text-primary" />
+                        <IconComponent className="size-6 text-blue-700" />
                       </div>
                       <Heading
                         as="h3"
                         level="h5"
-                        className="text-gray-900!"
+                        className="text-black"
                       >
                         {benefit.title}
                       </Heading>
@@ -80,7 +80,7 @@ export function StrategicPartnerNetwork() {
 
                     <Body
                       size="sm"
-                      className="text-gray-700!"
+                      className="text-black/80"
                     >
                       {benefit.description}
                     </Body>

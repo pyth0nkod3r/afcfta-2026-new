@@ -42,7 +42,7 @@ const tentativeVenues = [
 
 export function VenueSection() {
   return (
-    <Section id="venue-details" spacing="lg" className="bg-white text-black">
+    <Section id="venue-details" spacing="lg" className="bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200 text-black">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -102,10 +102,10 @@ export function VenueSection() {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="h-full p-6 hover:shadow-lg transition-shadow text-center border-black/10">
+                  <Card className="h-full p-6 hover:shadow-lg transition-shadow text-center bg-white/60 border-white/40">
                     <div className="space-y-4">
-                      <div className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center">
-                        <IconComponent className="size-6 text-primary" />
+                      <div className="w-12 h-12 mx-auto rounded-lg bg-blue-100 flex items-center justify-center">
+                        <IconComponent className="size-6 text-blue-700" />
                       </div>
                       <div className="space-y-2">
                         <Heading as="h4" level="h6" className="text-black">
@@ -137,7 +137,7 @@ export function VenueSection() {
             </Heading>
           </div>
 
-          <Card className="p-6 max-w-2xl mx-auto border-black/10">
+          <Card className="p-6 max-w-2xl mx-auto bg-white/60 border-white/40">
             <ul className="space-y-3">
               {tentativeVenues.map((venue, index) => (
                 <motion.li
@@ -148,12 +148,12 @@ export function VenueSection() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start gap-3"
                 >
-                  <Building2 className="size-5 text-primary mt-0.5 shrink-0" />
+                  <Building2 className="size-5 text-blue-700 mt-0.5 shrink-0" />
                   <Body className="text-black/80">{venue}</Body>
                 </motion.li>
               ))}
             </ul>
-            <Body size="sm" color="muted" className="mt-6 text-center italic">
+            <Body size="sm" color="default" className="mt-6 text-center italic text-black/60">
               (Final venue details to be confirmed and published by March 2026.)
             </Body>
           </Card>
@@ -165,7 +165,7 @@ export function VenueSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="bg-gray-100 rounded-2xl p-8"
+          className="bg-white/60 rounded-2xl p-8 border border-white/40"
         >
           <div className="space-y-4">
             <div className="text-center">
@@ -175,11 +175,11 @@ export function VenueSection() {
             </div>
 
             {/* Map Placeholder */}
-            <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
+            <div className="bg-white/50 rounded-lg h-64 flex items-center justify-center border border-white/30">
               <div className="text-center space-y-2">
-                <MapPin className="size-12 mx-auto text-gray-400" />
-                <Body color="muted">Interactive Map Coming Soon</Body>
-                <Body size="sm" color="muted">
+                <MapPin className="size-12 mx-auto text-black/30" />
+                <Body color="default" className="text-black/60">Interactive Map Coming Soon</Body>
+                <Body size="sm" color="default" className="text-black/50">
                   Detailed venue location and transportation guide
                 </Body>
               </div>

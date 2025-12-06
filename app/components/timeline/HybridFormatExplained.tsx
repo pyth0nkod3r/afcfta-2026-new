@@ -123,7 +123,7 @@ const participationStats = [
 
 export function HybridFormatExplained() {
   return (
-    <Section background="muted" spacing="lg" className="bg-black text-white">
+    <Section background="muted" spacing="lg" className="bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200 text-black">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -132,17 +132,15 @@ export function HybridFormatExplained() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-4"
         >
-          <Badge variant="outline" className="mb-4">
-            🌐 5️⃣ Hybrid Format Explained
-          </Badge>
+
           <Heading
             as="h2"
             level="h2"
-            className="text-white"
+            className="text-black"
           >
             Hybrid Format: Physical + Virtual Experience
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto">
+          <Body size="lg" className="max-w-3xl mx-auto text-black">
             To ensure inclusive participation, equal opportunity, and
             cross-border collaboration consistent with the AfCFTA Digital Trade
             Protocol.
@@ -165,18 +163,18 @@ export function HybridFormatExplained() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="p-6">
+              <Card className="p-6 bg-white/60 border-white/40">
                 <div className="space-y-2">
                   <Heading as="h3" level="h3" color="primary">
                     {stat.value}
                   </Heading>
                   <Body
                     weight="semibold"
-                    className="text-white"
+                    className="text-black"
                   >
                     {stat.label}
                   </Body>
-                  <Body size="sm" color="muted">
+                  <Body size="sm" className="text-black">
                     {stat.description}
                   </Body>
                 </div>
@@ -197,11 +195,11 @@ export function HybridFormatExplained() {
             <Heading
               as="h3"
               level="h3"
-              className="text-white"
+              className="text-black"
             >
               Choose Your Participation Mode
             </Heading>
-            <Body color="muted" className="mt-2">
+            <Body className="mt-2 text-black">
               Both formats offer complete hackathon experiences with unique
               advantages
             </Body>
@@ -218,7 +216,7 @@ export function HybridFormatExplained() {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                 >
-                  <Card className="h-full p-6 hover:shadow-lg transition-shadow">
+                  <Card className="h-full p-6 hover:shadow-lg transition-shadow bg-white/60 border-white/40">
                     <div className="space-y-6">
                       {/* Header */}
                       <div className="text-center space-y-3">
@@ -231,19 +229,18 @@ export function HybridFormatExplained() {
                           <Heading
                             as="h4"
                             level="h4"
-                            className="text-white"
+                            className="text-black"
                           >
                             {format.title}
                           </Heading>
                           <Body
                             size="sm"
-                            color="muted"
-                            className="flex items-center justify-center gap-1 mt-1"
+                            className="flex items-center justify-center gap-1 mt-1 text-black"
                           >
                             <MapPin className="size-4" />
                             {format.location}
                           </Body>
-                          <Badge variant="secondary" className="mt-2">
+                          <Badge variant="secondary" className="mt-2 bg-blue-100 text-blue-800">
                             {format.capacity}
                           </Badge>
                         </div>
@@ -255,7 +252,7 @@ export function HybridFormatExplained() {
                           size="sm"
                           weight="semibold"
                           transform="uppercase"
-                          color="muted"
+                          className="text-black"
                         >
                           Key Advantages:
                         </Body>
@@ -269,7 +266,7 @@ export function HybridFormatExplained() {
                                 <CheckCircle className="size-4 text-green-600 mt-0.5 shrink-0" />
                                 <Body
                                   size="sm"
-                                  className="text-white/90"
+                                  className="text-black"
                                 >
                                   {advantage}
                                 </Body>
@@ -298,11 +295,11 @@ export function HybridFormatExplained() {
             <Heading
               as="h3"
               level="h3"
-              className="text-white"
+              className="text-black"
             >
               Hybrid Integration Features
             </Heading>
-            <Body color="muted" className="mt-2">
+            <Body className="mt-2 text-black">
               Advanced technology ensures seamless collaboration across formats
             </Body>
           </div>
@@ -318,16 +315,16 @@ export function HybridFormatExplained() {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="h-full p-6 hover:shadow-lg transition-shadow">
+                  <Card className="h-full p-6 hover:shadow-lg transition-shadow bg-white/60 border-white/40">
                     <div className="space-y-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                          <IconComponent className="size-6 text-primary" />
+                        <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center">
+                          <IconComponent className="size-6 text-blue-600" />
                         </div>
                         <Heading
                           as="h4"
                           level="h6"
-                          className="text-white"
+                          className="text-black"
                         >
                           {feature.title}
                         </Heading>
@@ -335,7 +332,7 @@ export function HybridFormatExplained() {
 
                       <Body
                         size="sm"
-                        className="text-white/80"
+                        className="text-black"
                       >
                         {feature.description}
                       </Body>
@@ -345,7 +342,7 @@ export function HybridFormatExplained() {
                           size="sm"
                           weight="semibold"
                           transform="uppercase"
-                          color="muted"
+                          className="text-black"
                         >
                           Benefits:
                         </Body>
@@ -355,10 +352,10 @@ export function HybridFormatExplained() {
                               key={benefitIndex}
                               className="flex items-center gap-2"
                             >
-                              <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0"></div>
                               <Body
                                 size="xs"
-                                className="text-white/90"
+                                className="text-black"
                               >
                                 {benefit}
                               </Body>
@@ -380,26 +377,26 @@ export function HybridFormatExplained() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center bg-primary/5 rounded-2xl p-8"
+          className="text-center bg-white/60 rounded-2xl p-8 border border-white/40"
         >
           <div className="space-y-4">
             <div className="flex items-center justify-center gap-2">
-              <Camera className="size-6 text-primary" />
+              <Camera className="size-6 text-blue-600" />
               <Heading
                 as="h3"
                 level="h4"
-                className="text-white"
+                className="text-black"
               >
                 Technology Requirements
               </Heading>
             </div>
-            <Body className="max-w-2xl mx-auto">
+            <Body className="max-w-2xl mx-auto text-black">
               To ensure the best hybrid experience, all participants (physical
               and virtual) should have access to reliable internet,
               collaboration tools, and communication platforms. Technical
               support will be available 24/7 during the hackathon.
             </Body>
-            <Body size="sm" color="muted">
+            <Body size="sm" className="text-black">
               Detailed technical requirements and setup guides will be provided
               upon registration.
             </Body>

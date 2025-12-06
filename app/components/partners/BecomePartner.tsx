@@ -36,7 +36,7 @@ const steps = [
 
 export function BecomePartner() {
   return (
-    <Section id="become-partner" background="muted" spacing="lg" className="bg-white text-black">
+    <Section id="become-partner" background="muted" spacing="lg" className="bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200 text-black">
       <div className="space-y-12 md:space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,7 @@ export function BecomePartner() {
             >
               How to Become a Partner
             </Heading>
-            <Body color="muted" className="mt-2 text-gray-700">
+            <Body color="default" className="mt-2 text-black/70">
               Simple steps to join the AfCFTA Hackathon 2026
             </Body>
           </div>
@@ -89,13 +89,13 @@ export function BecomePartner() {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="h-full p-6 text-center hover:shadow-lg transition-shadow bg-white border-gray-200">
+                  <Card className="h-full p-6 text-center hover:shadow-lg transition-shadow bg-white/60 border-white/40">
                     <div className="space-y-4">
                       <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
-                        <IconComponent className="size-8 text-primary" />
+                        <IconComponent className="size-8 text-blue-700" />
                       </div>
                       <div className="space-y-2">
-                        <div className="w-8 h-8 mx-auto rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
+                        <div className="w-8 h-8 mx-auto rounded-full bg-blue-700 text-white flex items-center justify-center text-sm font-bold">
                           {step.step}
                         </div>
                         <Heading
@@ -107,7 +107,7 @@ export function BecomePartner() {
                         </Heading>
                         <Body
                           size="sm"
-                          className="text-gray-700"
+                          className="text-black/80"
                         >
                           {step.description}
                         </Body>

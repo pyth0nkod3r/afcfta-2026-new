@@ -130,9 +130,10 @@ const partnerPlaceholders = [
 export function RewardsPreviewSection() {
   return (
     <Section
-      id="rewards-preview"
+      id="rewards"
       background="muted"
-      className="bg-white text-black"
+      spacing="lg"
+      className="bg-gradient-to-br from-indigo-200 via-blue-200 to-purple-200 text-black"
     >
       <div className="flex flex-col gap-10">
         <motion.div
@@ -142,10 +143,10 @@ export function RewardsPreviewSection() {
           transition={{ duration: 0.5 }}
           className="text-center space-y-4"
         >
-          <Heading as="h2" level="h2" align="center" className="text-white!">
+          <Heading as="h2" level="h2" align="center" className="text-black">
             ₦60 Million in Prizes + Mentorship & Acceleration Opportunities
           </Heading>
-          <Body size="lg" align="center" className="text-white/80">
+          <Body size="lg" align="center" className="text-black/80">
             Significant cash prizes, implementation grants, and non-cash
             benefits accelerate winning teams from prototype to pilot across the
             continent.
@@ -157,16 +158,16 @@ export function RewardsPreviewSection() {
           className="mt-2 flex flex-col gap-6"
           activationMode="automatic"
         >
-          <TabsList className="mx-auto flex-wrap gap-2 bg-white/10 text-white/70">
+          <TabsList className="mx-auto flex-wrap gap-2 bg-black/5 text-black/70">
             <TabsTrigger
               value="cash"
-              className="text-white data-[state=active]:bg-white/10 data-[state=active]:text-white"
+              className="text-black data-[state=active]:bg-white data-[state=active]:text-black data-[state=active]:shadow-sm"
             >
               Prize Pool
             </TabsTrigger>
             <TabsTrigger
               value="benefits"
-              className="text-white data-[state=active]:bg-white/10 data-[state=active]:text-white"
+              className="text-black data-[state=active]:bg-white data-[state=active]:text-black data-[state=active]:shadow-sm"
             >
               Non-Cash Benefits
             </TabsTrigger>
@@ -191,13 +192,13 @@ export function RewardsPreviewSection() {
                   >
                     <Card
                       className={cn(
-                        "h-full border-white/15 bg-white/5 text-white shadow-xl backdrop-blur-sm",
+                        "h-full border-black/10 bg-white/60 text-black shadow-xl backdrop-blur-sm",
                         tier.featured &&
-                          "bg-linear-to-br from-primary/40 via-primary/20 to-secondary/40 border-white/25",
+                          "bg-linear-to-br from-primary/10 via-primary/5 to-secondary/10 border-black/10",
                       )}
                     >
                       <CardHeader className="gap-4">
-                        <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-white/15 text-white">
+                        <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                           <Icon className="size-5" aria-hidden />
                         </span>
                         <div className="space-y-1">
@@ -205,20 +206,20 @@ export function RewardsPreviewSection() {
                             as="p"
                             size="sm"
                             transform="uppercase"
-                            className="text-white/70 tracking-[0.3em]"
+                            className="text-black/70 tracking-[0.3em]"
                           >
                             {tier.title}
                           </Body>
-                          <CardTitle className="text-3xl font-bold text-white">
+                          <CardTitle className="text-3xl font-bold text-black">
                             {tier.amount}
                           </CardTitle>
-                          <CardDescription className="text-white/80">
+                          <CardDescription className="text-black/80">
                             {tier.description}
                           </CardDescription>
                         </div>
                       </CardHeader>
                       <CardContent>
-                        <ul className="space-y-3 text-sm text-white/80">
+                        <ul className="space-y-3 text-sm text-black/80">
                           {tier.highlights.map((highlight) => (
                             <li
                               key={highlight}
@@ -245,22 +246,22 @@ export function RewardsPreviewSection() {
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.45 }}
               >
-                <div className="rounded-3xl border border-white/15 bg-white/5 p-6 shadow-xl backdrop-blur-sm">
+                <div className="rounded-3xl border border-black/10 bg-white/60 p-6 shadow-xl backdrop-blur-sm">
                   <Body
                     size="sm"
                     transform="uppercase"
-                    className="text-white/60 tracking-[0.3em]"
+                    className="text-black/60 tracking-[0.3em]"
                   >
                     Beyond Cash
                   </Body>
                   <Heading
                     as="h3"
                     level="h3"
-                    className="mt-2 text-white! leading-snug"
+                    className="mt-2 text-black leading-snug"
                   >
                     Non-Cash Benefit Stack
                   </Heading>
-                  <Body className="mt-2 text-white/80">
+                  <Body className="mt-2 text-black/80">
                     Every finalist receives deep operational support to launch
                     in multiple AfCFTA markets, paired with policy and ecosystem
                     partners.
@@ -270,12 +271,12 @@ export function RewardsPreviewSection() {
                     {benefitHighlights.map((benefit) => (
                       <li
                         key={benefit.title}
-                        className="rounded-2xl border border-white/10 bg-white/5 p-4"
+                        className="rounded-2xl border border-black/5 bg-white/40 p-4"
                       >
-                        <p className="font-semibold text-white">
+                        <p className="font-semibold text-black">
                           {benefit.title}
                         </p>
-                        <p className="mt-1 text-sm text-white/80">
+                        <p className="mt-1 text-sm text-black/80">
                           {benefit.description}
                         </p>
                       </li>
@@ -290,11 +291,11 @@ export function RewardsPreviewSection() {
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.45, delay: 0.1 }}
               >
-                <div className="rounded-3xl border border-dashed border-white/25 bg-white/5 p-6 text-center shadow-xl backdrop-blur-sm">
+                <div className="rounded-3xl border border-dashed border-black/20 bg-white/60 p-6 text-center shadow-xl backdrop-blur-sm">
                   <Body
                     size="sm"
                     transform="uppercase"
-                    className="text-white/60 tracking-[0.3em]"
+                    className="text-black/60 tracking-[0.3em]"
                   >
                     Partner Logos
                   </Body>
@@ -302,11 +303,11 @@ export function RewardsPreviewSection() {
                     as="h3"
                     level="h4"
                     align="center"
-                    className="mt-2 text-white!"
+                    className="mt-2 text-black"
                   >
                     Implementation Allies
                   </Heading>
-                  <Body className="mt-1 text-white/70">
+                  <Body className="mt-1 text-black/70">
                     Co-delivered with policy institutions, DFIs, and venture
                     studios across Africa.
                   </Body>
@@ -315,13 +316,13 @@ export function RewardsPreviewSection() {
                     {partnerPlaceholders.map((partner) => (
                       <div
                         key={partner}
-                        className="flex h-20 items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-4 text-sm font-semibold text-white/80"
+                        className="flex h-20 items-center justify-center rounded-2xl border border-black/10 bg-white/40 px-4 text-sm font-semibold text-black/80"
                       >
                         {partner}
                       </div>
                     ))}
                   </div>
-                  <Body size="sm" className="mt-4 text-white/65">
+                  <Body size="sm" className="mt-4 text-black/65">
                     Additional partners announced monthly.
                   </Body>
                 </div>
@@ -341,7 +342,7 @@ export function RewardsPreviewSection() {
             asChild
             size="lg"
             variant="secondary"
-            className="bg-white text-black hover:bg-white/90"
+            className="bg-black text-white hover:bg-black/90"
           >
             <Link to="/rewards-incentives">View Full Rewards Details</Link>
           </Button>

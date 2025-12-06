@@ -102,7 +102,7 @@ export function FullScheduleSnapshot() {
       id="full-schedule"
       background="muted"
       spacing="lg"
-      className="bg-black!"
+      className="bg-gradient-to-br from-indigo-200 via-blue-200 to-purple-200 text-black"
     >
       <div className="space-y-12 md:space-y-16">
         <motion.div
@@ -112,13 +112,11 @@ export function FullScheduleSnapshot() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-4"
         >
-          <Badge variant="outline" className="mb-4 border-white/20 text-white">
-            📅 4️⃣ Full Schedule Snapshot
-          </Badge>
-          <Heading as="h2" level="h2" className="text-white!">
+
+          <Heading as="h2" level="h2" className="text-black">
             Timeline Milestone Overview
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto text-white!">
+          <Body size="lg" className="max-w-3xl mx-auto text-black">
             Complete timeline of key milestones and deadlines for the AfCFTA
             Hackathon 2026 journey.
           </Body>
@@ -133,10 +131,10 @@ export function FullScheduleSnapshot() {
           className="space-y-6"
         >
           <div className="text-center">
-            <Heading as="h3" level="h3" className="text-white!">
+            <Heading as="h3" level="h3" className="text-black">
               Phase Overview
             </Heading>
-            <Body className="mt-2 text-white!">
+            <Body className="mt-2 text-black">
               Complete timeline of key milestones and deadlines
             </Body>
           </div>
@@ -150,19 +148,19 @@ export function FullScheduleSnapshot() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-4 hover:shadow-lg transition-shadow bg-gray-50! border-white/15">
+                <Card className="p-4 hover:shadow-lg transition-shadow bg-white/60 border-white/40">
                   <div className="flex items-center justify-between gap-4">
                     <div className="flex-1">
-                      <Heading as="h4" level="h6" className="text-gray-900!">
+                      <Heading as="h4" level="h6" className="text-black">
                         {item.milestone}
                       </Heading>
-                      <Body size="sm" className="text-gray-700! mt-1">
+                      <Body size="sm" className="text-black mt-1">
                         {item.description}
                       </Body>
                     </div>
                     <Badge
                       variant="outline"
-                      className="shrink-0 border-gray-400 text-gray-700"
+                      className="shrink-0 border-black/20 text-black"
                     >
                       {item.date}
                     </Badge>
@@ -182,10 +180,10 @@ export function FullScheduleSnapshot() {
           className="space-y-6"
         >
           <div className="text-center">
-            <Heading as="h3" level="h3" className="text-white!">
+            <Heading as="h3" level="h3" className="text-black">
               Critical Dates & Deadlines
             </Heading>
-            <Body className="mt-2 text-white!">
+            <Body className="mt-2 text-black">
               Mark your calendar - these dates are essential for participation
             </Body>
           </div>
@@ -199,17 +197,17 @@ export function FullScheduleSnapshot() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-4 hover:shadow-md transition-shadow bg-gray-50! border-white/15">
+                <Card className="p-4 hover:shadow-md transition-shadow bg-white/60 border-white/40">
                   <div className="space-y-3">
                     <div className="flex items-start justify-between gap-4">
                       <div>
-                        <Heading as="h4" level="h6" className="text-gray-900!">
+                        <Heading as="h4" level="h6" className="text-black">
                           {item.event}
                         </Heading>
                         <Body
                           size="sm"
                           weight="semibold"
-                          className="text-primary"
+                          className="text-blue-600"
                         >
                           {item.date}
                         </Body>
@@ -226,20 +224,20 @@ export function FullScheduleSnapshot() {
                       </Badge>
                     </div>
 
-                    <Body size="sm" className="text-gray-700!">
+                    <Body size="sm" className="text-black">
                       {item.description}
                     </Body>
 
-                    <div className="bg-gray-200! rounded-lg p-3">
+                    <div className="bg-white/50 rounded-lg p-3 border border-white/40">
                       <Body
                         size="xs"
                         weight="semibold"
                         transform="uppercase"
-                        className="text-gray-600!"
+                        className="text-black"
                       >
                         Action Required:
                       </Body>
-                      <Body size="sm" className="text-gray-800! mt-1">
+                      <Body size="sm" className="text-black mt-1">
                         {item.action}
                       </Body>
                     </div>
@@ -258,65 +256,65 @@ export function FullScheduleSnapshot() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="grid gap-6 md:grid-cols-4 text-center"
         >
-          <Card className="p-6 bg-gray-50! border-white/15">
+          <Card className="p-6 bg-white/60 border-white/40">
             <div className="space-y-2">
-              <Clock className="size-8 mx-auto text-primary" />
-              <Heading as="h3" level="h3" className="text-primary">
+              <Clock className="size-8 mx-auto text-blue-600" />
+              <Heading as="h3" level="h3" className="text-blue-600">
                 12+
               </Heading>
               <Body
                 size="sm"
                 weight="semibold"
                 transform="uppercase"
-                className="text-gray-600!"
+                className="text-black"
               >
                 Total Months
               </Body>
             </div>
           </Card>
-          <Card className="p-6 bg-gray-50! border-white/15">
+          <Card className="p-6 bg-white/60 border-white/40">
             <div className="space-y-2">
-              <Users className="size-8 mx-auto text-primary" />
-              <Heading as="h3" level="h3" className="text-primary">
+              <Users className="size-8 mx-auto text-blue-600" />
+              <Heading as="h3" level="h3" className="text-blue-600">
                 5,000+
               </Heading>
               <Body
                 size="sm"
                 weight="semibold"
                 transform="uppercase"
-                className="text-gray-600!"
+                className="text-black"
               >
                 Participants
               </Body>
             </div>
           </Card>
-          <Card className="p-6 bg-gray-50! border-white/15">
+          <Card className="p-6 bg-white/60 border-white/40">
             <div className="space-y-2">
-              <MapPin className="size-8 mx-auto text-primary" />
-              <Heading as="h3" level="h3" className="text-primary">
+              <MapPin className="size-8 mx-auto text-blue-600" />
+              <Heading as="h3" level="h3" className="text-blue-600">
                 54
               </Heading>
               <Body
                 size="sm"
                 weight="semibold"
                 transform="uppercase"
-                className="text-gray-600!"
+                className="text-black"
               >
                 Countries
               </Body>
             </div>
           </Card>
-          <Card className="p-6 bg-gray-50! border-white/15">
+          <Card className="p-6 bg-white/60 border-white/40">
             <div className="space-y-2">
-              <Calendar className="size-8 mx-auto text-primary" />
-              <Heading as="h3" level="h3" className="text-primary">
+              <Calendar className="size-8 mx-auto text-blue-600" />
+              <Heading as="h3" level="h3" className="text-blue-600">
                 100+
               </Heading>
               <Body
                 size="sm"
                 weight="semibold"
                 transform="uppercase"
-                className="text-gray-600!"
+                className="text-black"
               >
                 Events & Sessions
               </Body>
@@ -330,14 +328,14 @@ export function FullScheduleSnapshot() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center bg-gray-50! rounded-2xl p-8"
+          className="text-center bg-white/60 rounded-2xl p-8 border border-white/40"
         >
           <div className="space-y-6">
             <div className="space-y-4">
-              <Heading as="h3" level="h4" className="text-gray-900!">
+              <Heading as="h3" level="h4" className="text-black">
                 Stay Updated & Prepared
               </Heading>
-              <Body className="max-w-2xl mx-auto text-gray-700!">
+              <Body className="max-w-2xl mx-auto text-black">
                 Download the complete schedule and set up calendar reminders to
                 ensure you don&apos;t miss any critical dates or opportunities.
               </Body>

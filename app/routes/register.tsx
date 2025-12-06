@@ -1,5 +1,5 @@
 import type { Route } from "./+types/register";
-import { RegisterPage } from "~/components/pages/RegisterPage";
+import { RegisterPage } from "~/components/register/RegisterPage";
 
 export const meta: Route.MetaFunction = () => [
   { title: "Register — AfCFTA Hackathon 2026" },

@@ -277,9 +277,9 @@ const judgingCriteria: JudgingCriterion[] = [
 export function ChallengeTracksPreviewSection() {
   return (
     <Section
-      id="challenge-tracks-preview"
+      id="tracks"
       background="muted"
-      className="bg-linear-to-b from-black via-neutral-950 to-neutral-900 text-white"
+      className="bg-gradient-to-bl from-blue-200 via-indigo-200 to-cyan-200 text-black"
     >
       <div className="flex flex-col gap-12">
         <motion.div
@@ -291,14 +291,14 @@ export function ChallengeTracksPreviewSection() {
         >
           <Badge
             variant="secondary"
-            className="mx-auto bg-white/10 text-white/80 border-white/15"
+            className="mx-auto bg-black/5 text-black/80 border-black/10"
           >
             🌍 Challenge Tracks Hero Section
           </Badge>
-          <Heading as="h2" level="h1" align="center" className="text-white!">
+          <Heading as="h2" level="h1" align="center" className="text-black">
             Build Solutions that Power Africa&apos;s Borderless Digital Economy
           </Heading>
-          <Body size="lg" align="center" className="text-white/70">
+          <Body size="lg" align="center" className="text-black/70">
             The AfCFTA Hackathon 2026 invites Africa&apos;s brightest innovators
             to co-create solutions that accelerate the implementation of the
             AfCFTA Digital Trade Protocol — advancing inclusive,
@@ -309,7 +309,7 @@ export function ChallengeTracksPreviewSection() {
               asChild
               size="lg"
               variant="secondary"
-              className="bg-white text-black hover:bg-white/90"
+              className="bg-black text-white hover:bg-black/90"
             >
               <Link to="/submit">🔗 Submit Your Idea</Link>
             </Button>
@@ -317,7 +317,7 @@ export function ChallengeTracksPreviewSection() {
               asChild
               size="lg"
               variant="outline"
-              className="border-white/20 text-white hover:bg-white/10"
+              className="border-black/20 text-black hover:bg-black/10"
             >
               <Link to="/track-guide">📘 Download Track Guide</Link>
             </Button>
@@ -329,15 +329,15 @@ export function ChallengeTracksPreviewSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.45, delay: 0.2 }}
-          className="mx-auto max-w-4xl rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur"
+          className="mx-auto max-w-4xl rounded-3xl border border-black/10 bg-white/60 p-8 shadow-2xl backdrop-blur"
         >
           <div className="flex items-center gap-3 mb-4">
             <span className="text-2xl">🧭</span>
-            <Heading as="h3" level="h3" className="text-white!">
+            <Heading as="h3" level="h3" className="text-black">
               Shaping the Future of African Trade through Innovation
             </Heading>
           </div>
-          <Body className="text-white/80 leading-relaxed">
+          <Body className="text-black/80 leading-relaxed">
             Each challenge track focuses on a critical pillar of Africa&apos;s
             digital trade ecosystem. From cross-border payments to smart
             logistics and AI-driven compliance, participants will design,
@@ -361,9 +361,9 @@ export function ChallengeTracksPreviewSection() {
                 transition={{ duration: 0.45, delay: index * 0.03 }}
                 className="h-full"
               >
-                <Card className="h-full border-white/10 bg-white/5 text-white shadow-2xl backdrop-blur">
+                <Card className="h-full border-black/10 bg-white/60 text-black shadow-2xl backdrop-blur">
                   <CardHeader className="gap-4">
-                    <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-white/10 text-white">
+                    <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                       <Icon className="size-5" aria-hidden />
                     </span>
                     <div className="space-y-1">
@@ -371,14 +371,14 @@ export function ChallengeTracksPreviewSection() {
                         as="p"
                         size="xs"
                         transform="uppercase"
-                        className="tracking-[0.25em] text-white/60"
+                        className="tracking-[0.25em] text-black/60"
                       >
                         Track {String(index + 1).padStart(2, "0")}
                       </Body>
-                      <CardTitle className="text-white text-xl">
+                      <CardTitle className="text-black text-xl">
                         {track.title}
                       </CardTitle>
-                      <CardDescription className="text-white/75">
+                      <CardDescription className="text-black/75">
                         {track.summary}
                       </CardDescription>
                     </div>
@@ -398,7 +398,7 @@ export function ChallengeTracksPreviewSection() {
                         <Badge
                           key={tag}
                           variant="outline"
-                          className="border-white/15 bg-white/5 text-white/70"
+                          className="border-black/15 bg-black/5 text-black/70"
                         >
                           {tag}
                         </Badge>
@@ -417,23 +417,23 @@ export function ChallengeTracksPreviewSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.45 }}
-            className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur"
+            className="rounded-3xl border border-black/10 bg-white/60 p-6 shadow-2xl backdrop-blur"
           >
             <Body
               size="sm"
               transform="uppercase"
-              className="tracking-[0.25em] text-white/60"
+              className="tracking-[0.25em] text-black/60"
             >
               ⚙️ All Challenge Tracks
             </Body>
             <Heading
               as="h3"
               level="h3"
-              className="mt-2 text-white! leading-tight"
+              className="mt-2 text-black leading-tight"
             >
               Official tracks for AfCFTA Hackathon 2026
             </Heading>
-            <Body className="mt-2 text-white/70">
+            <Body className="mt-2 text-black/70">
               Each represents a frontier for innovation, trade, and
               collaboration across Africa. Expand a track to see focus areas and
               expected deliverables.
@@ -443,17 +443,17 @@ export function ChallengeTracksPreviewSection() {
               type="single"
               collapsible
               defaultValue="digital-trade-facilitation"
-              className="mt-6 divide-y divide-white/10"
+              className="mt-6 divide-y divide-black/10"
             >
               {challengeTracks.map((track) => (
                 <AccordionItem
                   key={track.id}
                   value={track.id}
-                  className="border-white/0"
+                  className="border-black/0"
                 >
-                  <AccordionTrigger className="text-white hover:no-underline">
+                  <AccordionTrigger className="text-black hover:no-underline">
                     <div className="flex flex-col gap-1 text-left">
-                      <span className="text-xs uppercase tracking-[0.3em] text-white/50">
+                      <span className="text-xs uppercase tracking-[0.3em] text-black/50">
                         {track.tags[0]}
                       </span>
                       <span className="text-base font-semibold">
@@ -461,13 +461,13 @@ export function ChallengeTracksPreviewSection() {
                       </span>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/75">
+                  <AccordionContent className="text-black/75">
                     <p>{track.detail.context}</p>
-                    <ul className="mt-4 space-y-2 text-sm text-white/80">
+                    <ul className="mt-4 space-y-2 text-sm text-black/80">
                       {track.detail.deliverables.map((item) => (
                         <li
                           key={item}
-                          className="flex gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2"
+                          className="flex gap-2 rounded-xl border border-black/10 bg-black/5 px-3 py-2"
                         >
                           <span className="mt-1 size-1.5 rounded-full bg-secondary" />
                           <span>{item}</span>
@@ -485,23 +485,23 @@ export function ChallengeTracksPreviewSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.45, delay: 0.1 }}
-            className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur"
+            className="rounded-3xl border border-black/10 bg-white/60 p-6 shadow-2xl backdrop-blur"
           >
             <Body
               size="sm"
               transform="uppercase"
-              className="tracking-[0.25em] text-white/60"
+              className="tracking-[0.25em] text-black/60"
             >
               🏆 Evaluation Criteria
             </Body>
             <Heading
               as="h3"
               level="h4"
-              className="mt-2 text-white! leading-tight"
+              className="mt-2 text-black leading-tight"
             >
               How solutions will be evaluated
             </Heading>
-            <Body className="mt-2 text-white/70">
+            <Body className="mt-2 text-black/70">
               Each solution will be evaluated based on these weighted criteria
               to ensure alignment with AfCFTA goals and real-world impact.
             </Body>
@@ -511,20 +511,20 @@ export function ChallengeTracksPreviewSection() {
                 <tbody>
                   {judgingCriteria.map((criterion) => (
                     <tr key={criterion.id} className="align-top">
-                      <td className="w-2/3 rounded-2xl border border-white/10 bg-white/5 p-4">
-                        <p className="text-white font-semibold">
+                      <td className="w-2/3 rounded-2xl border border-black/10 bg-white/60 p-4">
+                        <p className="text-black font-semibold">
                           {criterion.title}
                         </p>
-                        <p className="mt-1 text-white/70 text-sm">
+                        <p className="mt-1 text-black/70 text-sm">
                           {criterion.description}
                         </p>
                       </td>
-                      <td className="w-1/3 rounded-2xl border border-white/5 bg-white/10 p-4 align-middle">
-                        <div className="flex items-center gap-3 text-white/80">
-                          <span className="font-semibold text-white">
+                      <td className="w-1/3 rounded-2xl border border-black/5 bg-black/5 p-4 align-middle">
+                        <div className="flex items-center gap-3 text-black/80">
+                          <span className="font-semibold text-black">
                             {criterion.weight}%
                           </span>
-                          <div className="h-2 flex-1 rounded-full bg-white/20 relative overflow-hidden">
+                          <div className="h-2 flex-1 rounded-full bg-black/20 relative overflow-hidden">
                             <div
                               className={`h-full rounded-full bg-gradient-to-r from-secondary via-primary to-white transition-all duration-300 ${
                                 criterion.weight >= 30
@@ -552,15 +552,15 @@ export function ChallengeTracksPreviewSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.45 }}
-          className="mx-auto max-w-4xl rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur"
+          className="mx-auto max-w-4xl rounded-3xl border border-black/10 bg-white/60 p-8 shadow-2xl backdrop-blur"
         >
           <div className="flex items-center gap-3 mb-4">
             <span className="text-2xl">🧩</span>
-            <Heading as="h3" level="h3" className="text-white!">
+            <Heading as="h3" level="h3" className="text-black">
               Track Collaboration & Cross-Impact
             </Heading>
           </div>
-          <Body className="text-white/80 leading-relaxed">
+          <Body className="text-black/80 leading-relaxed">
             Participants are encouraged to form multi-disciplinary teams that
             combine expertise from different tracks — for example, linking
             FinTech + Digital Identity, or AI + Logistics — to develop holistic
@@ -577,12 +577,12 @@ export function ChallengeTracksPreviewSection() {
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="text-2xl">🚀</span>
-            <Heading as="h3" level="h2" className="text-white!">
+            <Heading as="h3" level="h2" className="text-black">
               Your Idea Could Power Africa&apos;s Next Digital Trade
               Breakthrough
             </Heading>
           </div>
-          <Body size="lg" className="text-white/70 leading-relaxed">
+          <Body size="lg" className="text-black/70 leading-relaxed">
             Join innovators shaping Africa&apos;s borderless future. Whether
             your focus is AI, FinTech, or logistics — your solution can help
             unlock Africa&apos;s $4 trillion digital trade potential.
@@ -592,7 +592,7 @@ export function ChallengeTracksPreviewSection() {
               asChild
               size="lg"
               variant="secondary"
-              className="bg-white text-black hover:bg-white/90"
+              className="bg-black text-white hover:bg-black/90"
             >
               <Link to="/apply">📝 Apply Now</Link>
             </Button>
@@ -600,7 +600,7 @@ export function ChallengeTracksPreviewSection() {
               asChild
               size="lg"
               variant="outline"
-              className="border-white/20 text-white hover:bg-white/10"
+              className="border-black/20 text-black hover:bg-black/10"
             >
               <Link to="/challenge-tracks">📘 Learn More About Tracks</Link>
             </Button>
@@ -608,7 +608,7 @@ export function ChallengeTracksPreviewSection() {
               asChild
               size="lg"
               variant="outline"
-              className="border-white/20 text-white hover:bg-white/10"
+              className="border-black/20 text-black hover:bg-black/10"
             >
               <Link to="/partner">🤝 Partner With Us</Link>
             </Button>

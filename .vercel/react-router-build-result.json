@@ -10,23 +10,25 @@
       }
     },
     "routeIdToServerBundleId": {
-      "routes/home": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/_index": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/register-dispatch": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/about": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/challenge-tracks": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/timeline-format": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/rewards-incentives": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
-      "routes/register": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/contact": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
-      "routes/strategic-plan": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/venue": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/partners": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/media-resources": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/faq": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/terms": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/privacy": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
-      "routes/portal-index": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
-      "routes/portal-assessment": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
-      "routes/portal-results": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
-      "routes/portal-register": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/portal/assessment": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/portal/results": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/portal/login": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/portal/dashboard": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/portal/profile": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/portal/settings": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/$": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0"
     },
     "routes": {
@@ -36,11 +38,20 @@
         "path": "",
         "config": {}
       },
-      "routes/home": {
-        "id": "routes/home",
+      "routes/_index": {
+        "id": "routes/_index",
         "parentId": "root",
-        "file": "app/routes/home.tsx",
+        "file": "app/routes/_index.tsx",
         "index": true,
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/register-dispatch": {
+        "id": "routes/register-dispatch",
+        "parentId": "root",
+        "file": "app/routes/register-dispatch.tsx",
+        "path": "/register",
         "config": {
           "runtime": "nodejs"
         }
@@ -81,15 +92,6 @@
           "runtime": "nodejs"
         }
       },
-      "routes/register": {
-        "id": "routes/register",
-        "parentId": "root",
-        "file": "app/routes/register.tsx",
-        "path": "/register",
-        "config": {
-          "runtime": "nodejs"
-        }
-      },
       "routes/contact": {
         "id": "routes/contact",
         "parentId": "root",
@@ -99,11 +101,11 @@
           "runtime": "nodejs"
         }
       },
-      "routes/strategic-plan": {
-        "id": "routes/strategic-plan",
+      "routes/venue": {
+        "id": "routes/venue",
         "parentId": "root",
-        "file": "app/routes/strategic-plan.tsx",
-        "path": "/strategic-plan",
+        "file": "app/routes/venue.tsx",
+        "path": "/venue",
         "config": {
           "runtime": "nodejs"
         }
@@ -153,38 +155,56 @@
           "runtime": "nodejs"
         }
       },
-      "routes/portal-index": {
-        "id": "routes/portal-index",
+      "routes/portal/assessment": {
+        "id": "routes/portal/assessment",
         "parentId": "root",
-        "file": "app/routes/portal-index.tsx",
-        "path": "/portal",
+        "file": "app/routes/portal/assessment.tsx",
+        "path": "/assessment",
         "config": {
           "runtime": "nodejs"
         }
       },
-      "routes/portal-assessment": {
-        "id": "routes/portal-assessment",
+      "routes/portal/results": {
+        "id": "routes/portal/results",
         "parentId": "root",
-        "file": "app/routes/portal-assessment.tsx",
-        "path": "/portal/assessment",
+        "file": "app/routes/portal/results.tsx",
+        "path": "/results",
         "config": {
           "runtime": "nodejs"
         }
       },
-      "routes/portal-results": {
-        "id": "routes/portal-results",
+      "routes/portal/login": {
+        "id": "routes/portal/login",
         "parentId": "root",
-        "file": "app/routes/portal-results.tsx",
-        "path": "/portal/results",
+        "file": "app/routes/portal/login.tsx",
+        "path": "/login",
         "config": {
           "runtime": "nodejs"
         }
       },
-      "routes/portal-register": {
-        "id": "routes/portal-register",
+      "routes/portal/dashboard": {
+        "id": "routes/portal/dashboard",
         "parentId": "root",
-        "file": "app/routes/portal-register.tsx",
-        "path": "/portal/register",
+        "file": "app/routes/portal/dashboard.tsx",
+        "path": "/dashboard",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/portal/profile": {
+        "id": "routes/portal/profile",
+        "parentId": "root",
+        "file": "app/routes/portal/profile.tsx",
+        "path": "/profile",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/portal/settings": {
+        "id": "routes/portal/settings",
+        "parentId": "root",
+        "file": "app/routes/portal/settings.tsx",
+        "path": "/settings",
         "config": {
           "runtime": "nodejs"
         }
@@ -205,7 +225,7 @@
     "basename": "/",
     "buildDirectory": "C:/Users/macmk/codes/GFA-TECH/WORK/afcfta-2026/build",
     "future": {
-      "v8_middleware": true,
+      "v8_middleware": false,
       "unstable_optimizeDeps": false,
       "unstable_splitRouteModules": false,
       "unstable_subResourceIntegrity": false,
@@ -217,11 +237,17 @@
         "file": "root.tsx",
         "path": ""
       },
-      "routes/home": {
-        "id": "routes/home",
+      "routes/_index": {
+        "id": "routes/_index",
         "parentId": "root",
-        "file": "routes/home.tsx",
+        "file": "routes/_index.tsx",
         "index": true
+      },
+      "routes/register-dispatch": {
+        "id": "routes/register-dispatch",
+        "parentId": "root",
+        "file": "routes/register-dispatch.tsx",
+        "path": "/register"
       },
       "routes/about": {
         "id": "routes/about",
@@ -247,23 +273,17 @@
         "file": "routes/rewards-incentives.tsx",
         "path": "/rewards-incentives"
       },
-      "routes/register": {
-        "id": "routes/register",
-        "parentId": "root",
-        "file": "routes/register.tsx",
-        "path": "/register"
-      },
       "routes/contact": {
         "id": "routes/contact",
         "parentId": "root",
         "file": "routes/contact.tsx",
         "path": "/contact"
       },
-      "routes/strategic-plan": {
-        "id": "routes/strategic-plan",
+      "routes/venue": {
+        "id": "routes/venue",
         "parentId": "root",
-        "file": "routes/strategic-plan.tsx",
-        "path": "/strategic-plan"
+        "file": "routes/venue.tsx",
+        "path": "/venue"
       },
       "routes/partners": {
         "id": "routes/partners",
@@ -295,29 +315,41 @@
         "file": "routes/privacy.tsx",
         "path": "/privacy"
       },
-      "routes/portal-index": {
-        "id": "routes/portal-index",
+      "routes/portal/assessment": {
+        "id": "routes/portal/assessment",
         "parentId": "root",
-        "file": "routes/portal-index.tsx",
-        "path": "/portal"
+        "file": "routes/portal/assessment.tsx",
+        "path": "/assessment"
       },
-      "routes/portal-assessment": {
-        "id": "routes/portal-assessment",
+      "routes/portal/results": {
+        "id": "routes/portal/results",
         "parentId": "root",
-        "file": "routes/portal-assessment.tsx",
-        "path": "/portal/assessment"
+        "file": "routes/portal/results.tsx",
+        "path": "/results"
       },
-      "routes/portal-results": {
-        "id": "routes/portal-results",
+      "routes/portal/login": {
+        "id": "routes/portal/login",
         "parentId": "root",
-        "file": "routes/portal-results.tsx",
-        "path": "/portal/results"
+        "file": "routes/portal/login.tsx",
+        "path": "/login"
       },
-      "routes/portal-register": {
-        "id": "routes/portal-register",
+      "routes/portal/dashboard": {
+        "id": "routes/portal/dashboard",
         "parentId": "root",
-        "file": "routes/portal-register.tsx",
-        "path": "/portal/register"
+        "file": "routes/portal/dashboard.tsx",
+        "path": "/dashboard"
+      },
+      "routes/portal/profile": {
+        "id": "routes/portal/profile",
+        "parentId": "root",
+        "file": "routes/portal/profile.tsx",
+        "path": "/profile"
+      },
+      "routes/portal/settings": {
+        "id": "routes/portal/settings",
+        "parentId": "root",
+        "file": "routes/portal/settings.tsx",
+        "path": "/settings"
       },
       "routes/$": {
         "id": "routes/$",
@@ -340,8 +372,12 @@
         "file": "root.tsx",
         "children": [
           {
-            "file": "routes/home.tsx",
+            "file": "routes/_index.tsx",
             "index": true
+          },
+          {
+            "file": "routes/register-dispatch.tsx",
+            "path": "/register"
           },
           {
             "file": "routes/about.tsx",
@@ -360,16 +396,12 @@
             "path": "/rewards-incentives"
           },
           {
-            "file": "routes/register.tsx",
-            "path": "/register"
-          },
-          {
             "file": "routes/contact.tsx",
             "path": "/contact"
           },
           {
-            "file": "routes/strategic-plan.tsx",
-            "path": "/strategic-plan"
+            "file": "routes/venue.tsx",
+            "path": "/venue"
           },
           {
             "file": "routes/partners.tsx",
@@ -392,20 +424,28 @@
             "path": "/privacy"
           },
           {
-            "file": "routes/portal-index.tsx",
-            "path": "/portal"
+            "file": "routes/portal/assessment.tsx",
+            "path": "/assessment"
           },
           {
-            "file": "routes/portal-assessment.tsx",
-            "path": "/portal/assessment"
+            "file": "routes/portal/results.tsx",
+            "path": "/results"
           },
           {
-            "file": "routes/portal-results.tsx",
-            "path": "/portal/results"
+            "file": "routes/portal/login.tsx",
+            "path": "/login"
           },
           {
-            "file": "routes/portal-register.tsx",
-            "path": "/portal/register"
+            "file": "routes/portal/dashboard.tsx",
+            "path": "/dashboard"
+          },
+          {
+            "file": "routes/portal/profile.tsx",
+            "path": "/profile"
+          },
+          {
+            "file": "routes/portal/settings.tsx",
+            "path": "/settings"
           },
           {
             "file": "routes/$.tsx",

@@ -1,5 +1,5 @@
 import type { Route } from "./+types/media-resources";
-import { MediaResourcesPage } from "~/components/pages/MediaResourcesPage";
+import { MediaResourcesPage } from "~/components/media/MediaResourcesPage";
 
 export const meta: Route.MetaFunction = () => [
   { title: "Media & Resources — AfCFTA Hackathon 2026" },
