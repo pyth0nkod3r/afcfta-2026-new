@@ -135,9 +135,6 @@
     --radius: 0.75rem;
   }
 
-  /* Dark mode removed */
-  @custom-variant dark (&:where(.dark, .dark *));
-
   * {
     @apply border-border;
   }
