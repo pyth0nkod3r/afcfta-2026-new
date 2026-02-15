@@ -383,7 +383,109 @@ _**Assistant (default)**_
 
 **TASK-014: Build Privacy Policy Page**
 - Hero section
-- All key sections: Data Collection, Stor
+- All key sections: Data Collection, Storage, Usage, Third-Party, User Rights, Cookies, Changes, Contact
+- Download PDF CTA button
+- Mobile-responsive typography and layout
+
+**TASK-015: Build Partners Page**
+- Hero section with headline, subtext, and CTAs
+- Partnership Tiers section (Platinum, Diamond, Gold, Silver) with benefits lists
+- Strategic Partner Network section
+- Become a Partner section with application CTAs
+- Highlighted Past Partners section with scrolling logo carousel
+- Mobile-responsive design
+
+**TASK-016: Build Rewards & Incentives Page (Complete)**
+- Hero section with prize pool information
+- Prize Categories section (Grand Prize, Runner-ups, Top 10)
+- Thematic Awards section listing 10 award categories
+- Non-Cash Benefits section with detailed benefit list
+- Delivery & Integration Framework section (table/timeline format)
+- Call to Action section
+- Mobile-responsive design
+
+**TASK-017: Build Timeline & Format Page (Complete)**
+- Hero section with event duration and format details
+- Phase One: Pre-Hackathon section with key activities and dates
+- Phase Two: Hackathon Days section with daily breakdown table
+- Phase Three: Post-Hackathon section with activities
+- Full Schedule Snapshot table
+- Hybrid Format Explained section (Physical vs Virtual comparison)
+- Call to Action section
+- Mobile-responsive design
+
+**TASK-018: Build Venue & Dates Page**
+- Hero section with event overview
+- Key Event Dates table with phases and activities
+- Venue section (Abuja, Nigeria) with highlights and tentative options
+- Virtual Participation Across Africa section
+- Why Abuja section with strategic context
+- Event Format Breakdown (3 component cards)
+- Key Highlights for Attendees list
+- Call to Action section
+- Footer additions (map embed placeholder, contact info)
+- Mobile-responsive design
+
+**TASK-019: Build Why AfCFTA Page**
+- Hero section with animated Africa map placeholder
+- Vision Behind the Hackathon section
+- Objectives section (4 cards: Inspire, Build, Empower, Foster)
+- Nigeria's Strategic Leadership section
+- Hybrid Format section (split screen layout)
+- Alignment with AfCFTA Digital Trade Protocol section (5 pillars)
+- Continental Impact section
+- Call to Action section
+- Optional Footer section
+- Mobile-responsive design
+
+### Integration & Quality Assurance
+
+**TASK-020: Setup routing and navigation integration**
+- Configure all routes in React Router v7
+- Connect navigation links to respective pages
+- Add route transitions with Framer Motion
+- Verify all internal links and CTAs
+- Create 404 error page component
+
+**TASK-021: Mobile-first responsive design audit**
+- Audit all pages for mobile-first compliance
+- Test responsive breakpoints across all components
+- Optimize images and assets for mobile performance
+- Ensure touch-friendly interactions and button sizes
+- Test navigation and user flows on mobile devices
+
+**TASK-022: Animation and interaction implementation**
+- Add Framer Motion page transition animations
+- Implement hover effects on interactive elements
+- Add loading states and smooth transitions
+- Implement smooth scroll behavior
+- Optimize animation performance
+
+**TASK-023: DRY refactoring and code optimization**
+- Extract repeated patterns into reusable components
+- Create custom hooks for shared logic
+- Optimize component structure to eliminate duplication
+- Create utility functions for common operations
+- Code review for DRY compliance across codebase
+
+**TASK-024: Final integration testing and bug fixes**
+- Test all page navigation flows end-to-end
+- Verify all CTA buttons and external links
+- Test responsive design across multiple device sizes
+- Fix any layout, styling, or functionality issues
+- Ensure consistent design system usage throughout
+
+---
+
+## Task Assignment Notes
+
+- Each task is self-contained and can be picked up independently
+- Tasks are sized for 1-2 days of work each
+- Clear acceptance criteria: mobile-first, responsive, follows design specs
+- No overlapping work to prevent merge conflicts
+- Both interns can work in parallel on different pages/sections
+
+Copy these 24 tasks directly into your GitHub Projects Kanban board Todo column. Each task includes enough context for an intern to start work immediately.
 
 ---
 

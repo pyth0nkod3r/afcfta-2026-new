@@ -1,11 +1,17 @@
 .DS_Store
 .env
 /node_modules/
+.specstory/
 
 # React Router
 /.react-router/
 /build/
 /do-not-track/
+/do-not-track-2/
+INTEGRATION_TEST_RESULTS.md
+AGENTS.md
+lint_output*.*
+SUBDOMAIN_SETUP.md
 
 # Generated .gitignore patterns
 
@@ -77,7 +83,6 @@ build/
 dist/
 eggs/
 .eggs/
-lib/
 parts/
 sdist/
 var/
@@ -168,3 +173,5 @@ cache/
 **/cache/
 .npm/
 .yarn/
+
+.vercel/*
